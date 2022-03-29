@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
