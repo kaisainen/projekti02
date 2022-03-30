@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'filter',
   template: `
     <div class="grid-container">
-      <div>PLACES</div>
-      <div (click)="showFilterTags()">FILTERS</div>
+      <button class="filter-title">PLACES</button>
+      <button class="filter-title" (click)="showFilterTags()">
+        FILTERS
+        <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
+        <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
+      </button>
     </div>
     <div *ngIf="showTags" class="tag-container">
       <p *ngFor="let tag of tags">
@@ -28,6 +33,8 @@ export class FilterComponent implements OnInit {
     'bakery',
   ];
   showTags = false;
+  faCaretDown = faCaretDown;
+  faCaretRight = faCaretRight;
 
   constructor() {}
 
