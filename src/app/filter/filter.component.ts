@@ -4,24 +4,26 @@ import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'filter',
   template: `
-    <div class="grid-container">
-      <button type="button" class="filter-title">PLACES</button>
-      <button type="button" class="filter-title" (click)="showFilterTags()">
-        FILTERS
-        <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
-        <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
-      </button>
-    </div>
-    <div *ngIf="showTags" class="tag-container">
-      <p *ngFor="let tag of tags">
-        <span
-          (click)="addSelectedTag(tag)"
-          [ngClass]="getYellowClass(tag)"
-          class="tag"
-          >#{{ tag }}</span
-        >
-      </p>
-    </div>
+    <section class="filter-container">
+      <div class="grid-container">
+        <button type="button" class="filter-title">PLACES</button>
+        <button type="button" class="filter-title" (click)="showFilterTags()">
+          FILTERS
+          <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
+          <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
+        </button>
+      </div>
+      <div *ngIf="showTags" class="tag-container">
+        <p *ngFor="let tag of tags">
+          <span
+            (click)="addSelectedTag(tag)"
+            [ngClass]="getYellowClass(tag)"
+            class="tag"
+            >#{{ tag }}</span
+          >
+        </p>
+      </div>
+    </section>
   `,
   styleUrls: ['./filter.component.css'],
 })

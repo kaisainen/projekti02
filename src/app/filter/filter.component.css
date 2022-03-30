@@ -30,3 +30,14 @@
 .selectedtag {
   background-color: #fdeb6c;
 }
+
+@media only screen and (min-width: 426px) {
+  .filter-container {
+    max-width: 50%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .filter-container {
+    max-width: 30%;
+  }
+}
