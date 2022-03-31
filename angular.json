@@ -1,13 +1,13 @@
 {
-    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-    "version": 1,
-    "newProjectRoot": "projects",
-    "projects": {
-        "projekti02": {
-            "projectType": "application",
-            "schematics": {
-                "@schematics/angular:application": {
-                    "strict": true
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "projekti02": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
                 }
             },
             "root": "",
@@ -103,6 +103,7 @@
                     }
                 }
             }
+
         }
     },
     "defaultProject": "projekti02"
