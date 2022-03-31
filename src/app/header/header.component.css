@@ -1,0 +1,13 @@
+.bg-color {
+    background-color: #fdeb6c;
+}
+
+.upp {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.bg-filter {
+    background-color: #57e0b2;
+    border-radius: 5px;
+}
