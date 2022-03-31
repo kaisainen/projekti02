@@ -8,6 +8,8 @@ import { faMap } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./list.component.css',],
 })
 export class ListComponent implements OnInit {
+  shownMap = false;
+  shownList = true;
   faList = faList;
   faMap = faMap;
   list = [{name: 'LINNANMÄKI', location:'Tivollikuja 1'},
@@ -17,6 +19,15 @@ export class ListComponent implements OnInit {
   {name: 'CAFE BRAHE', location:'Läntinen Brahenkatu 6'},
 ];
   constructor() { }
+
+  showMap() {
+    this.shownMap = true;
+    this.shownList = false;
+  }
+  showList() {
+    this.shownList = true;
+    this.shownMap = false;
+  }
 
   ngOnInit(): void {
   }
