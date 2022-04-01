@@ -30,14 +30,26 @@
 .selectedtag {
   background-color: #fdeb6c;
 }
-
-@media only screen and (min-width: 426px) {
-  .filter-container {
-    max-width: 50%;
-  }
+.main-filters-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #57e0b2;
+  width: 50%;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+/* .p-yellow-hover {
+  margin: 0;
+  padding: 5px 0 5px 20px;
+} */
+a {
+  text-decoration: none;
+  color: black;
 }
 @media only screen and (min-width: 769px) {
-  .filter-container {
-    max-width: 30%;
+  .p-yellow-hover:hover {
+    background-color: #fdeb6c;
+    /* margin-left: -10px;
+    margin: 0; */
   }
 }

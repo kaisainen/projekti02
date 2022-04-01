@@ -10,26 +10,18 @@ import { FooterComponent } from './footer/footer.component';
 import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
 
     FilterComponent,
 
     FooterComponent,
-      ListComponent
-
+    ListComponent,
   ],
-  imports: [
-    BrowserModule,
-    NgbModule,
- 
-    FontAwesomeModule
-  ],
+  imports: [BrowserModule, NgbModule, FontAwesomeModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
