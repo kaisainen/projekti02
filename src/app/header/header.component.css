@@ -1,13 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+
 .bg-color {
-    background-color: #fdeb6c;
+  background-color: var(--yellow-bg-color);
 }
 
 .upp {
-    text-transform: uppercase;
-    font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .bg-filter {
-    background-color: #57e0b2;
-    border-radius: 5px;
+  background-color: var(--turquoise-bg-color);
+  border-radius: 5px;
+}
+.title-font {
+  font-family: "Saira Stencil One", cursive;
+  font-size: 50px;
 }

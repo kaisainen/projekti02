@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --yellow-bg-color: #fdeb6c;
+  --turquoise-bg-color: #57e0b2;
+  --orange-bg-color: #fcad47;
+  --main-font: Nunito, "Helvetica Neue", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Nunito, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--main-font);
+}

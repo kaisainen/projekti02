@@ -1,17 +1,17 @@
 .top {
   display: flex;
 }
-.top> * {
+.top > * {
   flex: 1;
   padding-left: 4rem;
 }
 .icon {
-padding-left:0.5rem;
+  padding-left: 0.5rem;
 }
 img {
   max-width: 100%;
   padding: 1rem;
 }
 .yellow {
-  background-color: #fdeb6c;
+  background-color: var(--yellow-bg-color);
 }
