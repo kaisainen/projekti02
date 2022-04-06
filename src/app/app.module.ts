@@ -9,24 +9,23 @@ import { FilterComponent } from './filter/filter.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MapComponent } from './map/map.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
-
+    HeaderComponent,
     FilterComponent,
-
     FooterComponent,
-      ListComponent
+      ListComponent,
+      MapComponent
 
   ],
   imports: [
     BrowserModule,
     NgbModule,
- 
     FontAwesomeModule
   ],
   providers: [],
