@@ -11,14 +11,17 @@ import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MapComponent } from './map/map.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+
+
+
+
     FilterComponent,
     FooterComponent,
+
       ListComponent,
       MapComponent
 
@@ -27,8 +30,10 @@ import { MapComponent } from './map/map.component';
     BrowserModule,
     NgbModule,
     FontAwesomeModule
+    ListComponent,
   ],
+  imports: [BrowserModule, NgbModule, FontAwesomeModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
