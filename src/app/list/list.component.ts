@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
+import { HostListener } from "@angular/core";
 
 @Component({
   selector: 'app-list',
@@ -8,6 +9,9 @@ import { faMap } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./list.component.css',],
 })
 export class ListComponent implements OnInit {
+  screenHeight: any;
+  screenWidth: any;
+  desktop = false;
   shownMap = false;
   shownList = true;
   faList = faList;
@@ -18,7 +22,11 @@ export class ListComponent implements OnInit {
   {name: 'LENININ PUISTO', location:'Vesilinnankatu'},
   {name: 'CAFE BRAHE', location:'Läntinen Brahenkatu 6'},
 ];
-  constructor() { }
+  constructor() { 
+    this.getScreenSize();
+
+    
+  }
 
   showMap() {
     this.shownMap = true;
@@ -28,7 +36,19 @@ export class ListComponent implements OnInit {
     this.shownList = true;
     this.shownMap = false;
   }
-
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+        this.screenHeight = window.innerHeight;
+        this.screenWidth = window.innerWidth;
+        if (this.screenWidth > 600) {
+          this.desktop = true;
+          this.shownMap = false;
+          this.shownList = true;
+        } else {
+          this.desktop = false;
+        }
+        
+  }
   ngOnInit(): void {
   }
 

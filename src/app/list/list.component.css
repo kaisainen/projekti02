@@ -15,3 +15,19 @@ img {
 .yellow {
   background-color: var(--yellow-bg-color);
 }
+
+
+@media only screen and (min-width: 426px) {
+.top {
+  display: none;
+  
+}
+.flex {
+  display: flex;
+}
+.map {
+  padding-left: 1rem;
+}
+
+}
+
