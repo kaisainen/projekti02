@@ -16,21 +16,11 @@ import { MapComponent } from './map/map.component';
     AppComponent,
     HeaderComponent,
 
-
-
-
     FilterComponent,
     FooterComponent,
 
-      ListComponent,
-      MapComponent
-
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    FontAwesomeModule
     ListComponent,
+    MapComponent,
   ],
   imports: [BrowserModule, NgbModule, FontAwesomeModule],
   providers: [],
