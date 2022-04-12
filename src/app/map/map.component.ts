@@ -60,6 +60,7 @@ export class MapComponent implements OnInit {
         console.log(
           `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
         );
+        //to not overload device cache
         if (position.coords.latitude === desLat) {
           navigator.geolocation.clearWatch(id);
         }
