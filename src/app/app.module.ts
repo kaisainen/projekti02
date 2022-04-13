@@ -10,20 +10,22 @@ import { FooterComponent } from './footer/footer.component';
 import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MapComponent } from './map/map.component';
+import { MarkerService } from './marker.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-
     FilterComponent,
     FooterComponent,
-
     ListComponent,
     MapComponent,
   ],
-  imports: [BrowserModule, NgbModule, FontAwesomeModule],
-  providers: [],
+  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule
+  ],
+  providers: [MarkerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
