@@ -78,10 +78,9 @@ export class MapService {
       );
       tiles.addTo(map);
 
-      //adds a marker of current location on the map
-      let marker = Leaflet.marker([lat, long]).addTo(map);
-
-      marker.bindPopup('<b>My location</b>').openPopup();
+      // adds a marker of current location on the map
+      // let marker = Leaflet.marker([lat, long]).addTo(map);
+      // marker.bindPopup('<b>My location</b>').openPopup();
     });
   }
 
