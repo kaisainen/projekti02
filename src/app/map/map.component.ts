@@ -1,3 +1,4 @@
+
 import { Component, AfterViewInit } from '@angular/core';
 import { MarkerService } from '../marker.service';
 import * as L from 'leaflet';
@@ -17,6 +18,11 @@ const iconDefault = L.icon({
   shadowSize: [41, 41]
 });
 L.Marker.prototype.options.icon = iconDefault;
+
+=======
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import * as Leaflet from 'leaflet';
+import { MapService } from '../map.service';
 
 
 @Component({
@@ -57,4 +63,13 @@ export class MapComponent implements AfterViewInit {
     this.markerService.makePlacesMarkers(this.map);
   }
 
+export class MapComponent implements OnInit {
+  private map: any;
+
+  constructor(private mapService: MapService) {}
+
+  ngOnInit(): void {
+    this.mapService.initMapByUserLocation(this.map, 15);
+    this.mapService.watchPosition();
+  }
 }

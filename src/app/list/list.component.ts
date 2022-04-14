@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
 import { HostListener } from "@angular/core";
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -16,16 +15,15 @@ export class ListComponent implements OnInit {
   shownList = true;
   faList = faList;
   faMap = faMap;
-  list = [{name: 'LINNANMÄKI', location:'Tivollikuja 1'},
-  {name: 'KULTTUURITALO', location:'Sturenkatu 4'},
-  {name: 'TYÖVÄENASUNTOMUSEO', location:'Kirstinkuja 4'},
-  {name: 'LENININ PUISTO', location:'Vesilinnankatu'},
-  {name: 'CAFE BRAHE', location:'Läntinen Brahenkatu 6'},
+  list = [{name: 'LINNANMÄKI', location:'Tivollikuja 1', distance: 777},
+  {name: 'KULTTUURITALO', location:'Sturenkatu 4', distance: 657},
+  {name: 'TYÖVÄENASUNTOMUSEO', location:'Kirstinkuja 4', distance: 747},
+  {name: 'LENININ PUISTO', location:'Vesilinnankatu', distance: 737},
+  {name: 'CAFE BRAHE', location:'Läntinen Brahenkatu 6', distance: 767},
 ];
   constructor() { 
     this.getScreenSize();
-
-    
+    this.list.sort((a, b) => (a.distance > b.distance) ? 1 : -1)
   }
 
   showMap() {
