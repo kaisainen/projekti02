@@ -12,11 +12,10 @@ export class MarkerService {
 
   
   makePlacesMarkers(map: L.Map): void {
-
-    this.http.get(this.places).subscribe((res: any) => {
-      for(const pl of res){
-      const lon = pl.location.lon;
-       const lat = pl.location.lat;
+    this.http.get(this.places).subscribe((response: any): void => {
+      for(const c of response){
+      const lon = c.location.lon;
+       const lat = c.location.lat;
         const marker = L.marker([lat, lon]);
       //  marker.bindPopup(this.popupService.makePlacePopup(p));
         marker.addTo(map);

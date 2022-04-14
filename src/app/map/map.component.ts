@@ -27,6 +27,7 @@ L.Marker.prototype.options.icon = iconDefault;
 export class MapComponent implements AfterViewInit {
 
   private map: any;
+  
   private initMap(): void {
     this.map = L.map('map').locate({setView: true, maxZoom: 12});
 
