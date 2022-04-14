@@ -20,11 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     FilterComponent,
     FooterComponent,
     ListComponent,
-    MapComponent,
+    MapComponent
   ],
   imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule
   ],
-  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [MarkerService],
   bootstrap: [AppComponent],
 })

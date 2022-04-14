@@ -28,15 +28,22 @@ L.Marker.prototype.options.icon = iconDefault;
 export class MapComponent implements AfterViewInit {
 
   private map: any;
-  
+  constructor(private markerService: MarkerService) { }
+
   private initMap(): void {
     this.map = L.map('map').locate({setView: true, maxZoom: 12});
 
   
-    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      minZoom: 3,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    const tiles =  L.tileLayer(
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWgtMjAiLCJhIjoiY2wxbTg0dWZyMGdlaTNqb2JhbXVqaG90aiJ9.P2rhaDNS3sVsqmeewBeQpQ',
+      {
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'your.mapbox.access.token',
     });
    
 
@@ -45,7 +52,6 @@ export class MapComponent implements AfterViewInit {
 
  
 
-  constructor(private markerService: MarkerService) { }
   ngAfterViewInit(): void {
     this.initMap();
     this.markerService.makeMyLocationMarker(this.map);
