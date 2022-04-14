@@ -30,9 +30,9 @@ export class MapService {
     let desLon = 0;
     let id = navigator.geolocation.watchPosition(
       (position) => {
-        console.log(
-          `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
-        );
+        // console.log(
+        //   `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
+        // );
         if (position.coords.latitude === desLat) {
           navigator.geolocation.clearWatch(id);
         }
@@ -58,9 +58,9 @@ export class MapService {
       const coords = position.coords;
       const lat = coords.latitude;
       const long = coords.longitude;
-      console.log(
-        `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
-      );
+      // console.log(
+      //   `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
+      // );
       // sets the map view based on current location
       if (!zoom) {
         zoom = 15;
@@ -79,7 +79,7 @@ export class MapService {
       tiles.addTo(map);
 
       // adds a marker of current location on the map
-      // let marker = Leaflet.marker([lat, long]).addTo(map);
+      // Leaflet.marker([lat, long]).addTo(map);
       // marker.bindPopup('<b>My location</b>').openPopup();
     });
   }

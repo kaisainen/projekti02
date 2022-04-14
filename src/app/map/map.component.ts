@@ -32,28 +32,29 @@ export class MapComponent implements AfterViewInit {
   ) {}
 
   ngAfterViewInit(): void {
-    this.mapService.initMapByUserLocation(this.map, 13);
+    // this.mapService.initMapByUserLocation(this.map, 13);
+    this.initMap();
     this.markerService.makeMyLocationMarker(this.map);
     this.markerService.makePlacesMarkers(this.map);
     this.mapService.watchPosition();
   }
 
-  // private initMap(): void {
-  //   this.map = L.map('map').locate({ setView: true, maxZoom: 12 });
+  private initMap(): void {
+    this.map = L.map('map').locate({ setView: true, maxZoom: 12 });
 
-  //   const tiles = L.tileLayer(
-  //     'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWgtMjAiLCJhIjoiY2wxbTg0dWZyMGdlaTNqb2JhbXVqaG90aiJ9.P2rhaDNS3sVsqmeewBeQpQ',
-  //     {
-  //       attribution:
-  //         'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  //       maxZoom: 18,
-  //       id: 'mapbox/streets-v11',
-  //       tileSize: 512,
-  //       zoomOffset: -1,
-  //       accessToken: 'your.mapbox.access.token',
-  //     }
-  //   );
+    const tiles = L.tileLayer(
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWgtMjAiLCJhIjoiY2wxbTg0dWZyMGdlaTNqb2JhbXVqaG90aiJ9.P2rhaDNS3sVsqmeewBeQpQ',
+      {
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'your.mapbox.access.token',
+      }
+    );
 
-  //   tiles.addTo(this.map);
-  // }
+    tiles.addTo(this.map);
+  }
 }
