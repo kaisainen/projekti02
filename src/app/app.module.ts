@@ -13,7 +13,6 @@ import { MapComponent } from './map/map.component';
 import { MarkerService } from './marker.service';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule
   ],
+  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [MarkerService],
   bootstrap: [AppComponent],
 })
