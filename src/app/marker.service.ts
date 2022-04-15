@@ -11,8 +11,8 @@ export class MarkerService {
   constructor(private http: HttpClient) {}
 
   makePlacesMarkers(map: L.Map): void {
-    this.http.get(this.places).subscribe((response: any): void => {
-      for (const c of response) {
+    this.http.get(this.places).subscribe((res: any) => {
+      for (const c of res) {
         const lon = c.location.lon;
         const lat = c.location.lat;
         const marker = L.marker([lat, lon]);
