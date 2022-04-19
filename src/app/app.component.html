@@ -1,7 +1,24 @@
 <section class="page-container">
   <app-header class="header"></app-header>
+
   <filter class="filter"></filter>
-  <app-list class="list"></app-list>
-  <p class="map"></p>
+
+  <div class="top" *ngIf="showTop">
+    <p (click)="showMap()">
+      Map
+      <fa-icon class="icon" [icon]="faMap"></fa-icon>
+    </p>
+    <p (click)="showList()">
+      List
+      <fa-icon class="icon" [icon]="faList"></fa-icon>
+    </p>
+  </div>
+
+  <app-list class="list" *ngIf="shownList"></app-list>
+
+  <div class="map" *ngIf="shownMap || desktop">
+    <app-map></app-map>
+  </div>
+
   <app-footer class="footer"></app-footer>
 </section>

@@ -4,10 +4,9 @@
 .filter {
   grid-area: filter;
 }
-/* .map {
+.map {
   grid-area: map;
-  background-color: red;
-} */
+}
 .list {
   grid-area: list;
 }
@@ -21,28 +20,45 @@
   grid-template-areas:
     "header"
     "filter"
+    "top"
     "list"
     "footer";
 }
+.top {
+  grid-area: top;
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.top > * {
+  flex: 1;
+  padding-left: 4rem;
+  margin: 0;
+}
+.icon {
+  padding-left: 0.5rem;
+}
+
 @media only screen and (min-width: 429px) {
   .page-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "header header"
-      "filter ."
-      "list ."
+      "filter filter"
+      "list map"
       "footer footer";
   }
 }
 @media only screen and (min-width: 769px) {
   .page-container {
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "header header header"
-      "filter . ."
-      "list . ."
+      "filter filter filter"
+      "list list map"
       "footer footer footer";
   }
 }
