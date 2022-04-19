@@ -7,7 +7,7 @@ export class MapService {
   constructor() {}
 
   // gets user's current location and returns the coordinates as a list/array.
-  // To use this function in a component, import the service and call it by this.servicename.getMyLocation().
+  // To use this function in a component, import the service and call it by this.servicename.getMyLocation()
   getMyLocation() {
     if (!navigator.geolocation) {
       console.log('location is not supported');
