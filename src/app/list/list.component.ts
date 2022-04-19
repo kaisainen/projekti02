@@ -4,8 +4,8 @@ import { faMap } from '@fortawesome/free-solid-svg-icons';
 import { HostListener } from '@angular/core';
 import { MapService } from '../map.service';
 import { Places } from "./places";
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import {JsonService} from '../json.service';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -13,7 +13,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListComponent implements OnInit {
   places: Places[] = [];
-  place: string = '../../assets/places.json';
   screenHeight: any;
   screenWidth: any;
   desktop = false;
@@ -23,13 +22,10 @@ export class ListComponent implements OnInit {
   faMap = faMap;
   mapService = new MapService();
   
-  constructor(private http: HttpClient) {
+  constructor(private jsonService: JsonService) {
   }
-  getPlaces():Observable<Places> {
-    return this.http.get<Places>(this.place);
-  }
-  getPlace(): void {
-    this.getPlaces().subscribe((res: Places) => {
+  getPlaces(): void {
+    this.jsonService.getPlaces().subscribe((res: Places) => {
       this.places.push(res);
     });
   }
@@ -57,9 +53,11 @@ export class ListComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    this.getPlace();
+    this.getPlaces();
     this.getScreenSize();
     // this.list.sort((a, b) => (a.distance > b.distance) ? 1 : -1)
   }
+
+  
 
 }
