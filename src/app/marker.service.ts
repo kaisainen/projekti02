@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as L from 'leaflet';
+import { PopupService } from './popup.service';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import * as L from 'leaflet';
 export class MarkerService {
   places: string = './assets/test.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private popupService: PopupService) {}
 
   makePlacesMarkers(map: L.Map): void {
     this.http.get(this.places).subscribe((res: any) => {
@@ -16,7 +17,7 @@ export class MarkerService {
         const lon = c.location.lon;
         const lat = c.location.lat;
         const marker = L.marker([lat, lon]);
-        // marker.bindPopup(this.popupService.makePlacePopup(p));
+         marker.bindPopup(this.popupService.makePlacesPopup(c));
         marker.addTo(map);
       }
     });
@@ -31,7 +32,7 @@ export class MarkerService {
 
       marker.setStyle({ color: 'blue' });
 
-      // marker.bindPopup(this.popupService.makeCurrentLocPopup());
+      marker.bindPopup(this.popupService.makeCurrentLocationPopup());
 
       marker.addTo(map);
     });
