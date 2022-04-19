@@ -28,10 +28,12 @@ export class AppComponent implements OnInit {
   showMap() {
     this.shownMap = true;
     this.shownList = false;
+    console.log(this.shownMap);
   }
   showList() {
     this.shownList = true;
     this.shownMap = false;
+    console.log(this.shownMap);
   }
   @HostListener('window:resize', ['$event'])
   getScreenSize() {

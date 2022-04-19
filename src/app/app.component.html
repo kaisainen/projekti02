@@ -16,9 +16,7 @@
 
   <app-list class="list" *ngIf="shownList"></app-list>
 
-  <div class="map" *ngIf="shownMap || desktop">
-    <app-map></app-map>
-  </div>
+  <app-map class="map" *ngIf="shownMap || desktop"></app-map>
 
   <app-footer class="footer"></app-footer>
 </section>
