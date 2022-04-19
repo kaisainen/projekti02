@@ -6,7 +6,7 @@ import * as L from 'leaflet';
   providedIn: 'root',
 })
 export class MarkerService {
-  places: string = './assets/places.json';
+  places: string = './assets/test.json';
 
   constructor(private http: HttpClient) {}
 
