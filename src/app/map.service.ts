@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import * as Leaflet from 'leaflet';
+import { MarkerService } from './marker.service';
+import { PopupService } from './popup.service';
 
 @Injectable({
   providedIn: 'root',
@@ -8,16 +11,16 @@ export class MapService {
 
   // gets user's current location and returns the coordinates as a list/array.
   // To use this function in a component, import the service and call it by this.servicename.getMyLocation()
-  getMyLocation() {
+  getMyLocation(): any {
     if (!navigator.geolocation) {
       console.log('location is not supported');
     }
     navigator.geolocation.getCurrentPosition((position) => {
       const coords = position.coords;
       const latLong = [coords.latitude, coords.longitude];
-      console.log(
-        `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
-      );
+      // console.log(
+      //   `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
+      // );
       return latLong;
     });
   }
