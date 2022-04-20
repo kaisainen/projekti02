@@ -12,7 +12,7 @@
                 {{ data.location.address.locality }}
               </p>
               {{ data.description.body }}
-              {{ data.description.images }}
+              <img *ngFor="let img of data.description.images, let i = index" src="{{data.description.images[i].url}}" alt="">
             </ng-template>
           </ngb-panel>
         </ngb-accordion>
