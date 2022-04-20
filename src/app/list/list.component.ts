@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faList } from '@fortawesome/free-solid-svg-icons';
-import { faMap } from '@fortawesome/free-solid-svg-icons';
-import { HostListener } from '@angular/core';
 import { MapService } from '../map.service';
 import { Places } from './places';
 import { JsonService } from '../json.service';
@@ -15,9 +12,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListComponent implements OnInit {
   places: Places[] = [];
-  mapService = new MapService();
+  // mapService = new MapService();
 
-  constructor(private jsonService: JsonService) {}
+  constructor(
+    private jsonService: JsonService,
+    private mapService: MapService
+  ) {}
   getPlaces(): void {
     this.jsonService.getPlaces().subscribe((res: Places) => {
       this.places.push(res);
