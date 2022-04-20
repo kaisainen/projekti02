@@ -34,14 +34,26 @@ export class MarkerService {
 
   // Reads data from jsonservice
   makePlacesMarkers(map: L.Map) {
-    this.jsonService.getPlaces().subscribe((res: Places) => {
-      for (const c of res.data) {
-        const lon = c.location.lon;
-        const lat = c.location.lat;
-        const marker = L.marker([lat, lon]);
-        marker.bindPopup(this.popupService.makePlacesPopup(c));
-        marker.addTo(map);
-      }
+    navigator.geolocation.getCurrentPosition((position) => {
+      const currentLat = position.coords.latitude;
+      const currentLon = position.coords.longitude;
+
+      this.jsonService.getPlaces().subscribe((res: Places) => {
+        for (const c of res.data) {
+          const lon = c.location.lon;
+          const lat = c.location.lat;
+          const marker = L.marker([lat, lon]);
+          //this is just testing
+          const distance = this.getDistance(
+            [currentLat, currentLon],
+            [lat, lon]
+          );
+          console.log(c.name.en + ':' + distance);
+          //above is for testing
+          marker.bindPopup(this.popupService.makePlacesPopup(c));
+          marker.addTo(map);
+        }
+      });
     });
   }
 
@@ -51,13 +63,36 @@ export class MarkerService {
 
       const currentLon = position.coords.longitude;
 
-      const marker = L.circleMarker([currentLat, currentLon]);
+      const currentLocationMarker = L.circleMarker([currentLat, currentLon]);
 
-      marker.setStyle({ color: 'red' });
+      currentLocationMarker.setStyle({ color: 'red' });
 
-      marker.bindPopup(this.popupService.makeCurrentLocationPopup());
+      currentLocationMarker.bindPopup(
+        this.popupService.makeCurrentLocationPopup()
+      );
 
-      marker.addTo(map);
+      currentLocationMarker.addTo(map);
     });
+  }
+
+  getDistance(origin: any, destination: any) {
+    var lon1 = this.toRadian(origin[1]),
+      lat1 = this.toRadian(origin[0]),
+      lon2 = this.toRadian(destination[1]),
+      lat2 = this.toRadian(destination[0]);
+
+    var deltaLat = lat2 - lat1;
+    var deltaLon = lon2 - lon1;
+
+    var a =
+      Math.pow(Math.sin(deltaLat / 2), 2) +
+      Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon / 2), 2);
+    var c = 2 * Math.asin(Math.sqrt(a));
+    var EARTH_RADIUS = 6371;
+    return c * EARTH_RADIUS * 1000;
+  }
+
+  toRadian(degree: number) {
+    return (degree * Math.PI) / 180;
   }
 }
