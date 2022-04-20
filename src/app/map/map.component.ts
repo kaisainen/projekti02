@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { MarkerService } from '../marker.service';
 import * as L from 'leaflet';
-
+import { MapService } from '../map.service';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -14,11 +14,9 @@ const iconDefault = L.icon({
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   tooltipAnchor: [16, -28],
-  shadowSize: [41, 41]
+  shadowSize: [41, 41],
 });
 L.Marker.prototype.options.icon = iconDefault;
-
-
 
 @Component({
   selector: 'app-map',
@@ -28,11 +26,15 @@ L.Marker.prototype.options.icon = iconDefault;
 export class MapComponent implements AfterViewInit {
   private map: any;
 
-  constructor(private markerService: MarkerService) { }
+  constructor(
+    private mapService: MapService,
+    private markerService: MarkerService
+  ) {}
 
   private initMap(): void {
-    this.map = L.map('map').locate({setView: true, maxZoom: 12});
-    const tiles =  L.tileLayer(
+    this.map = L.map('map').locate({ setView: true, maxZoom: 14 });
+
+    const tiles = L.tileLayer(
       'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWgtMjAiLCJhIjoiY2wxbTg0dWZyMGdlaTNqb2JhbXVqaG90aiJ9.P2rhaDNS3sVsqmeewBeQpQ',
       {
         attribution:
@@ -42,19 +44,15 @@ export class MapComponent implements AfterViewInit {
         tileSize: 512,
         zoomOffset: -1,
         accessToken: 'your.mapbox.access.token',
-    });
-   
+      }
+    );
 
     tiles.addTo(this.map);
   }
 
- 
-
   ngAfterViewInit(): void {
     this.initMap();
-  this.markerService.makeMyLocationMarker(this.map);
-  this.markerService.makePlacesMarkers(this.map);
-
+    this.markerService.makeMyLocationMarker(this.map);
+    this.markerService.makePlacesMarkers(this.map);
   }
-
 }
