@@ -5,14 +5,21 @@
 }
 @media only screen and (min-width: 429px) {
   .map {
-    height: 60vh;
-    width: 60vh;
+    height: 350px;
+    width: 350px;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .map {
-    height: 80vh;
-    width: 80vh;
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .map {
+    height: 600px;
+    width: 600px;
   }
 }
