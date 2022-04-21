@@ -10,6 +10,8 @@ import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MapComponent } from './map/map.component';
 import { MarkerService } from './marker.service';
+import { AppRoutingModule } from './app-routing.module';
+import { PlaceDetailComponent } from './place-detail/place-detail.component';
 
 
 @NgModule({
@@ -19,9 +21,10 @@ import { MarkerService } from './marker.service';
     FilterComponent,
     FooterComponent,
     ListComponent,
-    MapComponent
+    MapComponent,
+    PlaceDetailComponent
   ],
-  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule
+  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule, AppRoutingModule
   ],
   providers: [MarkerService],
   bootstrap: [AppComponent],

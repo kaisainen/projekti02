@@ -9,8 +9,12 @@ export class PopupService {
 
   makePlacesPopup(data: any): string { 
     return `` +
-    `<div> ${ data.name.fi }</div>` 
-  //  `<div> ${ data.address.street_address }</div>`
+    `
+    <h4><a href=${'/place-detail/' + data.id }">${data.name.fi} </a></h4>
+
+   
+   ` 
+  //  ` <div> ${ data.address.street_address }</div>`
   }
   makeCurrentLocationPopup(): string {
   return  `` +
