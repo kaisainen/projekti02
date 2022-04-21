@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as L from 'leaflet';
+import { Observable } from 'rxjs';
 import { JsonService } from './json.service';
 import { Datum, Places } from './list/places';
 import { PopupService } from './popup.service';
@@ -109,5 +110,10 @@ export class MarkerService {
 
   toRadian(degree: number) {
     return (degree * Math.PI) / 180;
+  }
+
+  public getPlace(id:any):Observable<any>{
+    const place = this.http.get('assets/places/' + id + '.json');
+    return place;
   }
 }

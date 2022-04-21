@@ -1,7 +1,9 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { MarkerService } from '../marker.service';
 import * as L from 'leaflet';
 import { MapService } from '../map.service';
+import { Places } from '../list/places';
+
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -23,13 +25,16 @@ L.Marker.prototype.options.icon = iconDefault;
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css'],
 })
-export class MapComponent implements AfterViewInit {
+export class MapComponent implements AfterViewInit, OnInit {
   private map: any;
+  places: Places[] = [];
 
   constructor(
     private mapService: MapService,
     private markerService: MarkerService
   ) {}
+  ngOnInit(): void {
+  }
 
   private initMap(): void {
     this.map = L.map('map').locate({ setView: true, maxZoom: 15 });
@@ -55,4 +60,5 @@ export class MapComponent implements AfterViewInit {
     this.markerService.makeMyLocationMarker(this.map);
     this.markerService.makePlacesMarkers(this.map);
   }
+
 }
