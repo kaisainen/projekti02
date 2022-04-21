@@ -6,8 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  
-  { path: 'map', component: MapComponent },
+  { path: '', redirectTo: 'map', pathMatch: 'full' },
   { path: 'place-detail/:id', component: PlaceDetailComponent},
  ];
 

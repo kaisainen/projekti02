@@ -10,7 +10,7 @@ export class PopupService {
   makePlacesPopup(data: any): string { 
     return `` +
     `
-    <h4><a href=${'/place-detail/' + data.id }">${data.name.fi} </a></h4>
+    <h4><a  href="${'/place-detail/' + data.id }">${data.name.fi} </a></h4>
 
    
    ` 

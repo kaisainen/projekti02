@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { faCheck, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { switchMap } from 'rxjs/operators';
+import { Places } from '../list/places';
 import { MarkerService } from '../marker.service';
 
 @Component({
@@ -9,9 +11,9 @@ import { MarkerService } from '../marker.service';
   styleUrls: ['./place-detail.component.css']
 })
 export class PlaceDetailComponent implements OnInit {
+  places: Places[] = [];
 
   placeId: any;
-  places: any;
   faCheck = faCheck;
   faMinus = faMinus;
   newImageString: string = '';
@@ -21,20 +23,25 @@ export class PlaceDetailComponent implements OnInit {
     private markerService: MarkerService) { }
 
   ngOnInit(): void {
-   // this.getPlace();
+   this.getPlace();
   }
 
-  /*getPlace(): void {
-    this.placeId = this.route.snapshot.params['id'];
-    this.route.params.subscribe((params) => {
-      this.placeId = params['id'];
-    });
-    this.markerService.getPlace(this.placeId).subscribe((data: any) => {
-      this.places = data.id;
-    })
-    
-  }*/
+  getPlace(): void {
+    this.route.paramMap.pipe(switchMap(params => {
+      this.placeId = params.get('id');
 
+      return this.markerService.getPlace(this.placeId)
+    })
+    ).subscribe(data => {
+      if (data.id == this.placeId) {
+
+        this.places = data;
+        console.log(this.places);
+      }
+
+     
+    })
+  }
 
   changeImg(event: any) {
     this.newImageString = event.target.getAttribute('src');

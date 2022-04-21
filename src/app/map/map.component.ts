@@ -34,7 +34,6 @@ export class MapComponent implements AfterViewInit, OnInit {
     private markerService: MarkerService
   ) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   private initMap(): void {
