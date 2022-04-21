@@ -44,11 +44,11 @@ export class MarkerService {
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
           //this is just testing
-          const distance = this.getDistance(
-            [currentLat, currentLon],
-            [lat, lon]
-          );
-          console.log(c.name.en + ':' + distance);
+          // const distance = this.getDistance(
+          //   [currentLat, currentLon],
+          //   [lat, lon]
+          // );
+          // console.log(c.name.en + ':' + distance);
           //above is for testing
           marker.bindPopup(this.popupService.makePlacesPopup(c));
           marker.addTo(map);
@@ -72,6 +72,21 @@ export class MarkerService {
       );
 
       currentLocationMarker.addTo(map);
+    });
+  }
+
+  // in progress, not yet tested
+  getAllDistances(listOfItems: any) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const currentLat = position.coords.latitude;
+      const currentLon = position.coords.longitude;
+
+      for (const item of listOfItems.data) {
+        const lon = item.location.lon;
+        const lat = item.location.lat;
+        const distance = this.getDistance([currentLat, currentLon], [lat, lon]);
+        console.log(item.name.en + ':' + distance);
+      }
     });
   }
 
