@@ -45,11 +45,11 @@ export class MarkerService {
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
           //this is just testing
-          // const distance = this.getDistance(
-          //   [currentLat, currentLon],
-          //   [lat, lon]
-          // );
-          // console.log(c.name.en + ':' + distance);
+          const distance = this.getDistance(
+            [currentLat, currentLon],
+            [lat, lon]
+          );
+          console.log(c.name.en + ':' + distance);
           //above is for testing
           marker.bindPopup(this.popupService.makePlacesPopup(c));
           marker.addTo(map);
@@ -112,7 +112,7 @@ export class MarkerService {
     return (degree * Math.PI) / 180;
   }
 
-  public getPlace(id:any):Observable<any>{
+  public getPlace(id: any): Observable<any> {
     const place = this.http.get('assets/places/' + id + '.json');
     return place;
   }
