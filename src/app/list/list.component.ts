@@ -51,6 +51,7 @@ export class ListComponent implements OnInit {
     var c = 2 * Math.asin(Math.sqrt(a));
     var EARTH_RADIUS = 6371;
     var distance = c * EARTH_RADIUS * 1000;
+    // if distance is more than a kilometer, the results will show in kilometers. Else results will show in meters.
     if (distance > 1000) {
       return (distance / 1000).toFixed(1) + ' km';
     }
