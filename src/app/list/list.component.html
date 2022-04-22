@@ -6,24 +6,40 @@
           <div *ngFor="let data of place.data"></div>
           <ngb-panel title="{{ data.name.fi }}">
             <ng-template ngbPanelContent>
-              <p style="font-weight: bold">
+              <!-- <p style="font-weight: bold">
                 {{ data.location.address.street_address }}
                 {{ data.location.address.postal_code }}
                 {{ data.location.address.locality }}
-              </p>
-              {{ data.description.body }}
+              </p> -->
+              <!-- {{ data.description.body }} -->
               <!-- Kommentti: seuraava div näyttää etäisyyden ainoastaan listan ensimmäisessä paikassa mutta ei muissa, vielä kehitteillä -->
               <div>
-              <hr>
-              <p>Distance to this place:</p>
-              <p id="distance"> {{getDistance(data.location.lat, data.location.lon)}} </p>
+                <hr />
+                <p>Distance to this place:</p>
+                <p id="distance">
+                  {{
+                    getDistanceV1(userCoordinates, [
+                      data.location.lat,
+                      data.location.lon
+                    ])
+                  }}
+                </p>
               </div>
               <!-- Kommentti: seuraavassa div'issä esitetään koeluonteisesti paikan koordinaatit -->
-              <div>
-                <p>Test content: latitude of this place = {{ data.location.lat }}</p>
-                <p>Test content: longitude of this place = {{ data.location.lon }}</p>
-              </div>
-              <img *ngFor="let img of data.description.images, let i = index" src="{{data.description.images[i].url}}" alt="">
+              <!-- <div>
+                <p>
+                  Test content: latitude of this place = {{ data.location.lat }}
+                </p>
+                <p>
+                  Test content: longitude of this place =
+                  {{ data.location.lon }}
+                </p>
+              </div> -->
+              <!-- <img
+                *ngFor="let img of data.description.images; let i = index"
+                src="{{ data.description.images[i].url }}"
+                alt=""
+              /> -->
             </ng-template>
           </ngb-panel>
         </ngb-accordion>
