@@ -4,13 +4,13 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
-  background-color: var(--turquoise-bg-color);
+  background-color: #A1B5D8;
   padding: 6px;
   font-family: var(--main-font);
 }
 .filter-title {
   font-size: 20px;
-  background-color: var(--turquoise-bg-color);
+  background-color: #A1B5D8;
   border: none;
 }
 .tag-container {
@@ -18,10 +18,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px 10px 0 10px;
-  background-color: var(--turquoise-bg-color);
+  background-color: #A1B5D8;
 }
 .tag {
-  background-color: var(--turquoise-bg-color);
+  background-color: #A1B5D8;
   border: solid black 1px;
   border-radius: 17px;
   padding: 5px 10px;
@@ -34,7 +34,7 @@
 .main-filters-container {
   display: flex;
   flex-direction: column;
-  background-color: var(--turquoise-bg-color);
+  background-color: #A1B5D8;
   width: 50%;
   font-family: var(--main-font);
   font-size: 16px;

@@ -40,6 +40,9 @@
 .icon {
   padding-left: 0.5rem;
 }
+.lightblue {
+  background-color: lightblue;
+}
 
 @media only screen and (min-width: 429px) {
   .page-container {
