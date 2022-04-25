@@ -1,6 +1,7 @@
 footer {
-  background-color: var(--orange-bg-color);
+  background-color: #abcedb;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  line-height: 0.5rem;
 }

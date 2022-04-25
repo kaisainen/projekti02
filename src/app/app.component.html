@@ -4,11 +4,11 @@
     <filter class="filter"></filter>
 
     <div class="top" *ngIf="showTop">
-        <p (click)="showMap()">
+        <p [ngClass] ="{'lightblue':shownMap}" (click)="showMap()">
             Map
             <fa-icon class="icon" [icon]="faMap"></fa-icon>
         </p>
-        <p (click)="showList()">
+        <p [ngClass] ="{'lightblue':shownList}" (click)="showList()">
             List
             <fa-icon class="icon" [icon]="faList"></fa-icon>
         </p>
