@@ -1,4 +1,3 @@
-<button (click)="sortResults()">Sort</button>
 <div class="flex">
   <div class="list">
     <div *ngFor="let place of places">
@@ -20,18 +19,20 @@
                 {{ data.location.address.locality }}
               </p>
               <p>
-              {{ data.description.body }}
-            </p>
-            <p>
-              <a href="{{ data.info_url }}"target="_blank">{{ data.info_url}}</a>
-            </p>
-            Tags:
-              <p id="tags" *ngFor="let tag of data.tags">{{tag.name}}</p>
+                {{ data.description.body }}
+              </p>
+              <p>
+                <a href="{{ data.info_url }}" target="_blank">{{
+                  data.info_url
+                }}</a>
+              </p>
+              Tags:
+              <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
               <img
                 *ngFor="let img of data.description.images; let i = index"
                 src="{{ data.description.images[i].url }}"
                 alt=""
-              /> 
+              />
               <!-- Kommentti: seuraava div näyttää etäisyyden ainoastaan listan ensimmäisessä paikassa mutta ei muissa, vielä kehitteillä -->
               <!-- Kommentti: seuraavassa div'issä esitetään koeluonteisesti paikan koordinaatit -->
               <!-- <div>
@@ -42,11 +43,11 @@
                   Test content: longitude of this place =
                   {{ data.location.lon }}
                 </p>
-              </div> --> 
+              </div> -->
             </ng-template>
           </ngb-panel>
-           <!-- Custom header below -->
-            <!-- <ngb-panel>
+          <!-- Custom header below -->
+          <!-- <ngb-panel>
             <ng-template  ngbPanelHeader >
               <button  ngbPanelToggle class="accordion-button">
                   <p id="name">{{ data.name.fi }}</p>
