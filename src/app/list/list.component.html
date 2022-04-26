@@ -1,17 +1,10 @@
 <div class="flex">
   <div class="list">
     <div *ngFor="let place of places">
-      <div *ngFor="let data of place.data | slice: 0:10">
+      <div *ngFor="let data of place.data | slice: 0:50">
         <ngb-accordion #acc="ngbAccordion">
           <div *ngFor="let data of place.data"></div>
-          <ngb-panel
-            title="{{ data.name.fi }} {{
-              getDistanceV1(userCoordinates, [
-                data.location.lat,
-                data.location.lon
-              ])
-            }}"
-          >
+          <ngb-panel title="{{ data.name.fi }} {{ showDistance(data) }}">
             <ng-template ngbPanelContent>
               <p style="font-weight: bold">
                 {{ data.location.address.street_address }}

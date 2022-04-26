@@ -54,15 +54,20 @@ export class ListComponent implements OnInit {
       Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon / 2), 2);
     var c = 2 * Math.asin(Math.sqrt(a));
     var EARTH_RADIUS = 6371;
-    var distance = c * EARTH_RADIUS * 1000;
-    // if distance is more than a kilometer, the results will show in kilometers. Else results will show in meters.
-    // if (distance > 1000) {
-    //   return (distance / 1000).toFixed(1) + ' km';
-    // }
-    return c * EARTH_RADIUS;
+    var distance = c * EARTH_RADIUS;
+    return distance;
   }
 
   toRadian(degree: number) {
     return (degree * Math.PI) / 180;
+  }
+
+  showDistance(place: any) {
+    let distance = place.distance * 1000;
+    if (distance < 1000) {
+      return distance.toFixed(0) + ' m';
+    }
+    distance = place.distance;
+    return distance.toFixed(1) + ' km';
   }
 }
