@@ -1,12 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MapService } from '../map.service';
 import { Places } from './places';
 import { JsonService } from '../json.service';
-
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { LatLng } from 'leaflet';
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -22,10 +16,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getUserLocation();
     this.getPlaces();
-
-    // this.list.sort((a, b) => (a.distance > b.distance) ? 1 : -1)
   }
-
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
       const userLat = position.coords.latitude;
@@ -35,15 +26,18 @@ export class ListComponent implements OnInit {
     });
   }
 
+  // gets places and sorts them ascending by distance to user
   getPlaces(): void {
     this.jsonService.getPlaces().subscribe((res: Places) => {
       this.places.push(res);
+      // here we set the distance to user for each place (the Places interface is updated with this new property).
       for (let place of this.places[0].data) {
         place.distance = this.getDistanceV1(this.userCoordinates, [
           place.location.lat,
           place.location.lon,
         ]);
       }
+      this.places[0].data.sort((a, b) => a.distance - b.distance);
     });
   }
 
@@ -53,10 +47,8 @@ export class ListComponent implements OnInit {
       lat1 = this.toRadian(origin[0]),
       lon2 = this.toRadian(destination[1]),
       lat2 = this.toRadian(destination[0]);
-
     var deltaLat = lat2 - lat1;
     var deltaLon = lon2 - lon1;
-
     var a =
       Math.pow(Math.sin(deltaLat / 2), 2) +
       Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(deltaLon / 2), 2);
@@ -72,9 +64,5 @@ export class ListComponent implements OnInit {
 
   toRadian(degree: number) {
     return (degree * Math.PI) / 180;
-  }
-
-  sortResults() {
-    this.places[0].data.sort((a, b) => a.distance - b.distance);
   }
 }
