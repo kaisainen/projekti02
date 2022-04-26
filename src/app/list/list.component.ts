@@ -68,6 +68,6 @@ export class ListComponent implements OnInit {
       return distance.toFixed(0) + ' m';
     }
     distance = place.distance;
-    return distance.toFixed(1) + ' km';
+    return distance.toFixed(2) + ' km';
   }
 }
