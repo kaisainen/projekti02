@@ -1,11 +1,18 @@
+<button (click)="sortResults()">Sort</button>
 <div class="flex">
   <div class="list">
     <div *ngFor="let place of places">
       <div *ngFor="let data of place.data | slice: 0:10">
         <ngb-accordion #acc="ngbAccordion">
           <div *ngFor="let data of place.data"></div>
-           <ngb-panel
-            title="{{ data.name.fi }} {{ getDistanceV1(userCoordinates, [data.location.lat,data.location.lon]) }}">
+          <ngb-panel
+            title="{{ data.name.fi }} {{
+              getDistanceV1(userCoordinates, [
+                data.location.lat,
+                data.location.lon
+              ])
+            }}"
+          >
             <ng-template ngbPanelContent>
               <p style="font-weight: bold">
                 {{ data.location.address.street_address }}
@@ -13,35 +20,24 @@
                 {{ data.location.address.locality }}
               </p>
               {{ data.description.body }}
-              <img
+              <!-- Kommentti: seuraava div näyttää etäisyyden ainoastaan listan ensimmäisessä paikassa mutta ei muissa, vielä kehitteillä -->
+              <!-- Kommentti: seuraavassa div'issä esitetään koeluonteisesti paikan koordinaatit -->
+              <!-- <div>
+                <p>
+                  Test content: latitude of this place = {{ data.location.lat }}
+                </p>
+                <p>
+                  Test content: longitude of this place =
+                  {{ data.location.lon }}
+                </p>
+              </div> -->
+              <!-- <img
                 *ngFor="let img of data.description.images; let i = index"
                 src="{{ data.description.images[i].url }}"
                 alt=""
-              />
+              /> -->
             </ng-template>
-          </ngb-panel> 
-          <!-- Custom header below -->
-            <!-- <ngb-panel>
-            <ng-template  ngbPanelHeader >
-              <button  ngbPanelToggle class="accordion-button">
-                  <p id="name">{{ data.name.fi }}</p>
-                  <p id="km">{{ getDistanceV1(userCoordinates, [data.location.lat,data.location.lon]) }}</p>
-              </button>
-            </ng-template>
-            <ng-template ngbPanelContent>
-              <p style="font-weight: bold">
-                {{ data.location.address.street_address }}
-                {{ data.location.address.postal_code }}
-                {{ data.location.address.locality }}
-              </p>
-              {{ data.description.body }}
-              <img
-                *ngFor="let img of data.description.images; let i = index"
-                src="{{ data.description.images[i].url }}"
-                alt=""
-              />
-            </ng-template>
-          </ngb-panel>  -->
+          </ngb-panel>
         </ngb-accordion>
       </div>
     </div>
