@@ -43,7 +43,6 @@
 .lightblue {
   background-color: lightblue;
 }
-
 @media only screen and (min-width: 429px) {
   .page-container {
     grid-template-columns: 1.5fr 1fr;
@@ -64,5 +63,15 @@
       "filter filter filter"
       "list list map"
       "footer footer footer";
+      
+  }
+  @media only screen and (min-width: 1400px) {
+    .page-container {
+    background-image: url(../assets/helsinki.jpg);
+  }
+  .map {
+    position: relative;
+    right: 300px;
+  }
   }
 }

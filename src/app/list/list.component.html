@@ -4,7 +4,7 @@
       <div *ngFor="let data of place.data | slice: 0:10">
         <ngb-accordion #acc="ngbAccordion">
           <div *ngFor="let data of place.data"></div>
-          <ngb-panel
+           <ngb-panel
             title="{{ data.name.fi }} {{ getDistanceV1(userCoordinates, [data.location.lat,data.location.lon]) }}">
             <ng-template ngbPanelContent>
               <p style="font-weight: bold">
@@ -19,28 +19,29 @@
                 alt=""
               />
             </ng-template>
-          </ngb-panel>
+          </ngb-panel> 
           <!-- Custom header below -->
-          <!-- <ngb-panel>
-            <ng-template ngbPanelHeader>
-              <button ngbPanelToggle class="accordion-button">
+            <!-- <ngb-panel>
+            <ng-template  ngbPanelHeader >
+              <button  ngbPanelToggle class="accordion-button">
                   <p id="name">{{ data.name.fi }}</p>
                   <p id="km">{{ getDistanceV1(userCoordinates, [data.location.lat,data.location.lon]) }}</p>
               </button>
             </ng-template>
             <ng-template ngbPanelContent>
-              Anim pariatur cliche reprehenderit, enim eiusmod high life
-              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
-              cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-              laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-              on it squid single-origin coffee nulla assumenda shoreditch et.
-              Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-              nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
-              lomo. Leggings occaecat craft beer farm-to-table, raw denim
-              aesthetic synth nesciunt you probably haven't heard of them
-              accusamus labore sustainable VHS.
+              <p style="font-weight: bold">
+                {{ data.location.address.street_address }}
+                {{ data.location.address.postal_code }}
+                {{ data.location.address.locality }}
+              </p>
+              {{ data.description.body }}
+              <img
+                *ngFor="let img of data.description.images; let i = index"
+                src="{{ data.description.images[i].url }}"
+                alt=""
+              />
             </ng-template>
-          </ngb-panel> -->
+          </ngb-panel>  -->
         </ngb-accordion>
       </div>
     </div>

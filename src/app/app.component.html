@@ -13,10 +13,10 @@
             <fa-icon class="icon" [icon]="faList"></fa-icon>
         </p>
     </div>
-
+  
     <app-list class="list" *ngIf="shownList"></app-list>
-
     <app-map class="map" *ngIf="shownMap || desktop"></app-map>
+    
     <app-footer class="footer"></app-footer>
     <router-outlet></router-outlet>
 
