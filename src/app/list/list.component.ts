@@ -15,7 +15,6 @@ export class ListComponent implements OnInit {
   places: Places[] = [];
   km: any;
   userCoordinates: number[] = [];
-  // mapService = new MapService();
 
   constructor(
     private jsonService: JsonService,

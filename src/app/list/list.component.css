@@ -2,3 +2,15 @@ img {
   max-width: 100%;
   padding: 1rem;
 }
+
+
+@media only screen and (min-width: 1400px) {
+  .list {
+    width: 350px;
+    position: relative;
+    left: 275px;
+  }
+  .panel {
+    height: 150px;
+  }
+}
