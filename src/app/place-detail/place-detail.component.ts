@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { ActivatedRoute } from '@angular/router';
-import { faCheck, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { switchMap } from 'rxjs/operators';
+import { JsonService } from '../json.service';
 import { Places } from '../list/places';
 import { MarkerService } from '../marker.service';
 
@@ -12,18 +14,40 @@ import { MarkerService } from '../marker.service';
 })
 export class PlaceDetailComponent implements OnInit {
   places: Places[] = [];
-
+  address!: String;
+  postalCode!: String; 
+  locality!: String;
+  name!: string;
+  fi!: string;
+  info_url!: string;
   placeId: any;
-  faCheck = faCheck;
-  faMinus = faMinus;
-  newImageString: string = '';
-  link: string = '';
+  intro!: string;
+  images!: string;
+  tags!: string;
+  
 
-  constructor(private route: ActivatedRoute, 
-    private markerService: MarkerService) { }
+  @ViewChild('templateBottomSheet') TemplateBottomSheet!: TemplateRef<any>;
+
+  constructor(private bottomSheet: MatBottomSheet, 
+   private markerService: MarkerService,
+    private jsonService: JsonService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-   this.getPlace();
+  //this.getPlace();
+  }
+  getPlaces(): void {
+    this.markerService.getPlaces().subscribe((res: Places) => {
+      this.places.push(res);
+    });
+  }
+  
+  openTemplateSheetMenu() {
+    this.bottomSheet.open(this.TemplateBottomSheet);
+  }
+
+  closeTemplateSheetMenu() {
+    this.bottomSheet.dismiss();
   }
 
   getPlace(): void {
@@ -41,10 +65,5 @@ export class PlaceDetailComponent implements OnInit {
 
      
     })
-  }
-
-  changeImg(event: any) {
-    this.newImageString = event.target.getAttribute('src');
-    document.getElementById('view-img')?.setAttribute('src', this.newImageString);
   }
 }

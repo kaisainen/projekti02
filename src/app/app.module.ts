@@ -12,7 +12,9 @@ import { MapComponent } from './map/map.component';
 import { MarkerService } from './marker.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PlaceDetailComponent } from './place-detail/place-detail.component';
-
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { PlaceDetailComponent } from './place-detail/place-detail.component';
     MapComponent,
     PlaceDetailComponent
   ],
-  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule, AppRoutingModule
+  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule, AppRoutingModule, MatBottomSheetModule, BrowserAnimationsModule, MatButtonModule
+
   ],
   providers: [MarkerService],
   bootstrap: [AppComponent],
