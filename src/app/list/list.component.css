@@ -18,6 +18,11 @@ table {
   width: 100%;
 }
 
+.accordion-button {
+  max-height: 4rem;
+  padding-top: 2rem;
+}
+
 @media only screen and (min-width: 1400px) {
   .list {
     width: 350px;
