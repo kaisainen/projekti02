@@ -14,7 +14,6 @@ export class ListComponent implements OnInit {
   km: any;
   userCoordinates: number[] = [];
 
-
   constructor(private jsonService: jsonService) {}
 
   ngOnInit(): void {
@@ -55,7 +54,7 @@ export class ListComponent implements OnInit {
           activity.location.lon,
         ]);
       }
-      this.places[0].data.sort((a, b) => a.distance - b.distance);
+      this.activities[0].data.sort((a, b) => a.distance - b.distance);
     });
   }
 
