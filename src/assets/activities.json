@@ -1,7 +1,296 @@
-
+{
   "offset": 0,
-  "count": 131,
+  "count": 137,
   "rows": [
+    {
+      "id": "338b9129-8ad4-496b-ba57-62bb87a78ad0",
+      "updated": "2022-04-21T10:07:13.542351+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Private boat sightseeing in Helsinki archipelago",
+          "description": "Want to spend a day out on the sea, just you and people whose company you enjoy, cruising around the islands and exploring the Helsinki archipelago? Don’t think twice! Welcome on board! With a private boat sightseeing tour you will have a chance to see most of Helsinki’s archipelago. The tour starts with pick-up at Vironallas, near the Market Square. You can experience all the small channels in Helsinki Archipelago, and avoid tourist traps. We will drive routes that are not possible to reach with water waterbusses. At one of the many islands we will stop for a picnic."
+        },
+        "fi": {
+          "name": "Yksityinen veneretki Helsingin saaristossa",
+          "description": "Haluatko viettää päivän merellä, vain sinä ja ihmiset, joiden seurasta pidät, risteilyllä saarilla ja Helsingin saaristossa? Älä mieti kahdesti! Tervetuloa kyytiin! Yksityisellä venekiertoajelulla pääset näkemään suurimman osan Helsingin saaristosta. Kiertue alkaa noudolla Vironaltaalta Kauppatorin läheltä. Voit kokea kaikki Helsingin saariston pienet kanavat ja välttää turistiansat. Ajetaan reittejä, joihin vesibussilla ei pääse. Yhdellä monista saarista pysähdymme piknikille."
+        }
+      },
+      "duration": "3",
+      "durationType": "hours",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": "09:00:00+02",
+          "to": "19:00:00+02"
+        },
+        "tuesday": {
+          "open": true,
+          "from": "09:00:00+02",
+          "to": "19:00:00+02"
+        },
+        "wednesday": {
+          "open": true,
+          "from": "09:00:00+02",
+          "to": "19:00:00+02"
+        },
+        "monday": {
+          "open": true,
+          "from": "09:00:00+02",
+          "to": "19:00:00+02"
+        },
+        "friday": {
+          "open": true,
+          "from": "09:00:00+02",
+          "to": "19:00:00+02"
+        },
+        "thursday": {
+          "open": true,
+          "from": "09:00:00+02",
+          "to": "19:00:00+02"
+        },
+        "saturday": {
+          "open": true,
+          "from": "09:00:00+02",
+          "to": "19:00:00+02"
+        }
+      },
+      "media": [
+        {
+          "id": "bbd12bb2-ebad-4bc3-9a18-aeb26ce2f029",
+          "kind": "image",
+          "copyright": "Burn Out City Events",
+          "name": "07fb43c0-817b-11eb-aa30-d19dac757ee6-IMG_0418.jpeg",
+          "alt": "Sightseeing thru Helsinki channels",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/07fb43c0-817b-11eb-aa30-d19dac757ee6-IMG_0418.jpeg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/07fb43c0-817b-11eb-aa30-d19dac757ee6-IMG_0418.jpeg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/07fb43c0-817b-11eb-aa30-d19dac757ee6-IMG_0418.jpeg?s=1920"
+        },
+        {
+          "id": "0fde56e6-443b-4d75-8353-0eed83e6fb74",
+          "kind": "image",
+          "copyright": "Burn Out City Events",
+          "name": "0e5034b0-817b-11eb-aa30-d19dac757ee6-Day-Cruiser-.jpg",
+          "alt": "Yamarin 64 Daycruiser boat",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/0e5034b0-817b-11eb-aa30-d19dac757ee6-Day-Cruiser-.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/0e5034b0-817b-11eb-aa30-d19dac757ee6-Day-Cruiser-.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/0e5034b0-817b-11eb-aa30-d19dac757ee6-Day-Cruiser-.jpg?s=1920"
+        },
+        {
+          "id": "cc7942a6-036a-48eb-9ddf-d1194325bbe5",
+          "kind": "image",
+          "copyright": "Burn Out City Events",
+          "name": "1823ec20-817b-11eb-aa30-d19dac757ee6-IMG_1694.JPG",
+          "alt": "Visit the islands surrounding Helsinki",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/1823ec20-817b-11eb-aa30-d19dac757ee6-IMG_1694.JPG",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/1823ec20-817b-11eb-aa30-d19dac757ee6-IMG_1694.JPG?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/1823ec20-817b-11eb-aa30-d19dac757ee6-IMG_1694.JPG?s=1920"
+        },
+        {
+          "id": "cb52aa5c-a7f5-4cca-bbbf-f1bafe9cea4c",
+          "kind": "image",
+          "copyright": "Burn Out City Events",
+          "name": "1ba598d0-817b-11eb-aa30-d19dac757ee6-IMG_E4798.jpg",
+          "alt": "There are hundreds of islands surrounding Helsinki",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/1ba598d0-817b-11eb-aa30-d19dac757ee6-IMG_E4798.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/1ba598d0-817b-11eb-aa30-d19dac757ee6-IMG_E4798.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/1ba598d0-817b-11eb-aa30-d19dac757ee6-IMG_E4798.jpg?s=1920"
+        },
+        {
+          "id": "0519b1d2-bace-4717-ba9a-702a4b3ff984",
+          "kind": "image",
+          "copyright": "Burn Out City Events",
+          "name": "130dbcc0-817b-11eb-aa30-d19dac757ee6-IMG_0428.jpeg",
+          "alt": "Enjoy the nature",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/130dbcc0-817b-11eb-aa30-d19dac757ee6-IMG_0428.jpeg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/130dbcc0-817b-11eb-aa30-d19dac757ee6-IMG_0428.jpeg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/130dbcc0-817b-11eb-aa30-d19dac757ee6-IMG_0428.jpeg?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.166103,
+          "long": 24.953488
+        },
+        "postalCode": "00130",
+        "streetName": "Viron Allas",
+        "city": "Helsinki"
+      },
+      "company": {
+        "name": "Burn Out City Events",
+        "businessId": "1461683-4",
+        "email": "info@burnoutcity.fi",
+        "phone": "+358505520857"
+      },
+      "tags": [
+        "coast_archipelago",
+        "family_activity",
+        "sightseeing_tours",
+        "boating_sailing"
+      ],
+      "priceEUR": {
+        "from": 520,
+        "to": null,
+        "pricingType": "chargeable"
+      },
+      "availableMonths": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ],
+      "meantFor": [
+        "b2c"
+      ],
+      "siteUrl": "https://burnoutcity.fi/en/summer-activities/boat-tour-in-helsinki/",
+      "storeUrl": "https://burnoutcity.fi/en/summer-activities/boat-tour-in-helsinki/"
+    },
+    {
+      "id": "2ddf6f8c-58f9-41db-b525-70c38cf09c92",
+      "updated": "2022-04-14T05:31:55.189805+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Megazone Vantaa",
+          "description": "Megazone laser tag is a fun, futuristic and exciting game that is suitable for all ages. Laser tag is played in a dimly lit, fog-filled, multi-level arena where players are provided with high tech vests and awesome but harmless laser guns. Players then try to score points by deactivating other players’ vests and destroying their bases."
+        },
+        "fi": {
+          "name": "Megazone Vantaa",
+          "description": "Hauska, futuristinen ja supersuosittu sisällä pelattava laserpeli, joka sopii ikään ja kuntoon katsomatta kaikille seikkailunhaluisille. Pelialueena toimii hämärä, UV-valoin valaistu labyrinttimainen kaupunkitaisteluareena.\n\nEnnen pelin alkua pelaajat ohjeistetaan peliin ja varustetaan huipputeknologiaan perustuvilla peliliiveillä sekä upeilla laseraseilla. Pelin tunnelmaa nostavat taustalla soiva musiikki, äänitehosteet ja kentällä viuhuvat lasersäteet."
+        }
+      },
+      "duration": "",
+      "durationType": "minutes",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "tuesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "wednesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "monday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "friday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "thursday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "saturday": {
+          "open": true,
+          "from": null,
+          "to": null
+        }
+      },
+      "media": [
+        {
+          "id": "ef27351d-47fd-4a23-a396-5bf6c4e4d2f2",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "59e702b0-9565-11ec-9e6e-cd72eacf1e96-zone1600x900px.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/59e702b0-9565-11ec-9e6e-cd72eacf1e96-zone1600x900px.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/59e702b0-9565-11ec-9e6e-cd72eacf1e96-zone1600x900px.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/59e702b0-9565-11ec-9e6e-cd72eacf1e96-zone1600x900px.jpg?s=1920"
+        },
+        {
+          "id": "81c4c35d-1d2f-466e-8d0a-c7817115b3a5",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "59ea0ff0-9565-11ec-9e6e-cd72eacf1e96-zonepoppoo1600x900px.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/59ea0ff0-9565-11ec-9e6e-cd72eacf1e96-zonepoppoo1600x900px.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/59ea0ff0-9565-11ec-9e6e-cd72eacf1e96-zonepoppoo1600x900px.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/59ea0ff0-9565-11ec-9e6e-cd72eacf1e96-zonepoppoo1600x900px.jpg?s=1920"
+        },
+        {
+          "id": "48610361-5b0c-4c76-8b79-68f95493c7b7",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "3e115990-9566-11ec-9e6e-cd72eacf1e96-14.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/3e115990-9566-11ec-9e6e-cd72eacf1e96-14.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/3e115990-9566-11ec-9e6e-cd72eacf1e96-14.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/3e115990-9566-11ec-9e6e-cd72eacf1e96-14.jpg?s=1920"
+        },
+        {
+          "id": "e3de0fe2-263a-4964-bef7-d3c6d512f9a4",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "9caa92f0-9566-11ec-9e6e-cd72eacf1e96-16.jpeg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/9caa92f0-9566-11ec-9e6e-cd72eacf1e96-16.jpeg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/9caa92f0-9566-11ec-9e6e-cd72eacf1e96-16.jpeg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/9caa92f0-9566-11ec-9e6e-cd72eacf1e96-16.jpeg?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.2906435,
+          "long": 24.9689253589714
+        },
+        "postalCode": "01510",
+        "streetName": "Tasetie 8",
+        "city": "Vantaa"
+      },
+      "company": {
+        "name": "Megazone Vantaa",
+        "businessId": "0939065-8",
+        "email": "vantaa@megazone.fi",
+        "phone": "+358505730805"
+      },
+      "tags": [
+        "childrens_attraction",
+        "family_activity",
+        "sports",
+        "other_activity",
+        "other_attraction"
+      ],
+      "priceEUR": {
+        "from": null,
+        "to": null,
+        "pricingType": "unknown"
+      },
+      "availableMonths": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "meantFor": [
+        "b2c",
+        "b2b"
+      ],
+      "siteUrl": "https://megazone.fi/vantaa/en/",
+      "storeUrl": null
+    },
     {
       "id": "da45071f-223a-4dee-ba6d-a51f435bc0aa",
       "updated": "2022-03-31T08:46:04.994387+00:00",
@@ -111,8 +400,6 @@
         "august"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -226,7 +513,6 @@
         "december"
       ],
       "meantFor": [
-        "group",
         "b2c",
         "b2b"
       ],
@@ -457,8 +743,6 @@
         "august"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -613,8 +897,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -731,8 +1013,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -844,151 +1124,11 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
       "siteUrl": "https://vinotours.fi/experiences-en/2021/12/2/biking-to-pizza",
       "storeUrl": "https://vinotours.fi/ota-yhteytta"
-    },
-    {
-      "id": "dcfc6f62-7ec5-4ace-bb53-1c39cd756535",
-      "updated": "2022-03-16T14:17:18.861574+00:00",
-      "descriptions": {
-        "en": {
-          "name": "Traditional Fishing on Ice",
-          "description": "Do you wish to experience winter in a unique way? Traditional fishing on ice with nets is a special, rare activity, a culture slowly disappearing.  We offer it in December-March depending on the ice and weather conditions. Good news for ice fishing in winter 2022! Ice conditions have been excellent since December 2021.  \n\nThis trip takes place on the frozen Baltic Sea, about 1 km from the coastline. We either walk or alternatively ski (slowly) to the destination. The nets (in total some 120 m long…) are placed under the ice! Quite amazing, isn’t it! You will learn how this is done. The nets are checked 4-5 days interval. If you join the day when the nets are checked, you will see step-by-step how the nets are pulled out from the icy water and the fish are collected from the nets. If you wish, you can try yourself! \n\nThis is a veritable outdoor activity. It is amazing feeling to be on ice. All that space around you, allowing you to see far away. Not only that. Guess who is observing you? White-tailed Sea Eagle(s), waiting to get some fish!"
-        },
-        "fi": {
-          "name": "Talvikalastusretki",
-          "description": "Nyt on harvinainen mahdollisuus osallistua talviverkkokalastukseen Etelä-Suomessakin. Oletko miettinyt, miten ihmeessä verkot saadaan jään alle? Kokeneet talviverkkokalastajat kertovat, miten se tehdään ja totta kai saat myös osallistua verkkokalastuksen eri vaiheisiin. \n\nTalviverkkokalastamme meren jäällä. Kävelemme tai hiihdämme rauhallisesti noin kilometrin jäätä pitkin. Meillä on pulkka mukana, jossa kulkevat jääkaira ja muut välineet. Ja paluumatkalla toivottavasti kalasaalis!\n\nRetki on verkkojen koentaa kalasaaliin tarkastusta varten. Pääset jännittämään, saadaanko verkoista kalaa. Verkot tyhjennetään noin 4-5 päivän välein, joten tämä rytmittää mahdollisuuksia osallistua tähän harvinaiseen kokemukseen.\n\nTalviverkkokalastusretki tuo myös mielenkiintoisen ulottuvuuden talvisen luonnon havainnointiin merenjäältä käsin. Montako merikotkaa näet sinnikkäästi odottelemassa kalasaalistaan?"
-        }
-      },
-      "duration": "4",
-      "durationType": "hours",
-      "open": {
-        "sunday": {
-          "open": true,
-          "from": "08:00:00+02",
-          "to": "18:00:00+02"
-        },
-        "tuesday": {
-          "open": true,
-          "from": "08:00:00+02",
-          "to": "20:00:00+02"
-        },
-        "wednesday": {
-          "open": true,
-          "from": "08:00:00+02",
-          "to": "20:00:00+02"
-        },
-        "monday": {
-          "open": true,
-          "from": "08:00:00+02",
-          "to": "20:00:00+02"
-        },
-        "friday": {
-          "open": true,
-          "from": "08:00:00+02",
-          "to": "20:00:00+02"
-        },
-        "thursday": {
-          "open": true,
-          "from": "08:00:00+02",
-          "to": "20:00:00+02"
-        },
-        "saturday": {
-          "open": true,
-          "from": "08:00:00+02",
-          "to": "18:00:00+02"
-        }
-      },
-      "media": [
-        {
-          "id": "945c250b-5e30-4981-a703-dcb379076fb8",
-          "kind": "image",
-          "copyright": "Marita Arvela",
-          "name": "b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice fishing_pikeperch.jpg",
-          "alt": "The biggest catch of the day - a pike perch",
-          "originalUrl": "https://cdn-datahub.visitfinland.com/images/b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice%20fishing_pikeperch.jpg",
-          "smallUrl": "https://cdn-datahub.visitfinland.com/images/b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice%20fishing_pikeperch.jpg?s=240",
-          "largeUrl": "https://cdn-datahub.visitfinland.com/images/b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice%20fishing_pikeperch.jpg?s=1920"
-        },
-        {
-          "id": "2697644d-e3a3-428f-a49c-cbbd7af4acbf",
-          "kind": "image",
-          "copyright": "Marita Arvela",
-          "name": "5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice fishing is veritable outdoor activity.jpg",
-          "alt": "Ice fishing with nets is a veritable outdoor activity",
-          "originalUrl": "https://cdn-datahub.visitfinland.com/images/5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice%20fishing%20is%20veritable%20outdoor%20activity.jpg",
-          "smallUrl": "https://cdn-datahub.visitfinland.com/images/5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice%20fishing%20is%20veritable%20outdoor%20activity.jpg?s=240",
-          "largeUrl": "https://cdn-datahub.visitfinland.com/images/5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice%20fishing%20is%20veritable%20outdoor%20activity.jpg?s=1920"
-        },
-        {
-          "id": "c6cdea33-30d7-41a8-86a0-5983176a113c",
-          "kind": "image",
-          "copyright": "Riku Lumiaro",
-          "name": "e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Yö_Sahaamista_Riku Lumiaro.jpg",
-          "alt": "Checking the fishing nets in a moonlight",
-          "originalUrl": "https://cdn-datahub.visitfinland.com/images/e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Y%C3%B6_Sahaamista_Riku%20Lumiaro.jpg",
-          "smallUrl": "https://cdn-datahub.visitfinland.com/images/e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Y%C3%B6_Sahaamista_Riku%20Lumiaro.jpg?s=240",
-          "largeUrl": "https://cdn-datahub.visitfinland.com/images/e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Y%C3%B6_Sahaamista_Riku%20Lumiaro.jpg?s=1920"
-        },
-        {
-          "id": "5873dcc9-17d0-4c1d-bac8-c6c587e450e5",
-          "kind": "image",
-          "copyright": "Marita Arvela",
-          "name": "2d408600-80fc-11ec-975b-43ddd48952e8-Ice fishing 3-resized.jpg",
-          "alt": "Sofia fishing with nets on ice of the Baltic Sea.",
-          "originalUrl": "https://cdn-datahub.visitfinland.com/images/2d408600-80fc-11ec-975b-43ddd48952e8-Ice%20fishing%203-resized.jpg",
-          "smallUrl": "https://cdn-datahub.visitfinland.com/images/2d408600-80fc-11ec-975b-43ddd48952e8-Ice%20fishing%203-resized.jpg?s=240",
-          "largeUrl": "https://cdn-datahub.visitfinland.com/images/2d408600-80fc-11ec-975b-43ddd48952e8-Ice%20fishing%203-resized.jpg?s=1920"
-        }
-      ],
-      "address": {
-        "location": {
-          "lat": 60.107236,
-          "long": 24.655355
-        },
-        "postalCode": "02360",
-        "streetName": "Björköfjärden",
-        "city": "Espoo"
-      },
-      "company": {
-        "name": "CNature with Borearctia",
-        "businessId": "2878746-6",
-        "email": "info@borearctia.fi",
-        "phone": "+358405741133"
-      },
-      "tags": [
-        "local_lifestyle",
-        "private_experience",
-        "fishing_hunting",
-        "nature_excursion",
-        "wildlife_bird_watching",
-        "ice_fishing"
-      ],
-      "priceEUR": {
-        "from": 400,
-        "to": null,
-        "pricingType": "chargeable"
-      },
-      "availableMonths": [
-        "january",
-        "february",
-        "march",
-        "november",
-        "december"
-      ],
-      "meantFor": [
-        "individual",
-        "group",
-        "b2c",
-        "b2b"
-      ],
-      "siteUrl": "https://borearctia.fi/unique-ice-fishing-experience/?lang=en",
-      "storeUrl": null
     },
     {
       "id": "5c7bf915-ca42-47f5-b31e-3a36e94f57ab",
@@ -1099,8 +1239,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -1217,8 +1355,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -1335,8 +1471,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -1453,13 +1587,571 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
       "siteUrl": "https://vinotours.fi/experiences-en/2021/12/2/my-helsinki",
       "storeUrl": "https://vinotours.fi/ota-yhteytta"
+    },
+    {
+      "id": "dcfc6f62-7ec5-4ace-bb53-1c39cd756535",
+      "updated": "2022-04-18T16:08:35.765058+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Traditional Fishing on Ice",
+          "description": "Do you wish to experience winter in a unique way? Traditional fishing on ice with nets is a special, rare activity, a culture slowly disappearing.  We offer it in December-March depending on the ice and weather conditions. Ice fishing in winter 2021-2022 was a great success - ice conditions were excellent since December 2021.  \n\nThis trip takes place on the frozen Baltic Sea, about 1 km from the coastline. We either walk or alternatively ski (slowly) to the destination. The nets (in total some 120 m long…) are placed under the ice! Quite amazing, isn’t it! You will learn how this is done. The nets are checked 4-5 days interval. If you join the day when the nets are checked, you will see step-by-step how the nets are pulled out from the icy water and the fish are collected from the nets. If you wish, you can try yourself! \n\nThis is a veritable outdoor activity. It is amazing feeling to be on ice. All that space around you, allowing you to see far away. Not only that. Guess who is observing you? White-tailed Sea Eagle(s), waiting to get some fish!"
+        },
+        "fi": {
+          "name": "Talvikalastusretki",
+          "description": "Nyt on harvinainen mahdollisuus osallistua talviverkkokalastukseen Etelä-Suomessakin. Oletko miettinyt, miten ihmeessä verkot saadaan jään alle? Kokeneet talviverkkokalastajat kertovat, miten se tehdään ja totta kai saat myös osallistua verkkokalastuksen eri vaiheisiin. \n\nTalviverkkokalastamme meren jäällä. Kävelemme tai hiihdämme rauhallisesti noin kilometrin jäätä pitkin. Meillä on pulkka mukana, jossa kulkevat jääkaira ja muut välineet. Ja paluumatkalla toivottavasti kalasaalis!\n\nRetki on verkkojen koentaa kalasaaliin tarkastusta varten. Pääset jännittämään, saadaanko verkoista kalaa. Verkot tyhjennetään noin 4-5 päivän välein, joten tämä rytmittää mahdollisuuksia osallistua tähän harvinaiseen kokemukseen.\n\nTalviverkkokalastusretki tuo myös mielenkiintoisen ulottuvuuden talvisen luonnon havainnointiin merenjäältä käsin. Montako merikotkaa näet sinnikkäästi odottelemassa kalasaalistaan?"
+        }
+      },
+      "duration": "4",
+      "durationType": "hours",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "18:00:00+02"
+        },
+        "tuesday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "20:00:00+02"
+        },
+        "wednesday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "20:00:00+02"
+        },
+        "monday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "20:00:00+02"
+        },
+        "friday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "20:00:00+02"
+        },
+        "thursday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "20:00:00+02"
+        },
+        "saturday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "18:00:00+02"
+        }
+      },
+      "media": [
+        {
+          "id": "7152e1e9-11be-4a6a-a348-7cfd0ba91f2c",
+          "kind": "image",
+          "copyright": "Marita Arvela",
+          "name": "2d408600-80fc-11ec-975b-43ddd48952e8-Ice fishing 3-resized.jpg",
+          "alt": "Sofia fishing with nets on ice of the Baltic Sea.",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/2d408600-80fc-11ec-975b-43ddd48952e8-Ice%20fishing%203-resized.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/2d408600-80fc-11ec-975b-43ddd48952e8-Ice%20fishing%203-resized.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/2d408600-80fc-11ec-975b-43ddd48952e8-Ice%20fishing%203-resized.jpg?s=1920"
+        },
+        {
+          "id": "6acf5f01-bd1c-47d5-ba04-f787596a11b8",
+          "kind": "image",
+          "copyright": "Marita Arvela",
+          "name": "b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice fishing_pikeperch.jpg",
+          "alt": "The biggest catch of the day - a pike perch",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice%20fishing_pikeperch.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice%20fishing_pikeperch.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/b35a9910-8d72-11ec-9e6e-cd72eacf1e96-Ice%20fishing_pikeperch.jpg?s=1920"
+        },
+        {
+          "id": "cfdd59f8-0551-4c0a-b2b1-983a95e087bc",
+          "kind": "image",
+          "copyright": "Marita Arvela",
+          "name": "5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice fishing is veritable outdoor activity.jpg",
+          "alt": "Ice fishing with nets is a veritable outdoor activity",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice%20fishing%20is%20veritable%20outdoor%20activity.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice%20fishing%20is%20veritable%20outdoor%20activity.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/5bec36e0-8d75-11ec-9e6e-cd72eacf1e96-Ice%20fishing%20is%20veritable%20outdoor%20activity.jpg?s=1920"
+        },
+        {
+          "id": "02dc1fd6-fddc-4b34-b3cb-ab29bb364bdb",
+          "kind": "image",
+          "copyright": "Riku Lumiaro",
+          "name": "e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Yö_Sahaamista_Riku Lumiaro.jpg",
+          "alt": "Checking the fishing nets in a moonlight",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Y%C3%B6_Sahaamista_Riku%20Lumiaro.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Y%C3%B6_Sahaamista_Riku%20Lumiaro.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/e8f5bf50-a532-11ec-828e-cf8ba0b64406-Talviverkoilla_Y%C3%B6_Sahaamista_Riku%20Lumiaro.jpg?s=1920"
+        },
+        {
+          "id": "e66d23a6-10a5-4549-b5f2-508800589fdd",
+          "kind": "image",
+          "copyright": "Marita Arvela",
+          "name": "837505f0-bf31-11ec-8dbc-bd98fe95bcdb.jpeg",
+          "alt": "Ice fishing with nets in a sunny March day",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/837505f0-bf31-11ec-8dbc-bd98fe95bcdb.jpeg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/837505f0-bf31-11ec-8dbc-bd98fe95bcdb.jpeg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/837505f0-bf31-11ec-8dbc-bd98fe95bcdb.jpeg?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.107236,
+          "long": 24.655355
+        },
+        "postalCode": "02360",
+        "streetName": "Björköfjärden",
+        "city": "Espoo"
+      },
+      "company": {
+        "name": "CNature with Borearctia",
+        "businessId": "2878746-6",
+        "email": "info@borearctia.fi",
+        "phone": "+358405741133"
+      },
+      "tags": [
+        "local_lifestyle",
+        "private_experience",
+        "fishing_hunting",
+        "nature_excursion",
+        "wildlife_bird_watching",
+        "ice_fishing"
+      ],
+      "priceEUR": {
+        "from": 400,
+        "to": null,
+        "pricingType": "chargeable"
+      },
+      "availableMonths": [
+        "january",
+        "february",
+        "march",
+        "november",
+        "december"
+      ],
+      "meantFor": [
+        "b2c",
+        "b2b"
+      ],
+      "siteUrl": "https://borearctia.fi/unique-ice-fishing-experience/?lang=en",
+      "storeUrl": null
+    },
+    {
+      "id": "8dd92add-e7fa-48ab-9391-f281a5181b07",
+      "updated": "2022-04-22T17:26:06.562282+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Wellness area, VALO Hotel Helsinki",
+          "description": "Revel in the heat of the authentic log saunas, take a dip in the ice pool on the rooftop terrace and get your heart rate up in the gym. You’ll find an unforgettable experience at our wellness area. In addition to a panoramic view, our wellness area is fitted with a steam room, cosy lounge, relaxation pools, traditional saunas, log saunas and a versatile gym.\n\nOpening hours: Monday – Friday 8-11 and 15-23, Saturday – Sunday 8-12 and 15-23"
+        },
+        "fi": {
+          "name": "Wellness-alue, VALO Hotelli Helsinki",
+          "description": "Nauti hirsisaunojen löylyistä, pulahda avantoon kattoterassilla ja virkistäydy kuntosalilla. Wellness-alueeltamme löydät unohtumattomia kokemuksia. Kattokerroksesta löytyy höyrysauna, takkahuone, rentoutumisaltaita, perinteisiä saunoja, hirsisaunoja sekä monipuolinen kuntosali.\n\nAukioloajat: Ma-Pe 8-11 ja 15-23, la-su 8-12 ja 15-23"
+        }
+      },
+      "duration": "",
+      "durationType": "minutes",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "23:00:00+02"
+        },
+        "tuesday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "23:00:00+02"
+        },
+        "wednesday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "23:00:00+02"
+        },
+        "monday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "23:00:00+02"
+        },
+        "friday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "23:00:00+02"
+        },
+        "thursday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "23:00:00+02"
+        },
+        "saturday": {
+          "open": true,
+          "from": "08:00:00+02",
+          "to": "23:00:00+02"
+        }
+      },
+      "media": [
+        {
+          "id": "db282077-3910-421a-9159-8af0f687c101",
+          "kind": "image",
+          "copyright": "VALO Hotel & Work",
+          "name": "3381c860-9f7b-11ec-845a-2529846aeb6c-_DSC0556-2.jpg",
+          "alt": "VALO Hotel & Work wellness area outside",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/3381c860-9f7b-11ec-845a-2529846aeb6c-_DSC0556-2.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/3381c860-9f7b-11ec-845a-2529846aeb6c-_DSC0556-2.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/3381c860-9f7b-11ec-845a-2529846aeb6c-_DSC0556-2.jpg?s=1920"
+        },
+        {
+          "id": "fb2b4f93-4b09-40cc-a6d1-934610a7ebee",
+          "kind": "image",
+          "copyright": "VALO Hotel & Work",
+          "name": "4a4c2220-9f7b-11ec-845a-2529846aeb6c-_DSC0566-saadetty.jpg",
+          "alt": "Wellness area log sauna",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/4a4c2220-9f7b-11ec-845a-2529846aeb6c-_DSC0566-saadetty.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/4a4c2220-9f7b-11ec-845a-2529846aeb6c-_DSC0566-saadetty.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/4a4c2220-9f7b-11ec-845a-2529846aeb6c-_DSC0566-saadetty.jpg?s=1920"
+        },
+        {
+          "id": "c92f219d-4542-4df4-bf00-448fcf1c1524",
+          "kind": "image",
+          "copyright": "VALO Hotel & Work",
+          "name": "68561af0-9f7b-11ec-845a-2529846aeb6c-_DSC6183.jpg",
+          "alt": "Wellness area in summer",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/68561af0-9f7b-11ec-845a-2529846aeb6c-_DSC6183.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/68561af0-9f7b-11ec-845a-2529846aeb6c-_DSC6183.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/68561af0-9f7b-11ec-845a-2529846aeb6c-_DSC6183.jpg?s=1920"
+        },
+        {
+          "id": "012ed957-61dd-4bce-8803-a37dd6a07c15",
+          "kind": "image",
+          "copyright": "VALO Hotel & Work",
+          "name": "8fa7dee0-9f7b-11ec-845a-2529846aeb6c-indoor pool.jpg",
+          "alt": "Indoor pool at the wellness area",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/8fa7dee0-9f7b-11ec-845a-2529846aeb6c-indoor%20pool.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/8fa7dee0-9f7b-11ec-845a-2529846aeb6c-indoor%20pool.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/8fa7dee0-9f7b-11ec-845a-2529846aeb6c-indoor%20pool.jpg?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.20570735,
+          "long": 24.8998396794517
+        },
+        "postalCode": "00280",
+        "streetName": "Mannerheimintie 109",
+        "city": "Helsinki"
+      },
+      "company": {
+        "name": "VALO Hotel & Work",
+        "businessId": "2929600-1",
+        "email": "tuomas.haapala@valohotel.fi",
+        "phone": "+358 10 340 4000"
+      },
+      "tags": [
+        "swimming",
+        "sauna_experience",
+        "spa_recreational_spa",
+        "wellness_treatments"
+      ],
+      "priceEUR": {
+        "from": 0,
+        "to": 20,
+        "pricingType": "chargeable"
+      },
+      "availableMonths": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "meantFor": [
+        "b2c",
+        "b2b"
+      ],
+      "siteUrl": "https://valo.fi/en/spaces/wellness/",
+      "storeUrl": null
+    },
+    {
+      "id": "22dd3bca-6710-4f4d-ba23-7f5c352f3dec",
+      "updated": "2022-04-22T17:18:14.88471+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Gym, VALO Hotel Helsinki",
+          "description": "Best gifts come in small packages! Get a good sweat on in our compact gym with professional gear. The VALO gym is packed with professional gear and good vibes."
+        },
+        "fi": {
+          "name": "Kuntosali, VALO Hotel Helsinki",
+          "description": "Parhaat lahjat tulee pienissä paketeissa! VALOn kompaktilla kuntosalilla nousee hiki pintaan ammattilaisten laitteilla. Kuntosali on täynnä huikeita herkkuja, joilla treenaa ammattilaisetkin. "
+        }
+      },
+      "duration": "",
+      "durationType": "minutes",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": "07:00:00+02",
+          "to": "22:00:00+02"
+        },
+        "tuesday": {
+          "open": true,
+          "from": "07:00:00+02",
+          "to": "22:00:00+02"
+        },
+        "wednesday": {
+          "open": true,
+          "from": "07:00:00+02",
+          "to": "22:00:00+02"
+        },
+        "monday": {
+          "open": true,
+          "from": "07:00:00+02",
+          "to": "22:00:00+02"
+        },
+        "friday": {
+          "open": true,
+          "from": "07:00:00+02",
+          "to": "22:00:00+02"
+        },
+        "thursday": {
+          "open": true,
+          "from": "07:00:00+02",
+          "to": "22:00:00+02"
+        },
+        "saturday": {
+          "open": true,
+          "from": "07:00:00+02",
+          "to": "22:00:00+02"
+        }
+      },
+      "media": [
+        {
+          "id": "07aafe43-7305-4c7b-9d50-e197230ca960",
+          "kind": "image",
+          "copyright": "VALO Hotel & Work",
+          "name": "638849c0-9f7c-11ec-845a-2529846aeb6c-Kuntosali wellness VALO Hotelli Helsinki.jpg",
+          "alt": "Gym in the wellness area",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/638849c0-9f7c-11ec-845a-2529846aeb6c-Kuntosali%20wellness%20VALO%20Hotelli%20Helsinki.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/638849c0-9f7c-11ec-845a-2529846aeb6c-Kuntosali%20wellness%20VALO%20Hotelli%20Helsinki.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/638849c0-9f7c-11ec-845a-2529846aeb6c-Kuntosali%20wellness%20VALO%20Hotelli%20Helsinki.jpg?s=1920"
+        },
+        {
+          "id": "9155f372-d32c-4f4b-b1da-822bde865cca",
+          "kind": "image",
+          "copyright": "VALO Hotel & Work",
+          "name": "9c27ae10-9f7c-11ec-845a-2529846aeb6c-gym.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/9c27ae10-9f7c-11ec-845a-2529846aeb6c-gym.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/9c27ae10-9f7c-11ec-845a-2529846aeb6c-gym.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/9c27ae10-9f7c-11ec-845a-2529846aeb6c-gym.jpg?s=1920"
+        },
+        {
+          "id": "0171d06f-6d52-4e23-a138-60a1c1a8326b",
+          "kind": "image",
+          "copyright": "VALO Hotel & Work",
+          "name": "a1bb23c0-9f7c-11ec-845a-2529846aeb6c-gym2.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/a1bb23c0-9f7c-11ec-845a-2529846aeb6c-gym2.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/a1bb23c0-9f7c-11ec-845a-2529846aeb6c-gym2.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/a1bb23c0-9f7c-11ec-845a-2529846aeb6c-gym2.jpg?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.20570735,
+          "long": 24.8998396794517
+        },
+        "postalCode": "00280",
+        "streetName": "Mannerheimintie 109",
+        "city": "Helsinki"
+      },
+      "company": {
+        "name": "VALO Hotel & Work",
+        "businessId": "2929600-1",
+        "email": "reception.helsinki@valohotel.fi",
+        "phone": "+358103404000"
+      },
+      "tags": [
+        "other_indoor_activities",
+        "rehabilitation",
+        "sauna_experience",
+        "yoga_meditation"
+      ],
+      "priceEUR": {
+        "from": null,
+        "to": null,
+        "pricingType": "unknown"
+      },
+      "availableMonths": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "meantFor": [
+        "b2c",
+        "b2b"
+      ],
+      "siteUrl": "https://valo.fi/en/gym/",
+      "storeUrl": null
+    },
+    {
+      "id": "05eb075c-3e00-4109-a701-52316b398917",
+      "updated": "2022-04-14T05:34:10.894602+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Prison Island Vantaa",
+          "description": "PRISON ISLAND. ONE FOR ALL – ALL FOR ONE. Gather your friends and prepare for an exciting adventure at Prison Island. Everyone is welcome at Prison Island – young and old. Form a team and solve the challenging tasks in the prison cells together with your teammates. All while the clock is ticking… Co-operate, collect points and have lots of fun. Everything is possible! And remember – The team always needs you and you always need the team!"
+        },
+        "fi": {
+          "name": "Prison Island Vantaa",
+          "description": "Laita taitosi äärimmäiselle koetukselle! Haasta itsesi ja ystäväsi ratkaisemaan nokkeluutta ja ketteryyttä vaativat sellien salat ja koe ainutlaatuinen seikkailu. \n\nFlamingon Prison Islandissa on 18 erilaista selliä, joissa jokaisessa toinen toistaan hauskempia ja haastavampia tehtäviä. Selleissä seikkaillaan 2-4 tiimeissä, yhtäaikaisia osallistujia voi olla jopa 45. Hauskanpitoa ja tiimityötä parhaimmillaan! \n\nYKSI KAIKKIEN - KAIKKI YHDEN PUOLESTA."
+        }
+      },
+      "duration": "",
+      "durationType": "minutes",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "tuesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "wednesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "monday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "friday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "thursday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "saturday": {
+          "open": true,
+          "from": null,
+          "to": null
+        }
+      },
+      "media": [
+        {
+          "id": "bbc9e990-b0fb-47fa-b2fd-946b38448612",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "cf1ad510-9a0c-11ec-a68e-0572ae650d94-Kuva03.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/cf1ad510-9a0c-11ec-a68e-0572ae650d94-Kuva03.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/cf1ad510-9a0c-11ec-a68e-0572ae650d94-Kuva03.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/cf1ad510-9a0c-11ec-a68e-0572ae650d94-Kuva03.jpg?s=1920"
+        },
+        {
+          "id": "77f96fc5-0b8b-4d36-b809-8d69b2d7a4b4",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "da3a4660-9a0c-11ec-a68e-0572ae650d94-waterfall3_preview.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/da3a4660-9a0c-11ec-a68e-0572ae650d94-waterfall3_preview.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/da3a4660-9a0c-11ec-a68e-0572ae650d94-waterfall3_preview.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/da3a4660-9a0c-11ec-a68e-0572ae650d94-waterfall3_preview.jpg?s=1920"
+        },
+        {
+          "id": "57ff5238-7c21-44e0-86bc-97dfc3ffaed6",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "e269eac0-9a0c-11ec-a68e-0572ae650d94-memory6_preview.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/e269eac0-9a0c-11ec-a68e-0572ae650d94-memory6_preview.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/e269eac0-9a0c-11ec-a68e-0572ae650d94-memory6_preview.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/e269eac0-9a0c-11ec-a68e-0572ae650d94-memory6_preview.jpg?s=1920"
+        },
+        {
+          "id": "c2f38e19-d06b-4ef1-b871-4cd9641029ae",
+          "kind": "image",
+          "copyright": "Camilla Lehtonen, Elmark Oy",
+          "name": "10f7cb50-9a0d-11ec-a68e-0572ae650d94-AA-muokattu05.png",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/10f7cb50-9a0d-11ec-a68e-0572ae650d94-AA-muokattu05.png",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/10f7cb50-9a0d-11ec-a68e-0572ae650d94-AA-muokattu05.png?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/10f7cb50-9a0d-11ec-a68e-0572ae650d94-AA-muokattu05.png?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.2906435,
+          "long": 24.9689253589714
+        },
+        "postalCode": "01510",
+        "streetName": "Tasetie 8",
+        "city": "Vantaa"
+      },
+      "company": {
+        "name": "Prison Island Vantaa",
+        "businessId": "2635401-8",
+        "email": "vantaa@prisonisland.fi",
+        "phone": "+358505965007"
+      },
+      "tags": [
+        "childrens_attraction",
+        "family_activity",
+        "sports",
+        "other_activity",
+        "other_attraction"
+      ],
+      "priceEUR": {
+        "from": null,
+        "to": null,
+        "pricingType": "unknown"
+      },
+      "availableMonths": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "meantFor": [
+        "b2c",
+        "b2b"
+      ],
+      "siteUrl": "https://www.prisonisland.fi/vantaa/en/",
+      "storeUrl": null
     },
     {
       "id": "fe830e4b-058e-4b2c-bb9e-c44ee573d870",
@@ -1596,8 +2288,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -1740,8 +2430,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -1868,8 +2556,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -1988,8 +2674,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -2125,8 +2809,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -2238,8 +2920,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -2355,8 +3035,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -2473,8 +3151,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -2591,8 +3267,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -2704,8 +3378,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c"
       ],
       "siteUrl": "https://www.seikkailupuistohuippu.fi/cms/en/huippu-en/adventure-golf-huippu",
@@ -2816,8 +3488,8 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group"
+        "b2c",
+        "b2b"
       ],
       "siteUrl": "https://www.seikkailupuistohuippu.fi/cms/en/huippu-en/nets-adventure",
       "storeUrl": "https://www.seikkailupuistohuippu.fi/cms/en/book"
@@ -2964,7 +3636,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -3096,8 +3767,6 @@
         "march"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -3209,7 +3878,6 @@
         "december"
       ],
       "meantFor": [
-        "group",
         "b2c",
         "b2b"
       ],
@@ -3321,7 +3989,6 @@
         "december"
       ],
       "meantFor": [
-        "group",
         "b2c",
         "b2b"
       ],
@@ -3473,8 +4140,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -3620,8 +4285,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -3814,8 +4477,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -3958,7 +4619,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -4121,8 +4781,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -4264,7 +4922,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2b"
       ],
       "siteUrl": "https://www.finlandlocalguide.com/porvoo-tours/",
@@ -4406,8 +5063,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -4514,8 +5169,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -4660,7 +5313,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2b"
       ],
       "siteUrl": "https://www.finlandlocalguide.com/helsinki-private-tours-4/",
@@ -4802,7 +5454,7 @@
         "september"
       ],
       "meantFor": [
-        "individual"
+        "b2c"
       ],
       "siteUrl": "http://www.lonna.fi/en/services/sauna/",
       "storeUrl": "http://www.lonna.fi/en/services/sauna/"
@@ -4921,7 +5573,6 @@
         "october"
       ],
       "meantFor": [
-        "group",
         "b2c",
         "b2b"
       ],
@@ -5051,7 +5702,6 @@
         "october"
       ],
       "meantFor": [
-        "group",
         "b2b"
       ],
       "siteUrl": "https://www.finlandlocalguide.com/helsinki-shore-excursion-group-tour/",
@@ -5195,8 +5845,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -5338,12 +5986,117 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
       "siteUrl": "https://taigatimes.com/finnish-smoke-sauna/",
       "storeUrl": "https://taigatimes.com/finnish-smoke-sauna/#book-now"
+    },
+    {
+      "id": "c511f51f-ca08-44e3-a66a-476267444de2",
+      "updated": "2022-03-04T09:26:54.506984+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Excursion to Nuuksio National Park",
+          "description": "Experience the Finnish landscape of barren rocky hills and sparse Scots pine stands. Nuuksio National Park is a large lake uplands area, which consists of 38 clearwater lakes and pools. The natural state area is the habitat of numerous birds, elks, deer, lynxes and flying squirrels. The guided tour on narrow forest paths allows you to discover the features of the Finnish nature. A visit to Haltia, the Finnish Nature Centre, can be added to the tour. The Haltia exhibitions offer you an authentic experience of the nature from all over Finland.\n\nRecommended duration 4-5 hours. Departure from Helsinki."
+        }
+      },
+      "duration": "5",
+      "durationType": "hours",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "tuesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "wednesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "monday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "friday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "thursday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "saturday": {
+          "open": true,
+          "from": null,
+          "to": null
+        }
+      },
+      "media": [
+        {
+          "id": "1e48a669-2259-4f0e-872e-6a5808d0d496",
+          "kind": "image",
+          "copyright": "Hendrik MorkelVisit Finland",
+          "name": "1f433a40-9af4-11ec-8438-35481556b663-Nuuksio1_Visit_Finland_Hendrik_Morkel-1200x900.jpg",
+          "alt": null,
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/1f433a40-9af4-11ec-8438-35481556b663-Nuuksio1_Visit_Finland_Hendrik_Morkel-1200x900.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/1f433a40-9af4-11ec-8438-35481556b663-Nuuksio1_Visit_Finland_Hendrik_Morkel-1200x900.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/1f433a40-9af4-11ec-8438-35481556b663-Nuuksio1_Visit_Finland_Hendrik_Morkel-1200x900.jpg?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.3363723,
+          "long": 24.4999158
+        },
+        "postalCode": "02820",
+        "streetName": "Nuuksio",
+        "city": "Espoo"
+      },
+      "company": {
+        "name": "Pohjolan Matka DMC",
+        "businessId": "0179285-5",
+        "email": "incoming@pohjolanmatka.fi",
+        "phone": "+358201303357"
+      },
+      "tags": [
+        "forests",
+        "national_park",
+        "hiking_walking_trekking",
+        "nature_excursion"
+      ],
+      "priceEUR": {
+        "from": null,
+        "to": null,
+        "pricingType": "unknown"
+      },
+      "availableMonths": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ],
+      "meantFor": [
+        "b2b"
+      ],
+      "siteUrl": "https://pohjolanmatka.fi/dmc/excursion-to-nuuksio-national-park/",
+      "storeUrl": null
     },
     {
       "id": "39ff696c-e595-4390-bb8e-81698ef9f938",
@@ -5487,7 +6240,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -5678,8 +6430,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -5812,7 +6562,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -5958,8 +6707,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -6076,8 +6823,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -6228,7 +6973,6 @@
         "october"
       ],
       "meantFor": [
-        "group",
         "b2b"
       ],
       "siteUrl": "https://www.eventure.fi/en/program/raft-and-hike/",
@@ -6240,7 +6984,7 @@
       "descriptions": {
         "en": {
           "name": "Nuuksio Reindeer Park and Amethyst Mining Shelter",
-          "description": "Welcome to visit Finland’s southernmost reindeer park in Nuuksio, 30 km / 30 min from Helsinki city center and from the airport. A private owned reindeer park is located in the middle of Nuuksio National Park. \n\nJoint ticket to Nuuksio Reindeer park and amethyst mining shelter is including reindeer feeding, our staff tells you about reindeer, campfire coffee (tea/juice) and bun over an open fire in the Lappish Teepee as well as a mining pass to the amethyst mining shelter where you can dig your own lucky stone. \n\nRaw amethysts have been digged ecologically in Upper Luosto quarry in northern Finland and transferred to Nuuksio to be rediscovered. Amethyst is a meditation and power stone that is believed to calm, protect and strengthen the flow of life and what is yet to come. The stone comes with a certificate of authenticity. Joint ticket via online store -10%."
+          "description": "Welcome to visit Finland’s southernmost reindeer park in Nuuksio, 30 km / 30 min from Helsinki city center and from the airport. A private owned reindeer park is located in the middle of Nuuksio National Park. \n\nJoint ticket to Nuuksio Reindeer park and amethyst mining shelter is including reindeer feeding, our staff tells you about reindeer, campfire coffee (tea/juice) and bun over an open fire in the Lappish Teepee as well as a mining pass to the amethyst mining shelter where you can dig your own lucky stone. \n\nRaw amethysts have been digged ecologically in Upper Luosto quarry in northern Finland and transferred to Nuuksio to be rediscovered. Amethyst is a meditation and power stone that is believed to calm, protect and strengthen the flow of life and what is yet to come. The stone comes with a certificate of authenticity. Joint ticket via online store -10%."
         }
       },
       "duration": "3",
@@ -6377,8 +7121,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2b"
       ],
       "siteUrl": "https://www.nuuksioreindeerpark.fi/en/programs-in-reindeer-park/",
@@ -6390,7 +7132,7 @@
       "descriptions": {
         "en": {
           "name": "Sunday Afternoon Catamaran Sailing in Helsinki",
-          "description": "Taste of luxury! Try catamaran sailing in the Helsinki archipelago. Sailing lasts for 3 hours and is very stable. You can participate in operating the boat.   "
+          "description": "Taste of luxury! Try catamaran sailing in the Helsinki archipelago. Sailing lasts for 3 hours and is very stable. You can participate in operating the boat.   "
         },
         "fi": {
           "name": "Sunnuntaipurjehdus katamaraanilla Helsingissä",
@@ -6479,8 +7221,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -6582,8 +7322,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -6689,7 +7427,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
         "b2b"
       ],
       "siteUrl": "https://www.activeholidayfinland.com/activities-in-finland/ecological-short-break-from-helsinki-to-tampere-4-days",
@@ -6793,8 +7530,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -6908,8 +7643,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -7010,8 +7743,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -7126,8 +7857,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c"
       ],
       "siteUrl": "https://www.helsinkiurbanart.com/en/street-art-tours/",
@@ -7269,7 +7998,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -7425,8 +8153,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c"
       ],
       "siteUrl": "https://gast.events/event?search=iltapurjehdus",
@@ -7574,8 +8300,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -7689,8 +8413,6 @@
         "august"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -7835,7 +8557,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -7998,7 +8719,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -8130,7 +8850,6 @@
         "july"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -8273,7 +8992,6 @@
         "december"
       ],
       "meantFor": [
-        "group",
         "b2b"
       ],
       "siteUrl": "https://www.teamkitchen.fi/en/main-page",
@@ -8424,7 +9142,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -8570,8 +9287,8 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group"
+        "b2b",
+        "b2c"
       ],
       "siteUrl": "https://www.stromma.com/en-fi/helsinki/tours-excursions/theme-cruises/helsinki-pizza-cruise/",
       "storeUrl": "https://www.stromma.com/en-fi/helsinki/tours-excursions/theme-cruises/helsinki-pizza-cruise/"
@@ -8713,8 +9430,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -8875,8 +9590,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -9018,8 +9731,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -9208,8 +9919,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -9222,7 +9931,7 @@
       "descriptions": {
         "fr": {
           "name": "Visite en tram d'Helsinki",
-          "description": "\n\nNe ratez pas le tram à Helsinki ! Créé en 1891, ce tramway est l’un des plus anciens au monde. Dans le centre-ville, le tram est le moyen de transport de prédilection des habitants. À Helsinki, tout fonctionne simplement, et les transports en commun ne dérogent pas à la règle. Très efficace, le tram d’Helsinki est considéré comme l’un des meilleurs d’Europe, mais aussi du monde.\n\nCette visite vous emmènera dans plusieurs recoins de la belle Helsinki, en dehors des sentiers touristiques, pour vous faire découvrir la vie locale grâce au fameux tramway. Vous explorerez Helsinki en transport en commun pour prendre le pouls de la ville et vivre une expérience authentique. Vous irez à la découverte de lieux inconnus de la plupart des tour-opérateurs : jardins secrets, plages, cafés sensationnels, marchés aux puces, panoramas spectaculaires, et bien entendu, une architecture remarquable ! Vous pourrez également garder votre ticket de transport, qui est valable sur tout le réseau pendant 24 heures."
+          "description": "\n\nNe ratez pas le tram à Helsinki ! Créé en 1891, ce tramway est l’un des plus anciens au monde. Dans le centre-ville, le tram est le moyen de transport de prédilection des habitants. À Helsinki, tout fonctionne simplement, et les transports en commun ne dérogent pas à la règle. Très efficace, le tram d’Helsinki est considéré comme l’un des meilleurs d’Europe, mais aussi du monde.\n\nCette visite vous emmènera dans plusieurs recoins de la belle Helsinki, en dehors des sentiers touristiques, pour vous faire découvrir la vie locale grâce au fameux tramway. Vous explorerez Helsinki en transport en commun pour prendre le pouls de la ville et vivre une expérience authentique. Vous irez à la découverte de lieux inconnus de la plupart des tour-opérateurs : jardins secrets, plages, cafés sensationnels, marchés aux puces, panoramas spectaculaires, et bien entendu, une architecture remarquable ! Vous pourrez également garder votre ticket de transport, qui est valable sur tout le réseau pendant 24 heures."
         },
         "it": {
           "name": "Tour in tram di Helsinki",
@@ -9230,11 +9939,11 @@
         },
         "de": {
           "name": "Straßenbahntour durch Helsinki",
-          "description": "\n\nDie Straßenbahnen von Helsinki sind legendär! Eines der weltweit ältesten Straßenbahnsysteme, das aus dem Jahr 1891 stammt. Im Stadtzentrum sind Straßenbahnen bei den Einwohnern die erste Wahl für den öffentlichen Nahverkehr. In dieser Stadt laufen die Dinge einfach, und der öffentliche Nahverkehr ist da keine Ausnahme. Das System funktioniert einwandfrei und gehört nicht nur europa-, sondern weltweit zu den besten.\n\nBei diesem Ausflug besuchen wir verschiedene Teile dieser wunderschönen Stadt, in denen keine Touristenströme zu finden sind. Dabei nutzen wir das berühmte Straßenbahnsystem und fühlen uns wie Einheimische. Wir erkunden Helsinki mit öffentlichen Verkehrsmitteln und genießen ein entspanntes, authentisches Erlebnis. Wir besuchen versteckte Plätze, die auf keinem Standardbesichtigungsplan zu finden sind, atemberaubende, geheime Parkanlagen, Strände, wunderschöne Cafés, Flohmärkte, tolle Aussichten und natürlich beeindruckende Architektur. Sie behalten Ihr Tagesticket für den öffentlichen Nahverkehr. Dieses ist 24 Stunden lang gültig."
+          "description": "\n\nDie Straßenbahnen von Helsinki sind legendär! Eines der weltweit ältesten Straßenbahnsysteme, das aus dem Jahr 1891 stammt. Im Stadtzentrum sind Straßenbahnen bei den Einwohnern die erste Wahl für den öffentlichen Nahverkehr. In dieser Stadt laufen die Dinge einfach, und der öffentliche Nahverkehr ist da keine Ausnahme. Das System funktioniert einwandfrei und gehört nicht nur europa-, sondern weltweit zu den besten.\n\nBei diesem Ausflug besuchen wir verschiedene Teile dieser wunderschönen Stadt, in denen keine Touristenströme zu finden sind. Dabei nutzen wir das berühmte Straßenbahnsystem und fühlen uns wie Einheimische. Wir erkunden Helsinki mit öffentlichen Verkehrsmitteln und genießen ein entspanntes, authentisches Erlebnis. Wir besuchen versteckte Plätze, die auf keinem Standardbesichtigungsplan zu finden sind, atemberaubende, geheime Parkanlagen, Strände, wunderschöne Cafés, Flohmärkte, tolle Aussichten und natürlich beeindruckende Architektur. Sie behalten Ihr Tagesticket für den öffentlichen Nahverkehr. Dieses ist 24 Stunden lang gültig."
         },
         "ru": {
           "name": "Экскурсия на трамвае по Хельсинки",
-          "description": "\n\nТрамваи Хельсинки легендарны! Одна из старейших трамвайных сетей в мире берет свое начало в 1891 году. В центральных районах города трамвай является излюбленным общественным транспортом местных жителей. Кроме того, Хельсинки — это город, где все просто работает, и общественный транспорт не исключение. Он работает безупречно и входит в число лучших не только в Европе, но и в мире.\n\nВо время этой экскурсии мы посетим разные районы этого прекрасного города, где не будет толп туристов, и посмотрим на него глазами местных жителей, воспользовавшись знаменитыми трамваями. Мы будем знакомиться с Хельсинки с помощью местного транспорта, чтобы получить аутентичные впечатления в непринужденной обстановке. Мы увидим скрытые детали, которые не входят в стандартные туристические маршруты: замечательные потаенные парки, пляжи, красивые кафе, блошиные рынки, прекрасные виды и, конечно, впечатляющую архитектуру. У вас также останется дневной билет на общественный транспорт, действительный в течение 24 часов."
+          "description": "\n\nТрамваи Хельсинки легендарны! Одна из старейших трамвайных сетей в мире берет свое начало в 1891 году. В центральных районах города трамвай является излюбленным общественным транспортом местных жителей. Кроме того, Хельсинки — это город, где все просто работает, и общественный транспорт не исключение. Он работает безупречно и входит в число лучших не только в Европе, но и в мире.\n\nВо время этой экскурсии мы посетим разные районы этого прекрасного города, где не будет толп туристов, и посмотрим на него глазами местных жителей, воспользовавшись знаменитыми трамваями. Мы будем знакомиться с Хельсинки с помощью местного транспорта, чтобы получить аутентичные впечатления в непринужденной обстановке. Мы увидим скрытые детали, которые не входят в стандартные туристические маршруты: замечательные потаенные парки, пляжи, красивые кафе, блошиные рынки, прекрасные виды и, конечно, впечатляющую архитектуру. У вас также останется дневной билет на общественный транспорт, действительный в течение 24 часов."
         },
         "sv": {
           "name": "Spårvagnstur i Helsingfors",
@@ -9399,8 +10108,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -9569,8 +10276,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -9799,8 +10504,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -9910,8 +10613,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -10031,8 +10732,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -10260,8 +10959,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -10367,8 +11064,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -10516,8 +11211,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -10666,8 +11359,6 @@
         "september"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -10772,7 +11463,7 @@
         "september"
       ],
       "meantFor": [
-        "individual"
+        "b2c"
       ],
       "siteUrl": "https://naturaviva.fi/en_US/private-nuuksio-sup-adventure/private-tour-nuuksio-sup-adventure",
       "storeUrl": "https://naturaviva.fi/en_US/private-nuuksio-sup-adventure/private-tour-nuuksio-sup-adventure"
@@ -10783,7 +11474,7 @@
       "descriptions": {
         "fr": {
           "name": "Visites guidées à Suomenlinna",
-          "description": "Pour découvrir l’histoire fascinante de la forteresse de Suomenlinna, inscrite au patrimoine mondial de l’UNESCO, l’idéal est de participer à une visite guidée. Pendant la visite, un guide agréé vous racontera les 270 ans d’histoire de Suomenlinna, qui a connu le règne de trois États, ainsi que la vie sur l’île aujourd’hui. Le guide vous emmènera voir les principales curiosités de la forteresse, notamment la grande cour du château, le parc Piper et la forme de radoub, qui était, à l’époque, l’une des plus grandes au monde.\n\nDisponible toute l’année, pour des groupes soigneusement constitués, en 13 langues. Durée : 1h-1h30."
+          "description": "Pour découvrir l’histoire fascinante de la forteresse de Suomenlinna, inscrite au patrimoine mondial de l’UNESCO, l’idéal est de participer à une visite guidée. Pendant la visite, un guide agréé vous racontera les 270 ans d’histoire de Suomenlinna, qui a connu le règne de trois États, ainsi que la vie sur l’île aujourd’hui. Le guide vous emmènera voir les principales curiosités de la forteresse, notamment la grande cour du château, le parc Piper et la forme de radoub, qui était, à l’époque, l’une des plus grandes au monde.\n\nDisponible toute l’année, pour des groupes soigneusement constitués, en 13 langues. Durée : 1h-1h30."
         },
         "it": {
           "name": "Visite guidate a Suomenlinna",
@@ -10791,11 +11482,11 @@
         },
         "de": {
           "name": "Geführte Touren in Suomenlinna",
-          "description": "Eine Führung ist ideal, um mehr über die faszinierende Geschichte zur Festung Suomenlinna, einem UNESCO Weltkulturerbe, zu erfahren. Bei dieser Führung erzählt ein zugelassener Fremdenführer interessante Einzelheiten aus der 270-jährigen ereignisreichen Geschichte der Suomenlinna unter der Herrschaft drei verschiedener Staaten und über das heutige Inselleben. Der Fremdenführer zeigt Ihnen die wichtigsten Attraktionen der Festung, darunter der große Burghof, Piper’s Park und das Trockendock, das einst zu den größten der Welt gehörte.\n\nNach Absprache das ganze Jahr über in 13 Sprachen für Gruppen verfügbar. Dauer: 1 bis 1,5 Stunden."
+          "description": "Eine Führung ist ideal, um mehr über die faszinierende Geschichte zur Festung Suomenlinna, einem UNESCO Weltkulturerbe, zu erfahren. Bei dieser Führung erzählt ein zugelassener Fremdenführer interessante Einzelheiten aus der 270-jährigen ereignisreichen Geschichte der Suomenlinna unter der Herrschaft drei verschiedener Staaten und über das heutige Inselleben. Der Fremdenführer zeigt Ihnen die wichtigsten Attraktionen der Festung, darunter der große Burghof, Piper’s Park und das Trockendock, das einst zu den größten der Welt gehörte.\n\nNach Absprache das ganze Jahr über in 13 Sprachen für Gruppen verfügbar. Dauer: 1 bis 1,5 Stunden."
         },
         "ru": {
           "name": "Экскурсии по Суоменлинне",
-          "description": "Лучший способ узнать удивительную историю крепости Суоменлинна, объекта всемирного наследия ЮНЕСКО, — это присоединиться к экскурсии. Во время пешей экскурсии лицензированный гид расскажет о полной событий 270-летней истории Суоменлинны под господством трех разных держав, а также о жизни на острове в наши дни. Экскурсовод покажет вам самые важные достопримечательности крепости, такие как большой крепостной двор, парк волынщиков и сухой док, который в свое время был самым большим в мире.\n\nЭкскурсии для групп проводятся по договоренности круглый год на 13 языках. Продолжительность: 1—1,5 часа."
+          "description": "Лучший способ узнать удивительную историю крепости Суоменлинна, объекта всемирного наследия ЮНЕСКО, — это присоединиться к экскурсии. Во время пешей экскурсии лицензированный гид расскажет о полной событий 270-летней истории Суоменлинны под господством трех разных держав, а также о жизни на острове в наши дни. Экскурсовод покажет вам самые важные достопримечательности крепости, такие как большой крепостной двор, парк волынщиков и сухой док, который в свое время был самым большим в мире.\n\nЭкскурсии для групп проводятся по договоренности круглый год на 13 языках. Продолжительность: 1—1,5 часа."
         },
         "sv": {
           "name": "Guidad rundvandring på Sveaborg",
@@ -10955,8 +11646,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2b"
       ],
       "siteUrl": "https://www.suomenlinnatours.com/en/home-en",
@@ -11109,8 +11798,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c"
       ],
       "siteUrl": "https://www.paintparty.fi/varaa",
@@ -11228,8 +11915,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -11336,8 +12021,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -11466,8 +12149,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -11577,8 +12258,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -11687,8 +12366,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -11701,7 +12378,7 @@
       "descriptions": {
         "fr": {
           "name": "Design Walk Helsinki ",
-          "description": "Le design est un art de vivre en Finlande. Lors de cette visite guidée du quartier du design à Helsinki, vous visiterez de célèbres marques de design finlandaises comme Iittala et Artek, connue pour les meubles signés par le fameux architecte finlandais Alvar Aalto, et vous découvrirez les nouveaux talents du design et de la mode d’Helsinki dans des boutiques indépendantes."
+          "description": "Le design est un art de vivre en Finlande. Lors de cette visite guidée du quartier du design à Helsinki, vous visiterez de célèbres marques de design finlandaises comme Iittala et Artek, connue pour les meubles signés par le fameux architecte finlandais Alvar Aalto, et vous découvrirez les nouveaux talents du design et de la mode d’Helsinki dans des boutiques indépendantes."
         },
         "it": {
           "name": "Tour del design a Helsinki ",
@@ -11713,7 +12390,7 @@
         },
         "ru": {
           "name": "Design Walk в Хельсинки ",
-          "description": "Дизайн — это финский образ жизни. Во время этой экскурсии по Дизайнерскому кварталу Хельсинки вы сможете посетить такие известные финские бренды, как Iittala и Artek, знаменитые мебелью авторства финского архитектора Алвара Аалто, и познакомиться с новыми талантами дизайнерских и модных кругов Хельсинки в небольших бутиках."
+          "description": "Дизайн — это финский образ жизни. Во время этой экскурсии по Дизайнерскому кварталу Хельсинки вы сможете посетить такие известные финские бренды, как Iittala и Artek, знаменитые мебелью авторства финского архитектора Алвара Аалто, и познакомиться с новыми талантами дизайнерских и модных кругов Хельсинки в небольших бутиках."
         },
         "sv": {
           "name": "Design Walk Helsinki ",
@@ -11841,8 +12518,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -11978,8 +12653,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -12138,8 +12811,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -12260,8 +12931,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -12415,8 +13084,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -12601,8 +13268,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -12768,7 +13433,7 @@
         "december"
       ],
       "meantFor": [
-        "individual"
+        "b2c"
       ],
       "siteUrl": "https://archipelagoigloos.com",
       "storeUrl": "https://archipelagoigloos.com"
@@ -12937,8 +13602,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -13096,8 +13759,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -13249,8 +13910,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -13421,8 +14080,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -13600,8 +14257,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -13760,7 +14415,7 @@
         "december"
       ],
       "meantFor": [
-        "individual"
+        "b2c"
       ],
       "siteUrl": "https://visitespoo.travel/en/routes/staycation-in-espoo/",
       "storeUrl": "https://visitespoo.travel/en/routes/?nz-url=%2Ftravel%2Froutes%2Fstaycation-in-espoo%3Fnz-lang%3Den&nz-lang=en"
@@ -13905,8 +14560,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -13919,7 +14572,7 @@
       "descriptions": {
         "fr": {
           "name": "Sauna Löyly",
-          "description": "Oasis urbaine sur le front de mer d’Helsinki, le sauna Löyly est ouvert à la population locale et aux touristes. Vous y trouverez un accueil chaleureux et des plaisirs en tous genres. Si vous venez par une belle journée d’été, ne manquez pas de profiter de notre terrasse. De plus, nos saunas sont ouverts tous les jours.\n\nIl y en a trois types différents, tous chauffés au bois : un sauna à chaleur continue, un sauna à accumulation de chaleur (chauffé une fois le matin avant ouverture, il reste chaud jusqu’au soir) et un sauna traditionnel à fumée (ce qui est très rare en ville). Vous pourrez ainsi expérimenter toutes les sortes de saunas finlandais en une seule visite. Entre deux saunas, vous pourrez vous arrêter à l’espace spa ou autour du feu de cheminée dans la salle de détente. Vous pouvez faire un plongeon dans la mer, même pendant l’hiver, grâce à un « avanto » (trou dans la glace »), rituel populaire en Finlande, qui a donné le nom du bureau d’architectes à l’origine du bâtiment."
+          "description": "Oasis urbaine sur le front de mer d’Helsinki, le sauna Löyly est ouvert à la population locale et aux touristes. Vous y trouverez un accueil chaleureux et des plaisirs en tous genres. Si vous venez par une belle journée d’été, ne manquez pas de profiter de notre terrasse. De plus, nos saunas sont ouverts tous les jours.\n\nIl y en a trois types différents, tous chauffés au bois : un sauna à chaleur continue, un sauna à accumulation de chaleur (chauffé une fois le matin avant ouverture, il reste chaud jusqu’au soir) et un sauna traditionnel à fumée (ce qui est très rare en ville). Vous pourrez ainsi expérimenter toutes les sortes de saunas finlandais en une seule visite. Entre deux saunas, vous pourrez vous arrêter à l’espace spa ou autour du feu de cheminée dans la salle de détente. Vous pouvez faire un plongeon dans la mer, même pendant l’hiver, grâce à un « avanto » (trou dans la glace »), rituel populaire en Finlande, qui a donné le nom du bureau d’architectes à l’origine du bâtiment."
         },
         "it": {
           "name": "Sauna Löyly",
@@ -13931,7 +14584,7 @@
         },
         "ru": {
           "name": "Сауна Löyly",
-          "description": "Löyly, городской оазис на прекрасной набережной в Хельсинки, предлагает теплую атмосферу и множество удовольствий как для местных жителей, так и для гостей. В чудесный летний день можно приятно отдохнуть на нашей террасе или провести время в саунах, которые работают здесь ежедневно.\n\nУ нас есть три разные сауны, которые топят дровами: сауна с постоянным подогревом, сауна с разовым подогревом (ее топят утром перед открытием, и она сохраняет тепло весь вечер) и традиционная дымная сауна — истинная редкость в городе. Так вы можете попробовать все виды финской бани за один визит. Между саунами есть спа-зона и зал с камином, где можно расслабиться в перерывах или после сауны. Вы можете поплавать в море, а зимой — в «аванто», то есть проруби для зимнего купания, — это популярное хобби в Финляндии и одновременно название нашего офиса."
+          "description": "Löyly, городской оазис на прекрасной набережной в Хельсинки, предлагает теплую атмосферу и множество удовольствий как для местных жителей, так и для гостей. В чудесный летний день можно приятно отдохнуть на нашей террасе или провести время в саунах, которые работают здесь ежедневно.\n\nУ нас есть три разные сауны, которые топят дровами: сауна с постоянным подогревом, сауна с разовым подогревом (ее топят утром перед открытием, и она сохраняет тепло весь вечер) и традиционная дымная сауна — истинная редкость в городе. Так вы можете попробовать все виды финской бани за один визит. Между саунами есть спа-зона и зал с камином, где можно расслабиться в перерывах или после сауны. Вы можете поплавать в море, а зимой — в «аванто», то есть проруби для зимнего купания, — это популярное хобби в Финляндии и одновременно название нашего офиса."
         },
         "sv": {
           "name": "Löyly bastu",
@@ -14075,8 +14728,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -14223,7 +14874,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
         "b2b"
       ],
       "siteUrl": "https://www.finlandlocalguide.com/helsinki-private-shore-excursion/",
@@ -14366,7 +15016,6 @@
         "may"
       ],
       "meantFor": [
-        "individual",
         "b2c"
       ],
       "siteUrl": "https://kauppa.purjelaiva.fi/en/product/vappupurjehdus-2022/",
@@ -14544,8 +15193,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -14681,7 +15328,6 @@
         "may"
       ],
       "meantFor": [
-        "individual",
         "b2c"
       ],
       "siteUrl": "https://kauppa.purjelaiva.fi/en/product/helsingin-saaristopurjehdus/",
@@ -14795,8 +15441,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -14934,8 +15578,8 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group"
+        "b2b",
+        "b2c"
       ],
       "siteUrl": "https://feelthenature.fi/fi/eramelontaa-intiaanikanooteilla-nuuksiossa/",
       "storeUrl": "https://feelthenature.fi/fi/eramelontaa-intiaanikanooteilla-nuuksiossa/"
@@ -15060,8 +15704,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -15236,7 +15878,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2c"
       ],
       "siteUrl": "https://visitespoo.travel/en/routes/family-vacation-in-espoo/",
@@ -15416,7 +16057,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
         "b2c",
         "b2b"
       ],
@@ -15571,8 +16211,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -15708,7 +16346,6 @@
         "may"
       ],
       "meantFor": [
-        "individual",
         "b2c"
       ],
       "siteUrl": "https://kauppa.purjelaiva.fi/en/product/kapteeni-sulkahatun-meriseikkailu/",
@@ -15932,8 +16569,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -16096,8 +16731,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -16235,7 +16868,6 @@
         "december"
       ],
       "meantFor": [
-        "group",
         "b2b"
       ],
       "siteUrl": "https://www.rolloutdoors.com/en/helsinki-en/guided-rides-hki/",
@@ -16390,8 +17022,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -16583,8 +17213,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -16731,7 +17359,6 @@
         "may"
       ],
       "meantFor": [
-        "individual",
         "b2c"
       ],
       "siteUrl": "https://kauppa.purjelaiva.fi/en/product/aitienpaivapurjehdus-2022/",
@@ -16986,8 +17613,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -17142,8 +17767,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -17291,8 +17914,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -17398,8 +18019,6 @@
         "october"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -17541,8 +18160,8 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group"
+        "b2c",
+        "b2b"
       ],
       "siteUrl": "https://greencaptours.com/free-tours/",
       "storeUrl": "https://greencaptours.com/free-tours/"
@@ -17645,7 +18264,7 @@
         "october"
       ],
       "meantFor": [
-        "individual"
+        "b2c"
       ],
       "siteUrl": "https://naturaviva.fi/en_US/hiking-in-nuuksio/private-nuuksio-forest-lake-walk",
       "storeUrl": "https://naturaviva.fi/en_US/hiking-in-nuuksio/private-nuuksio-forest-lake-walk"
@@ -17785,13 +18404,153 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
       "siteUrl": "https://greencaptours.com/experiences/helsinki-stopover-tour/",
       "storeUrl": "https://greencaptours.com/experiences/helsinki-stopover-tour/"
+    },
+    {
+      "id": "cafd67f0-f629-4d95-aae4-84a930cad7f4",
+      "updated": "2022-04-20T06:05:15.088601+00:00",
+      "descriptions": {
+        "en": {
+          "name": "Helsinki by TukTuk ",
+          "description": "See and feel Helsinki and its major sights in this unique and fun way! \nOn our 100% electrical, environmentally friendly and silent TukTuk vehicles you experience the city in a completely new way. The driver is also your private guide, who will use the live audio system to ensure that you won't miss a thing around you. Our TukTuks can accommodate only up to 4 guests providing a private, dedicated and safe service to you whether you are alone or with friends or family.\nWe will pick you up to the tour from the agreed location (eg. hotel in Helsinki center, Helsinki Cruise Port)."
+        },
+        "fi": {
+          "name": "TukTuk opastettu kaupunkikierros ",
+          "description": "Näe ja koe Helsinki tällä uudella ja hauskalla opastetulla kierroksella! \nTäysin sähkökäyttöisen TukTukin kyydissä näet Helsingin ja sen tärkeimmät nähtävyydet ympäristöystävällisellä ja rennolla tavalla. Kuljettaja on myös oppaasi, ja yhdessä voimme sopia kierroksen täysin sinulle sopivaksi. TukTukin kyytiin mahtuu vain neljä henkilöä, joten tämä on oivallinen tapa nähdä Helsinkiä yksilöllisesti ja turvallisesti oman porukkasi tai perheesi kanssa. \nSovimme kierroksen aloituspaikan / noutopaikan kierrosta varatessasi. "
+        },
+        "sv": {
+          "name": "TukTuk guidade citytour i Helsingfors",
+          "description": "Se och njut av Helsingfors på den här unika och roliga turen! \nOmbord på våra elektriska, miljövänliga och tysta TukTuk upplever du staden på ett helt nytt sätt. Din guide är också din privata chaufför som guidar med live audio system så att du inte missar någonting. Våra TukTuk tar högst 4 personer ombord, så det här är ett bra alternativ för en personlig och trygg tur med din egen grupp eller familj. \nStartpunkt för turen bestämms tillsammans vid bookningen. "
+        }
+      },
+      "duration": "",
+      "durationType": "hours",
+      "open": {
+        "sunday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "tuesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "wednesday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "monday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "friday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "thursday": {
+          "open": true,
+          "from": null,
+          "to": null
+        },
+        "saturday": {
+          "open": true,
+          "from": null,
+          "to": null
+        }
+      },
+      "media": [
+        {
+          "id": "3a718639-99df-4607-addd-949cea37d0a6",
+          "kind": "image",
+          "copyright": "Helsinki TukTours",
+          "name": "614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18[1].jpg",
+          "alt": "TukTuk Oodi",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18%5B1%5D.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18%5B1%5D.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18%5B1%5D.jpg?s=1920"
+        },
+        {
+          "id": "1509b54c-4210-42e7-bd97-e365260cee92",
+          "kind": "image",
+          "copyright": "Helsinki TukTours",
+          "name": "7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5[1].jpg",
+          "alt": "TukTuk Sibelius monument",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5%5B1%5D.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5%5B1%5D.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5%5B1%5D.jpg?s=1920"
+        },
+        {
+          "id": "5d5dfeb6-da45-4831-b954-ac563d283abc",
+          "kind": "image",
+          "copyright": "Helsinki TukTours",
+          "name": "a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11[1].jpg",
+          "alt": "TukTuk citytour",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11%5B1%5D.jpg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11%5B1%5D.jpg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11%5B1%5D.jpg?s=1920"
+        },
+        {
+          "id": "cc62b063-9268-47cb-8846-de2e299812a5",
+          "kind": "image",
+          "copyright": "Helsinki TukTours",
+          "name": "fcf4fb70-c06b-11ec-8dbc-bd98fe95bcdb.jpeg",
+          "alt": "Have fun with your private group ",
+          "originalUrl": "https://cdn-datahub.visitfinland.com/images/fcf4fb70-c06b-11ec-8dbc-bd98fe95bcdb.jpeg",
+          "smallUrl": "https://cdn-datahub.visitfinland.com/images/fcf4fb70-c06b-11ec-8dbc-bd98fe95bcdb.jpeg?s=240",
+          "largeUrl": "https://cdn-datahub.visitfinland.com/images/fcf4fb70-c06b-11ec-8dbc-bd98fe95bcdb.jpeg?s=1920"
+        }
+      ],
+      "address": {
+        "location": {
+          "lat": 60.169304,
+          "long": 24.927887
+        },
+        "postalCode": "00100",
+        "streetName": "Runeberginkatu 5",
+        "city": "Helsinki"
+      },
+      "company": {
+        "name": "Helsinki TukTours",
+        "businessId": "3014752-1",
+        "email": "info@helsinkituktours.fi",
+        "phone": "+358102126180"
+      },
+      "tags": [
+        "guided_service",
+        "sightseeing_tours",
+        "LGBTQ",
+        "pet_friendly"
+      ],
+      "priceEUR": {
+        "from": 130,
+        "to": 220,
+        "pricingType": "chargeable"
+      },
+      "availableMonths": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ],
+      "meantFor": [
+        "b2c",
+        "b2b"
+      ],
+      "siteUrl": "https://www.helsinkituktours.fi",
+      "storeUrl": "https://helsinkituktours.johku.com/en_US"
     },
     {
       "id": "8da4eebd-3413-4e5e-a8b9-48ccf00ea814",
@@ -17957,8 +18716,6 @@
         "november"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -17966,142 +18723,12 @@
       "storeUrl": "https://burnoutcity.fi/en/rib-safari-helsinki/"
     },
     {
-      "id": "cafd67f0-f629-4d95-aae4-84a930cad7f4",
-      "updated": "2022-01-11T13:48:45.026438+00:00",
-      "descriptions": {
-        "en": {
-          "name": "Helsinki by TukTuk ",
-          "description": "See and feel Helsinki and its major sights in this unique and fun way! \nOn our 100% electrical, environmentally friendly and silent TukTuk vehicles you experience the city in a completely new way. The driver is also your private guide, who will use the live audio system to ensure that you won't miss a thing around you. Our TukTuks can accommodate only up to 4 guests providing a private, dedicated and safe service to you whether you are alone or with friends or family.\nWe will pick you up to the tour from the agreed location (eg. hotel in Helsinki center, Helsinki Cruise Port)."
-        },
-        "fi": {
-          "name": "TukTuk opastettu kaupunkikierros ",
-          "description": "Näe ja koe Helsinki tällä uudella ja hauskalla opastetulla kierroksella! \nTäysin sähkökäyttöisen TukTukin kyydissä näet Helsingin ja sen tärkeimmät nähtävyydet ympäristöystävällisellä ja rennolla tavalla. Kuljettaja on myös oppaasi, ja yhdessä voimme sopia kierroksen täysin sinulle sopivaksi. TukTukin kyytiin mahtuu vain neljä henkilöä, joten tämä on oivallinen tapa nähdä Helsinkiä yksilöllisesti ja turvallisesti oman porukkasi tai perheesi kanssa. \nSovimme kierroksen aloituspaikan / noutopaikan kierrosta varatessasi. "
-        },
-        "sv": {
-          "name": "TukTuk guidade citytour i Helsingfors",
-          "description": "Se och njut av Helsingfors på den här unika och roliga turen! \nOmbord på våra elektriska, miljövänliga och tysta TukTuk upplever du staden på ett helt nytt sätt. Din guide är också din privata chaufför som guidar med live audio system så att du inte missar någonting. Våra TukTuk tar högst 4 personer ombord, så det här är ett bra alternativ för en personlig och trygg tur med din egen grupp eller familj. \nStartpunkt för turen bestämms tillsammans vid bookningen. "
-        }
-      },
-      "duration": "",
-      "durationType": "hours",
-      "open": {
-        "sunday": {
-          "open": true,
-          "from": null,
-          "to": null
-        },
-        "tuesday": {
-          "open": true,
-          "from": null,
-          "to": null
-        },
-        "wednesday": {
-          "open": true,
-          "from": null,
-          "to": null
-        },
-        "monday": {
-          "open": true,
-          "from": null,
-          "to": null
-        },
-        "friday": {
-          "open": true,
-          "from": null,
-          "to": null
-        },
-        "thursday": {
-          "open": true,
-          "from": null,
-          "to": null
-        },
-        "saturday": {
-          "open": true,
-          "from": null,
-          "to": null
-        }
-      },
-      "media": [
-        {
-          "id": "6fffbf27-2b51-402a-9f85-264fbd3c58d9",
-          "kind": "image",
-          "copyright": "Helsinki TukTours",
-          "name": "614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18[1].jpg",
-          "alt": "TukTuk Oodi",
-          "originalUrl": "https://cdn-datahub.visitfinland.com/images/614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18%5B1%5D.jpg",
-          "smallUrl": "https://cdn-datahub.visitfinland.com/images/614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18%5B1%5D.jpg?s=240",
-          "largeUrl": "https://cdn-datahub.visitfinland.com/images/614e4e20-7b1a-11eb-aa27-4584271e3c70-ttf-18%5B1%5D.jpg?s=1920"
-        },
-        {
-          "id": "eac3a19c-6e96-49e4-ba6a-e9cbea7ac799",
-          "kind": "image",
-          "copyright": "Helsinki TukTours",
-          "name": "7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5[1].jpg",
-          "alt": "TukTuk Sibelius monument",
-          "originalUrl": "https://cdn-datahub.visitfinland.com/images/7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5%5B1%5D.jpg",
-          "smallUrl": "https://cdn-datahub.visitfinland.com/images/7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5%5B1%5D.jpg?s=240",
-          "largeUrl": "https://cdn-datahub.visitfinland.com/images/7fb35f40-7b1a-11eb-aa27-4584271e3c70-ttf-5%5B1%5D.jpg?s=1920"
-        },
-        {
-          "id": "d76d6839-2c5d-44b6-8c95-4dc8e127bdba",
-          "kind": "image",
-          "copyright": "Helsinki TukTours",
-          "name": "a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11[1].jpg",
-          "alt": "TukTuk citytour",
-          "originalUrl": "https://cdn-datahub.visitfinland.com/images/a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11%5B1%5D.jpg",
-          "smallUrl": "https://cdn-datahub.visitfinland.com/images/a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11%5B1%5D.jpg?s=240",
-          "largeUrl": "https://cdn-datahub.visitfinland.com/images/a8f02a50-7b1a-11eb-aa27-4584271e3c70-ttf-11%5B1%5D.jpg?s=1920"
-        }
-      ],
-      "address": {
-        "location": {
-          "lat": 60.169304,
-          "long": 24.927887
-        },
-        "postalCode": "00100",
-        "streetName": "Runeberginkatu 5",
-        "city": "Helsinki"
-      },
-      "company": {
-        "name": "Helsinki TukTours",
-        "businessId": "3014752-1",
-        "email": "info@helsinkituktours.fi",
-        "phone": "+358102126180"
-      },
-      "tags": [
-        "sightseeing_tours",
-        "LGBTQ"
-      ],
-      "priceEUR": {
-        "from": 130,
-        "to": 220,
-        "pricingType": "chargeable"
-      },
-      "availableMonths": [
-        "march",
-        "april",
-        "may",
-        "june",
-        "july",
-        "august",
-        "september",
-        "october",
-        "november"
-      ],
-      "meantFor": [
-        "individual",
-        "group"
-      ],
-      "siteUrl": "https://www.helsinkituktours.fi",
-      "storeUrl": "https://helsinkituktours.johku.com/en_US"
-    },
-    {
       "id": "23e7d34f-74a6-4f40-8cf9-593e369c91fa",
       "updated": "2021-11-22T13:18:29.490001+00:00",
       "descriptions": {
         "fr": {
           "name": "Parc à rennes de Nuuksio",
-          "description": "Goûtez à la magie nordique dans le parc à rennes le plus méridional de Finlande, à 30 km/30 minutes du centre-ville d'Helsinki et de l'aéroport. Ce parc privé dédié aux rennes se trouve au cœur du parc national de Nuuksio. \n\nNous sommes ouverts certains jours seulement, principalement le samedi de 12 h à 15 h. Nous vous accueillons à tout moment dans ce créneau horaire, sans réservation préalable. Une heure suffit généralement à visiter l'ensemble du parc, mais vous pouvez bien sûr rester plus longtemps, y compris jusqu'à la fermeture. \n\nTarifs : 25 € par adulte, 10 € par enfant (entre 4 et 11 ans), 60 € par famille (2 adultes + 2 enfants), gratuit jusqu'à 3 ans. \nPass minier : pour 25 €, vous aurez le droit de repartir avec une améthyste brute que vous aurez vous-même extraite de la mine d'améthystes.\nCarte d'étudiant : -10 % \nBillet jumelé Parc à rennes/Mine d'améthystes : -10 % via la billetterie en ligne\n\nL'admission au parc à rennes inclut du lichen pour nourrir les rennes, le commentaire de notre équipe pour tout savoir sur les rennes, ainsi qu'un café et un petit pain à déguster au-dessus d'un feu ouvert dans l'ambiance poétique d'une tente traditionnelle de Laponie. Des souvenirs et des saucisses à faire griller sur un feu de camp sont disponibles à l'achat. Les week-ends du mois de décembre, le père Noël fait une halte au parc à rennes, et sa visite est suivie d'une distribution de vin chaud (glogg) et de pain d'épice. \n\nIl est possible de réserver des visites privées à d'autres moments de l'année. Veuillez vous informer des disponibilités à l'avance.\n\nPour vous rendre au parc à rennes depuis Helsinki, il vous suffit de prendre le train de banlieue U, E, L jusqu'à Espoon keskus (centre d'Espoo), puis le bus n° 245 de la gare ferroviaire d'Espoo à Nuuksio. Descendez à l'arrêt de bus PUNJONSUO (deux arrêts après le Centre de la nature finlandais Haltia)."
+          "description": "Goûtez à la magie nordique dans le parc à rennes le plus méridional de Finlande, à 30 km/30 minutes du centre-ville d'Helsinki et de l'aéroport. Ce parc privé dédié aux rennes se trouve au cœur du parc national de Nuuksio. \n\nNous sommes ouverts certains jours seulement, principalement le samedi de 12 h à 15 h. Nous vous accueillons à tout moment dans ce créneau horaire, sans réservation préalable. Une heure suffit généralement à visiter l'ensemble du parc, mais vous pouvez bien sûr rester plus longtemps, y compris jusqu'à la fermeture. \n\nTarifs : 25 € par adulte, 10 € par enfant (entre 4 et 11 ans), 60 € par famille (2 adultes + 2 enfants), gratuit jusqu'à 3 ans. \nPass minier : pour 25 €, vous aurez le droit de repartir avec une améthyste brute que vous aurez vous-même extraite de la mine d'améthystes.\nCarte d'étudiant : -10 % \nBillet jumelé Parc à rennes/Mine d'améthystes : -10 % via la billetterie en ligne\n\nL'admission au parc à rennes inclut du lichen pour nourrir les rennes, le commentaire de notre équipe pour tout savoir sur les rennes, ainsi qu'un café et un petit pain à déguster au-dessus d'un feu ouvert dans l'ambiance poétique d'une tente traditionnelle de Laponie. Des souvenirs et des saucisses à faire griller sur un feu de camp sont disponibles à l'achat. Les week-ends du mois de décembre, le père Noël fait une halte au parc à rennes, et sa visite est suivie d'une distribution de vin chaud (glogg) et de pain d'épice. \n\nIl est possible de réserver des visites privées à d'autres moments de l'année. Veuillez vous informer des disponibilités à l'avance.\n\nPour vous rendre au parc à rennes depuis Helsinki, il vous suffit de prendre le train de banlieue U, E, L jusqu'à Espoon keskus (centre d'Espoo), puis le bus n° 245 de la gare ferroviaire d'Espoo à Nuuksio. Descendez à l'arrêt de bus PUNJONSUO (deux arrêts après le Centre de la nature finlandais Haltia)."
         },
         "it": {
           "name": "Parco delle renne di Nuuksio",
@@ -18109,11 +18736,11 @@
         },
         "de": {
           "name": "Rentierpark Nuuksio",
-          "description": "Erlebe einen Hauch von nordischer Magie in Finnlands südlichstem Rentierpark in Nuuksio, 30 km / 30 Min. vom Stadtzentrum Helsinkis und vom Flughafen entfernt. Inmitten des Nuuksio-Nationalparks befindet sich ein privater Rentierpark \n\nWir haben an den separat genannten Tagen meist samstags von 12 bis 15 Uhr geöffnet. Zwischen diesen Terminen kannst du jederzeit ohne Voranmeldung vorbeikommen. Der Ort ist nicht sehr groß, sodass etwa eine Stunde Verweildauer in der Regel ausreicht, aber natürlich können Sie die auch länger bleiben, wenn Sie möchten. \n\nEintrittspreise: 25 € für Erwachsene, 10 € für Kinder (4-11 Jahre), 60 € für Familien (2 Erwachsene + 2 Kinder), Kinder bis 3 Jahre gratis. \nBergbaupass: 25 € berechtigen zum Schürfen eines rohen Amethyst-Glückssteins aus der Amethyst-Bergbauhütte.\nStudentenausweis: 10 % Rabatt \nGemeinsame Eintrittskarte für den Rentierpark und die Amethyst-Bergbauhütte: über SmaShop -10 %\n\nDie Eintrittskarte für den Rentierpark beinhaltet Flechten zum Füttern der Rentiere, unser Personal erzählt Ihnen etwas über Rentiere, Kaffee und Brötchen am offenen Feuer im stimmungsvollen lappländischen Tipi. Souvenirs und Würstchen o. Ä. zum Grillen am Lagerfeuer können vor Ort gekauft werden. An den Wochenenden im Dezember besucht der Weihnachtsmann den Rentierpark, und dann gibt es warmen Glühwein und Lebkuchen. \n\nPrivate Besichtigungen sind auch zu anderen Zeiten möglich, bitte fragen Sie die Verfügbarkeit im Voraus an.\n\nSie erreichen den Rentierpark bequem mit den Nahverkehrszügen U, E, L von Helsinki nach Espoon keskus (Espoo Zentrum) und mit dem Bus Nr. 245 vom Bahnhof Espoo nach Nuuksio. Bushaltestelle PUNJONSUO (zwei Haltestellen nach dem Finnischen Naturzentrum Haltia)."
+          "description": "Erlebe einen Hauch von nordischer Magie in Finnlands südlichstem Rentierpark in Nuuksio, 30 km / 30 Min. vom Stadtzentrum Helsinkis und vom Flughafen entfernt. Inmitten des Nuuksio-Nationalparks befindet sich ein privater Rentierpark \n\nWir haben an den separat genannten Tagen meist samstags von 12 bis 15 Uhr geöffnet. Zwischen diesen Terminen kannst du jederzeit ohne Voranmeldung vorbeikommen. Der Ort ist nicht sehr groß, sodass etwa eine Stunde Verweildauer in der Regel ausreicht, aber natürlich können Sie die auch länger bleiben, wenn Sie möchten. \n\nEintrittspreise: 25 € für Erwachsene, 10 € für Kinder (4-11 Jahre), 60 € für Familien (2 Erwachsene + 2 Kinder), Kinder bis 3 Jahre gratis. \nBergbaupass: 25 € berechtigen zum Schürfen eines rohen Amethyst-Glückssteins aus der Amethyst-Bergbauhütte.\nStudentenausweis: 10 % Rabatt \nGemeinsame Eintrittskarte für den Rentierpark und die Amethyst-Bergbauhütte: über SmaShop -10 %\n\nDie Eintrittskarte für den Rentierpark beinhaltet Flechten zum Füttern der Rentiere, unser Personal erzählt Ihnen etwas über Rentiere, Kaffee und Brötchen am offenen Feuer im stimmungsvollen lappländischen Tipi. Souvenirs und Würstchen o. Ä. zum Grillen am Lagerfeuer können vor Ort gekauft werden. An den Wochenenden im Dezember besucht der Weihnachtsmann den Rentierpark, und dann gibt es warmen Glühwein und Lebkuchen. \n\nPrivate Besichtigungen sind auch zu anderen Zeiten möglich, bitte fragen Sie die Verfügbarkeit im Voraus an.\n\nSie erreichen den Rentierpark bequem mit den Nahverkehrszügen U, E, L von Helsinki nach Espoon keskus (Espoo Zentrum) und mit dem Bus Nr. 245 vom Bahnhof Espoo nach Nuuksio. Bushaltestelle PUNJONSUO (zwei Haltestellen nach dem Finnischen Naturzentrum Haltia)."
         },
         "ru": {
           "name": "Парк оленей Нууксио",
-          "description": "Прикоснитесь к магии Севера в самом южном парке северных оленей Финляндии в Нууксио, в 30 км, или 30 минутах от центра Хельсинки и от аэропорта. Частный парк оленей находится в центре национального парка Нууксио. \n\nМы открыты в определенные дни, в основном по субботам с 12:00 до 15:00. Можно приходить в любое время в этом интервале без предварительной записи. Территория небольшая, поэтому обычно достаточно одного часа, чтобы все обойти, но при желании можете оставаться здесь дольше. \n\nВходная плата: 25 евро взрослый билет, 10 евро детский (4—11 лет), 60 евро семейный (2 взрослых+2 детей), детям до трех лет вход бесплатный. \nПлата за вход в шахту: За 25 евро вы сможете откопать один счастливый необработанный аметист на шахте, где добывают эти камни.\nСтуденческий билет: -10 %. \nЕдиный билет в парк северных оленей и аметистов: в онлайн-магазине SmaShop -10 %.\n\nВ цену на билет в парк оленей входит лишайник для кормления, кофе у костра и булочки на открытом огне в атмосферном лапландском вигваме. Также наши сотрудники расскажут вам об оленях. Сувениры и колбаски для гриля у костра можно приобрести на месте. Санта-Клаус приезжает в парк северных оленей по выходным в декабре, а потом мы угощаем всех теплым глоггом и имбирными пряниками. \n\nЕсть возможность забронировать посещение в частном порядке в другое время. Пожалуйста, уточняйте наличие мест заранее.\n\nДо Парка оленей можно легко добраться на пригородном поезде U, E, L из Хельсинки до Espoon keskus (центр Эспоо) и на автобусе № 245 от железнодорожного вокзала Эспоо до Нууксио. Автобусная остановка PUNJONSUO (через две остановки после финского природного центра Haltia)."
+          "description": "Прикоснитесь к магии Севера в самом южном парке северных оленей Финляндии в Нууксио, в 30 км, или 30 минутах от центра Хельсинки и от аэропорта. Частный парк оленей находится в центре национального парка Нууксио. \n\nМы открыты в определенные дни, в основном по субботам с 12:00 до 15:00. Можно приходить в любое время в этом интервале без предварительной записи. Территория небольшая, поэтому обычно достаточно одного часа, чтобы все обойти, но при желании можете оставаться здесь дольше. \n\nВходная плата: 25 евро взрослый билет, 10 евро детский (4—11 лет), 60 евро семейный (2 взрослых+2 детей), детям до трех лет вход бесплатный. \nПлата за вход в шахту: За 25 евро вы сможете откопать один счастливый необработанный аметист на шахте, где добывают эти камни.\nСтуденческий билет: -10 %. \nЕдиный билет в парк северных оленей и аметистов: в онлайн-магазине SmaShop -10 %.\n\nВ цену на билет в парк оленей входит лишайник для кормления, кофе у костра и булочки на открытом огне в атмосферном лапландском вигваме. Также наши сотрудники расскажут вам об оленях. Сувениры и колбаски для гриля у костра можно приобрести на месте. Санта-Клаус приезжает в парк северных оленей по выходным в декабре, а потом мы угощаем всех теплым глоггом и имбирными пряниками. \n\nЕсть возможность забронировать посещение в частном порядке в другое время. Пожалуйста, уточняйте наличие мест заранее.\n\nДо Парка оленей можно легко добраться на пригородном поезде U, E, L из Хельсинки до Espoon keskus (центр Эспоо) и на автобусе № 245 от железнодорожного вокзала Эспоо до Нууксио. Автобусная остановка PUNJONSUO (через две остановки после финского природного центра Haltia)."
         },
         "sv": {
           "name": "Nuuksio Renpark",
@@ -18125,7 +18752,7 @@
         },
         "es": {
           "name": "Parque de renos de Nuuksio",
-          "description": "Experimenta un toque de magia nórdica en el parque de renos más meridional de Finlandia, en Nuuksio, a 30 km (30 minutos) del centro de Helsinki y del aeropuerto. Dentro del Parque Nacional de Nuuksio hay un parque de renos de propiedad privada. \n\nAbrimos los días indicados por separado, principalmente los sábados de 12 a 15 h. Puedes venir en cualquier momento dentro de este horario sin necesidad de registrarte previamente. No es un lugar grande, una hora suele ser suficiente para visitarlo, pero por supuesto puedes quedarte todo el tiempo si quieres. \n\nEntradas: 25 € adultos, 10 € niños (de 4 a 11 años), 60 € familia (2 adultos+2 niños), de 0 a 3 años gratis. \nEntrada para la mina: 25 € dan derecho a extraer una piedra de amatista de la suerte en bruto del refugio minero de amatista.\nTarjeta de estudiante: -10 %. \nEntrada conjunta al Parque de Renos y al refugio minero de amatista: a través de la tienda online SmaShop -10 %.\n\nLa entrada al Parque de Renos incluye liquen para alimentar a los renos, explicaciones de nuestro personal sobre los renos, café y bollo en la hoguera en un pintoresco tipi lapón. En el lugar se pueden comprar recuerdos y, por ejemplo, salchichas para asar en la hoguera. Papá Noel visita el Parque de Renos durante los fines de semana de diciembre y luego servimos vino caliente especiado y pan de jengibre. \n\nEs posible reservar visitas privadas en otros horarios. Por favor, consulta la disponibilidad con antelación.\n\nSe puede llegar fácilmente al Parque de Renos en los trenes de cercanías U, E, L desde Helsinki hasta Espoon keskus (centro de Espoo) y en el autobús n.º 245 desde la estación de tren de Espoo hasta Nuuksio. Parada de bus PUNJONSUO (dos paradas después del Centro de la Naturaleza Finlandesa Haltia)."
+          "description": "Experimenta un toque de magia nórdica en el parque de renos más meridional de Finlandia, en Nuuksio, a 30 km (30 minutos) del centro de Helsinki y del aeropuerto. Dentro del Parque Nacional de Nuuksio hay un parque de renos de propiedad privada. \n\nAbrimos los días indicados por separado, principalmente los sábados de 12 a 15 h. Puedes venir en cualquier momento dentro de este horario sin necesidad de registrarte previamente. No es un lugar grande, una hora suele ser suficiente para visitarlo, pero por supuesto puedes quedarte todo el tiempo si quieres. \n\nEntradas: 25 € adultos, 10 € niños (de 4 a 11 años), 60 € familia (2 adultos+2 niños), de 0 a 3 años gratis. \nEntrada para la mina: 25 € dan derecho a extraer una piedra de amatista de la suerte en bruto del refugio minero de amatista.\nTarjeta de estudiante: -10 %. \nEntrada conjunta al Parque de Renos y al refugio minero de amatista: a través de la tienda online SmaShop -10 %.\n\nLa entrada al Parque de Renos incluye liquen para alimentar a los renos, explicaciones de nuestro personal sobre los renos, café y bollo en la hoguera en un pintoresco tipi lapón. En el lugar se pueden comprar recuerdos y, por ejemplo, salchichas para asar en la hoguera. Papá Noel visita el Parque de Renos durante los fines de semana de diciembre y luego servimos vino caliente especiado y pan de jengibre. \n\nEs posible reservar visitas privadas en otros horarios. Por favor, consulta la disponibilidad con antelación.\n\nSe puede llegar fácilmente al Parque de Renos en los trenes de cercanías U, E, L desde Helsinki hasta Espoon keskus (centro de Espoo) y en el autobús n.º 245 desde la estación de tren de Espoo hasta Nuuksio. Parada de bus PUNJONSUO (dos paradas después del Centro de la Naturaleza Finlandesa Haltia)."
         },
         "ja": {
           "name": "ヌークシオ トナカイパーク",
@@ -18321,8 +18948,6 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
@@ -18427,7 +19052,7 @@
         "october"
       ],
       "meantFor": [
-        "individual"
+        "b2c"
       ],
       "siteUrl": "https://naturaviva.fi/en_US/canoe-tours-nuuksio-national-park/private-nuuksio-canoe-and-hike-adventure",
       "storeUrl": "https://naturaviva.fi/en_US/canoe-tours-nuuksio-national-park/private-nuuksio-canoe-and-hike-adventure"
@@ -18617,121 +19242,11 @@
         "december"
       ],
       "meantFor": [
-        "individual",
-        "group",
         "b2c",
         "b2b"
       ],
       "siteUrl": "https://www.eckeroline.com/journeys/journeys-departing-from-tallinn/cruises-from-tallinn",
       "storeUrl": "https://www.eckeroline.com/journeys/journeys-departing-from-tallinn/cruises-from-tallinn"
-    }
-  ]
-}
-
-Response headers
-
- cache-control: public, max-age=600, immutable  connection: keep-alive  content-length: 733279  content-type: application/json  date: Tue, 12 Apr 2022 07:44:50 GMT  expires: Tue, 12 Apr 2022 07:54:50 GMT  referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin  server: Cowboy  via: 1.1 vegur  x-content-type-options: nosniff  x-frame-options: DENY  x-permitted-cross-domain-policies: master-only  x-xss-protection: 1; mode=block 
-
-Responses
-Code	Description
-200	
-successful operation
-
-    Example Value
-    Model
-
-{
-  "offset": 0,
-  "count": 0,
-  "rows": [
-    {
-      "id": "string",
-      "updated": "string",
-      "descriptions": {
-        "additionalProp1": {
-          "name": "string",
-          "description": "string",
-          "siteUrl": "string",
-          "storeUrl": "string"
-        },
-        "additionalProp2": {
-          "name": "string",
-          "description": "string",
-          "siteUrl": "string",
-          "storeUrl": "string"
-        },
-        "additionalProp3": {
-          "name": "string",
-          "description": "string",
-          "siteUrl": "string",
-          "storeUrl": "string"
-        }
-      },
-      "company": {
-        "name": "string",
-        "businessId": "string",
-        "email": "string",
-        "phone": "string"
-      },
-      "open": {
-        "additionalProp1": {
-          "open": true,
-          "from": "string",
-          "to": "string"
-        },
-        "additionalProp2": {
-          "open": true,
-          "from": "string",
-          "to": "string"
-        },
-        "additionalProp3": {
-          "open": true,
-          "from": "string",
-          "to": "string"
-        }
-      },
-      "media": [
-        {
-          "id": "string",
-          "kind": "string",
-          "copyright": "string",
-          "name": "string",
-          "alt": "string",
-          "smallUrl": "string",
-          "originalUrl": "string",
-          "largeUrl": "string"
-        }
-      ],
-      "address": {
-        "streetAddress": "string",
-        "postalCode": "string",
-        "locality": "string",
-        "neighbourhood": "string"
-      },
-      "companyAddress": {
-        "streetAddress": "string",
-        "postalCode": "string",
-        "locality": "string",
-        "neighbourhood": "string"
-      },
-      "tags": [
-        "string"
-      ],
-      "siteUrl": "string",
-      "storeUrl": "string",
-      "priceEUR": {
-        "from": {},
-        "to": {},
-        "pricingType": "string"
-      },
-      "availableMonths": [
-        "string"
-      ],
-      "meantFor": [
-        "string"
-      ],
-      "duration": "string",
-      "durationType": "string"
     }
   ]
 }

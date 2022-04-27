@@ -1,7 +1,7 @@
 <div class="flex">
   <div class="list">
     <div *ngFor="let place of places">
-      <div *ngFor="let data of place.data | slice: 0:20">
+      <div *ngFor="let data of place.data | slice: 0:10">
         <ngb-accordion #acc="ngbAccordion">
           <div *ngFor="let data of place.data"></div>
           <ngb-panel title="{{ data.name.fi }} {{ showDistance(data) }}">
