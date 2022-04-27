@@ -2,7 +2,7 @@ import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { MarkerService } from '../marker.service';
 import * as L from 'leaflet';
 import { MapService } from '../map.service';
-import { Places } from '../list/places';
+import { Places } from '../places';
 
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output} from '@angular/core';
 import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -72,7 +72,7 @@ export class FilterComponent implements OnInit {
   selectedTags: string[] = [];
   selectedTag = false;
   showFilters = false;
-  selectedMainFilter = 'places';
+  @Input() selectedMainFilter = 'places';
 
   constructor() {}
 

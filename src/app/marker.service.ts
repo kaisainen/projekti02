@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import * as L from 'leaflet';
 import { Observable } from 'rxjs';
 import { jsonService } from './json.service';
-import { Datum, Places } from './list/places';
+import { Datum, Places } from './places';
 import { PopupService } from './popup.service';
 @Injectable({
   providedIn: 'root',
