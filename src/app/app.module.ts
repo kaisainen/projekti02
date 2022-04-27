@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PlaceDetailComponent } from './place-detail/place-detail.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
