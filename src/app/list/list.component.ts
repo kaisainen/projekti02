@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { jsonService } from '../json.service';
-import { Places } from './places';
-import { Activities } from "../../app/activities"
+import { Places } from '../places';
+import { Activities } from "../../app/activities";
+import { Events } from "../../app/events";
 
 @Component({
   selector: 'app-list',
@@ -11,6 +12,7 @@ import { Activities } from "../../app/activities"
 export class ListComponent implements OnInit {
   places: Places[] = [];
   activities: Activities[] = [];
+  events: Events[] = [];
   km: any;
   userCoordinates: number[] = [];
 
@@ -20,6 +22,7 @@ export class ListComponent implements OnInit {
     this.getUserLocation();
     this.getPlaces();
     this.getActivities();
+    this.getEvents();
   }
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -55,6 +58,19 @@ export class ListComponent implements OnInit {
         ]);
       }
       this.activities[0].data.sort((a, b) => a.distance - b.distance);
+    });
+  }
+  getEvents(): void {
+    this.jsonService.getEvents().subscribe((res: Events) => {
+      this.events.push(res);
+      // here we set the distance to user for each place (the Events interface is updated with this new property).
+      for (let event of this.events[0].data) {
+        event.distance = this.getDistanceV1(this.userCoordinates, [
+          event.location.lat,
+          event.location.lon,
+        ]);
+      }
+      this.events[0].data.sort((a, b) => a.distance - b.distance);
     });
   }
 
