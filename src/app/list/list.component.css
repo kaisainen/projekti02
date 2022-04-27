@@ -9,9 +9,9 @@ img {
 
 .distance-in-list {
   text-align: right;
-  padding-right: 1rem;
   font-size: smaller;
   color: gray;
+  vertical-align: middle;
 }
 
 table {
