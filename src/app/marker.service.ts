@@ -20,7 +20,9 @@ export class MarkerService {
     private popupService: PopupService,
     private jsonService: jsonService
   ) {}
-
+  getPlaces():Observable<Places> {
+    return this.http.get<Places>(this.place);
+  }
   // makePlacesMarkers(map: L.Map): void {
   //   this.http.get(this.place).subscribe((res: any) => {
   //     for (const c of res.data) {
@@ -112,8 +114,7 @@ export class MarkerService {
     return (degree * Math.PI) / 180;
   }
 
-  public getPlace(id: any): Observable<any> {
-    const place = this.http.get('assets/places/' + id + '.json');
-    return place;
+  getPlace(id: any): Observable<any>  {
+    return  this.http.get(`${this.place + 'places'}/${id}`);
   }
 }

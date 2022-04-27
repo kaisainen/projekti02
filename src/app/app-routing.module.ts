@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'map', pathMatch: 'full' },
-  { path: 'place-detail/:id', component: PlaceDetailComponent},
+ 
  ];
 
 @NgModule({
