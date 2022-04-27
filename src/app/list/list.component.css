@@ -7,6 +7,17 @@ img {
   line-height: 0.5rem;
 }
 
+.distance-in-list {
+  text-align: right;
+  padding-right: 1rem;
+  font-size: smaller;
+  color: gray;
+}
+
+table {
+  width: 100%;
+}
+
 @media only screen and (min-width: 1400px) {
   .list {
     width: 350px;

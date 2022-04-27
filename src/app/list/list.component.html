@@ -4,7 +4,50 @@
       <div *ngFor="let data of place.data | slice: 0:10">
         <ngb-accordion #acc="ngbAccordion">
           <div *ngFor="let data of place.data"></div>
-          <ngb-panel title="{{ data.name.fi }} {{ showDistance(data) }}">
+
+          <!-- Note: former version of ngb-panel as commented below -->
+          <!-- <ngb-panel title="{{ data.name.fi }} {{ showDistance(data) }}">
+            <ng-template ngbPanelContent>
+              <p style="font-weight: bold">
+                {{ data.location.address.street_address }}
+                {{ data.location.address.postal_code }}
+                {{ data.location.address.locality }}
+              </p>
+              <p>
+                {{ data.description.body }}
+              </p>
+              <p>
+                <a href="{{ data.info_url }}" target="_blank">{{
+                  data.info_url
+                }}</a>
+              </p>
+              Tags:
+              <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
+              <img
+                *ngFor="let img of data.description.images; let i = index"
+                src="{{ data.description.images[i].url }}"
+                alt=""
+              />
+            </ng-template>
+          </ngb-panel> -->
+
+          <ngb-panel>
+            <ng-template ngbPanelHeader>
+              <button ngbPanelToggle class="accordion-button">
+                <table>
+                  <tr>
+                    <td>
+                      <p id="name">{{ data.name.fi }}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="distance-in-list">
+                      <p id="km">{{ showDistance(data) }}</p>
+                    </td>
+                  </tr>
+                </table>
+              </button>
+            </ng-template>
             <ng-template ngbPanelContent>
               <p style="font-weight: bold">
                 {{ data.location.address.street_address }}
@@ -28,7 +71,8 @@
               />
             </ng-template>
           </ngb-panel>
-          <!-- Custom header below -->
+
+          <!-- Note: (original) Custom header below -->
           <!-- <ngb-panel>
             <ng-template  ngbPanelHeader >
               <button  ngbPanelToggle class="accordion-button">
