@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as L from 'leaflet';
 import { Observable } from 'rxjs';
-import { JsonService } from './json.service';
+import { jsonService } from './json.service';
 import { Datum, Places } from './list/places';
 import { PopupService } from './popup.service';
 @Injectable({
@@ -18,7 +18,7 @@ export class MarkerService {
   constructor(
     private http: HttpClient,
     private popupService: PopupService,
-    private jsonService: JsonService
+    private jsonService: jsonService
   ) {}
 
   // makePlacesMarkers(map: L.Map): void {
