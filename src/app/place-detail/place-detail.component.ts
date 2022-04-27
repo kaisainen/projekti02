@@ -3,7 +3,7 @@ import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core'
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
-import { JsonService } from '../json.service';
+import { jsonService } from '../json.service';
 import { Places } from '../list/places';
 import { MarkerService } from '../marker.service';
 
@@ -30,7 +30,6 @@ export class PlaceDetailComponent implements OnInit {
 
   constructor(private bottomSheet: MatBottomSheet, 
    private markerService: MarkerService,
-    private jsonService: JsonService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
