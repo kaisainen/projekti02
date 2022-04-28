@@ -12,14 +12,13 @@
     <div class="card">
 
 
-        <!-- <img src="https://media.routard.com/image/68/0/helsinki.1524680.w630.jpg" class="card-img-top">-->
+        <img src="https://media.routard.com/image/68/0/helsinki.1524680.w630.jpg" class="card-img-top">
         <div class="card-body">
             <h2 class="card-title" *ngIf="name">{{ name }}</h2>
             <p *ngIf="address"> {{ address }}, {{ postalCode }} {{ locality }}</p>
             <p class="card-text" *ngIf="intro">{{ intro }}</p>
             <a mat-raised-button *ngIf="info_url" href="{{ info_url }}" target="_blank">Link</a>
 
-            <p *ngIf="tags">{{ tags }}</p>
 
 
 

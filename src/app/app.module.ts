@@ -9,7 +9,6 @@ import { FooterComponent } from './footer/footer.component';
 import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MapComponent } from './map/map.component';
-import { MarkerService } from './marker.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PlaceDetailComponent } from './place-detail/place-detail.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
@@ -30,7 +29,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule, AppRoutingModule, MatBottomSheetModule, BrowserAnimationsModule, MatButtonModule
 
   ],
-  providers: [MarkerService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
