@@ -12,6 +12,7 @@ img {
   font-size: smaller;
   color: gray;
   vertical-align: middle;
+  padding-right: 0.5rem;
 }
 
 table {
@@ -19,7 +20,7 @@ table {
 }
 
 .accordion-button {
-  max-height: 4rem;
+  max-height: 5.5rem;
   padding-top: 2rem;
 }
 
