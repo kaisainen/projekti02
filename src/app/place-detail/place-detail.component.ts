@@ -4,7 +4,7 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Places } from '../places';
-import { MarkerService } from '../marker.service';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-place-detail',
@@ -28,14 +28,14 @@ export class PlaceDetailComponent implements OnInit {
   @ViewChild('templateBottomSheet') TemplateBottomSheet!: TemplateRef<any>;
 
   constructor(private bottomSheet: MatBottomSheet, 
-   private markerService: MarkerService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private api: ApiService) { }
 
   ngOnInit(): void {
   //this.getPlace();
   }
   getPlaces(): void {
-    this.markerService.getPlaces().subscribe((res: Places) => {
+    this.api.getAllPlaces().subscribe((res: Places) => {
       this.places.push(res);
     });
   }
@@ -52,7 +52,7 @@ export class PlaceDetailComponent implements OnInit {
     this.route.paramMap.pipe(switchMap(params => {
       this.placeId = params.get('id');
 
-      return this.markerService.getPlace(this.placeId)
+      return this.api.getPlace(this.placeId)
     })
     ).subscribe(data => {
       if (data.id == this.placeId) {

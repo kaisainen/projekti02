@@ -1,7 +1,7 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
-import { MarkerService } from '../marker.service';
+import { Component, AfterViewInit, OnInit, ComponentFactoryResolver, ApplicationRef, Injector } from '@angular/core';
 import * as L from 'leaflet';
-import { MapService } from '../map.service';
+import { ApiService } from '../api.service';
+import { PlaceDetailComponent } from '../place-detail/place-detail.component';
 import { Places } from '../places';
 
 
@@ -30,8 +30,10 @@ export class MapComponent implements AfterViewInit, OnInit {
   places: Places[] = [];
 
   constructor(
-    private mapService: MapService,
-    private markerService: MarkerService
+    private api: ApiService,
+    private resolver: ComponentFactoryResolver,
+    private applicationRef: ApplicationRef,
+    private injector: Injector
   ) {}
   ngOnInit(): void {
   }
@@ -54,11 +56,83 @@ export class MapComponent implements AfterViewInit, OnInit {
 
     tiles.addTo(this.map);
   }
+  makePlacesPopup(data: any): any{
+    let markerPopup: any = this.compilePopup(PlaceDetailComponent, (p: any) => {
+      (p.instance.name = data.name.fi),
+      (p.instance.address = data.location.address.street_address),
+      (p.instance.postal_code = data.location.address.postal_code),
+      (p.instance.locality = data.location.address.locality),
+      (p.instance.info_url = data.info_url),
+      (p.instance.intro = data.description.intro)
+    });
+    return markerPopup;
+  }
+  private compilePopup(component: any, onAttach: any): any {
+  const compFactory: any = this.resolver.resolveComponentFactory(component);
+  let compRef: any = compFactory.create(this.injector);
+  
+  if (onAttach)
+    onAttach(compRef);
+  
+  this.applicationRef.attachView(compRef.hostView);
+  compRef.onDestroy(() => this.applicationRef.detachView(compRef.hostView));
+  
+  let div = document.createElement('div');
+  div.appendChild(compRef.location.nativeElement);
+  return div;
+  }
+  
+    makeCurrentLocationPopup(): string {
+    return  `` +
+    `<div>Olen tässä</div>`  
+    }
+  
+  makePlacesMarkers(map: L.Map) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const currentLat = position.coords.latitude;
+      const currentLon = position.coords.longitude;
+
+      this.api.PlaceMarker().subscribe((res: any) => {
+        for (const c of res.data) {
+          const lon = c.location.lon;
+          const lat = c.location.lat;
+          const marker = L.marker([lat, lon]);
+          //this is just testing
+          // const distance = this.getDistance(
+          //   [currentLat, currentLon],
+          //   [lat, lon]
+          // );
+          // console.log(c.name.en + ':' + distance);
+          //above is for testing
+          marker.bindPopup(this.makePlacesPopup(c));
+          marker.addTo(map);
+        }
+      });
+    });
+  }
+
+  makeMyLocationMarker(map: L.Map): void {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const currentLat = position.coords.latitude;
+
+      const currentLon = position.coords.longitude;
+
+      const currentLocationMarker = L.circleMarker([currentLat, currentLon]);
+
+      currentLocationMarker.setStyle({ color: 'red' });
+
+      currentLocationMarker.bindPopup(
+        this.makeCurrentLocationPopup()
+      );
+
+      currentLocationMarker.addTo(map);
+    });
+  }
 
   ngAfterViewInit(): void {
     this.initMap();
-    this.markerService.makeMyLocationMarker(this.map);
-    this.markerService.makePlacesMarkers(this.map);
+    this.makeMyLocationMarker(this.map);
+    this.makePlacesMarkers(this.map);
   }
 
 }
