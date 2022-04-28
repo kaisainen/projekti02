@@ -11,16 +11,44 @@
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   .map {
     height: 350px;
     width: 350px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   /* big landscape tablets, laptops, and desktops */
   .map {
-    height: 600px;
+    height: 660px;
     width: 600px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .map {
+    position: relative;
+    left: 50px;
+    height: 660px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  .map {
+    position: relative;
+    left: 50px;
+    height: 660px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .map {
+    position: absolute;
+    left: -50px;
+    height: 660px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .map {
+    position: absolute;
+    left: -50px;
+    height: 660px;
   }
 }

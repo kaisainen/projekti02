@@ -1,7 +1,7 @@
 <div class="flex">
   <div class="list">
     <!-- EVENTS -->
-    <div id="events">
+      <div id="events">
       <div *ngFor="let event of events">
         <div *ngFor="let data of event.data | slice: 0:10">
           <ngb-accordion #acc="ngbAccordion">
@@ -49,9 +49,9 @@
           </ngb-accordion>
         </div>
       </div>
-    </div>
+    </div> 
     <!-- ACTIVITIES -->
-    <div id="activities">
+      <div id="activities">
       <div *ngFor="let activity of activities">
         <div *ngFor="let data of activity.data | slice: 0:10">
           <ngb-accordion #acc="ngbAccordion">
@@ -99,7 +99,7 @@
           </ngb-accordion>
         </div>
       </div>
-    </div>
+    </div> 
               <!-- PLACES -->
               <div id="places">
     <div *ngFor="let place of places">
