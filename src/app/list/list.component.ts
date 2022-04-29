@@ -1,23 +1,61 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Injectable, NgModule, OnInit, Output } from '@angular/core';
 import { jsonService } from '../json.service';
 import { Places } from '../places';
 import { Activities } from "../../app/activities";
 import { Events } from "../../app/events";
-
+import { FilterComponent } from '../filter/filter.component';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
 })
+@Injectable({ providedIn: 'root' })
 export class ListComponent implements OnInit {
+  FilterComponent: any = FilterComponent;
   places: Places[] = [];
   activities: Activities[] = [];
   events: Events[] = [];
   km: any;
   userCoordinates: number[] = [];
-
+  filter = '';
+  place = false;
+  event = true;
+  activity = false;
+  @Output() notifyParent: EventEmitter<any> = new EventEmitter();
   constructor(private jsonService: jsonService) {}
 
+
+  // Täällä maali, consoleen tulee arvot oikein mutta ngIf ei vaihda listaa
+  setFilter(filter:any) : void {
+    this.filter = filter;
+    if (this.filter === 'places') {
+      this.place = true;
+      this.event = false;
+      this.activity = false;
+      console.log("list has been set to places")
+      console.log("place = ",this.place)
+      console.log("activity = ",this.activity)
+      console.log("event = ",this.event)
+    }
+    else if(this.filter === 'events') {
+      this.place = false;
+      this.event = true;
+      this.activity = false;
+      console.log("list has been set to events")
+      console.log("event = ",this.event)
+      console.log("place = ",this.place)
+      console.log("activity = ",this.activity)
+    }
+    else if (this.filter === 'activities') {
+      this.place = false;
+      this.event = false;
+      this.activity = true;
+      console.log("list has been set to activities")
+      console.log("event = ",this.event)
+      console.log("activity = ",this.activity)
+      console.log("place = ",this.place)
+    }
+  }
   ngOnInit(): void {
     this.getUserLocation();
     this.getPlaces();
