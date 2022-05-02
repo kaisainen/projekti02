@@ -5,20 +5,23 @@ export interface Events {
 }
 
 export interface Datum {
-  id:          string;
-  name:        NameClass;
-  source_type: EType;
-  info_url:    null | string;
-  modified_at: Date;
-  location:    Location;
-  description: Description;
-  tags:        Tag[];
+  id:                  string;
+  name:                NameClass;
+  source_type:         EType;
+  info_url:            string;
+  modified_at:         Date;
+  location:            Location;
+  description:         Description;
+  tags:                Tag[];
+  where_when_duration: WhereWhenDuration;
   event_dates: EventDates;
+  extra_searchwords: string[];
+  opening_hours_url: string;
   distance: number;
 }
 
 export interface Description {
-  intro:  null | string;
+  intro:  null;
   body:   string;
   images: Image[];
 }
@@ -37,13 +40,7 @@ export interface EType {
 
 export enum NameEnum {
   AllRightsReserved = "All rights reserved.",
-  LinkedEvents = "LinkedEvents",
-}
-
-export interface EventDates {
-  starting_day:           Date | null;
-  ending_day:             Date | null;
-  additional_description: null;
+  MyHelsinki = "MyHelsinki",
 }
 
 export interface Location {
@@ -55,22 +52,22 @@ export interface Location {
 export interface Address {
   street_address: null | string;
   postal_code:    null | string;
-  locality:       Locality | null;
+  locality:       Locality;
   neighbourhood:  null;
 }
 
 export enum Locality {
   Espoo = "Espoo",
   Helsinki = "Helsinki",
-  Kauniainen = "Kauniainen",
+  Tampere = "Tampere",
   Vantaa = "Vantaa",
 }
 
 export interface NameClass {
   fi: string;
-  en: null | string;
+  en: string;
   sv: null | string;
-  zh: null | string;
+  zh: null;
 }
 
 export interface Tag {
@@ -78,6 +75,16 @@ export interface Tag {
   name: string;
 }
 
+export interface WhereWhenDuration {
+  where_and_when: null | string;
+  duration:       null | string;
+}
+
 export interface Meta {
   count: string;
+}
+export interface EventDates {
+  starting_day:           Date | null;
+  ending_day:             Date | null;
+  additional_description: null;
 }

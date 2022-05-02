@@ -14,6 +14,9 @@ export interface Datum {
   description:         Description;
   tags:                Tag[];
   where_when_duration: WhereWhenDuration;
+  event_dates: EventDates;
+  extra_searchwords: string[];
+  opening_hours_url: string;
   distance: number;
 }
 
@@ -79,4 +82,9 @@ export interface WhereWhenDuration {
 
 export interface Meta {
   count: string;
+}
+export interface EventDates {
+  starting_day:           Date | null;
+  ending_day:             Date | null;
+  additional_description: null;
 }
