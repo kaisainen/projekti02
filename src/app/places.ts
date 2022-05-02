@@ -5,98 +5,86 @@ export interface Places {
 }
 
 export interface Datum {
-  id: string;
-  name: NameClass;
-  source_type: EType;
-  info_url: string;
-  modified_at: Date;
-  location: Location;
-  description: Description;
-  tags: Tag[];
+  id:                  string;
+  name:                NameClass;
+  source_type:         EType;
+  info_url:            string;
+  modified_at:         Date;
+  location:            Location;
+  description:         Description;
+  tags:                Tag[];
+  where_when_duration: WhereWhenDuration;
+  event_dates: EventDates;
   extra_searchwords: string[];
   opening_hours_url: string;
   distance: number;
 }
 
 export interface Description {
-  intro: string;
-  body: string;
+  intro:  null;
+  body:   string;
   images: Image[];
 }
 
 export interface Image {
-  url: string;
+  url:              string;
   copyright_holder: string;
-  license_type: EType;
-  media_id: string;
+  license_type:     EType;
+  media_id:         null;
 }
 
 export interface EType {
-  id: number;
+  id:   number;
   name: NameEnum;
 }
 
 export enum NameEnum {
-  Copyright1 = 'Copyright 1',
-  Copyright2 = 'Copyright 2',
-  Matko = 'Matko',
+  AllRightsReserved = "All rights reserved.",
+  MyHelsinki = "MyHelsinki",
 }
 
 export interface Location {
-  lat: number;
-  lon: number;
+  lat:     number;
+  lon:     number;
   address: Address;
 }
 
 export interface Address {
-  street_address: string;
-  postal_code: string;
-  locality: Locality;
-  neighbourhood: string;
+  street_address: null | string;
+  postal_code:    null | string;
+  locality:       Locality;
+  neighbourhood:  null;
 }
 
 export enum Locality {
-  Empty = '',
-  Espoo = 'Espoo',
-  Harviala = 'Harviala,',
-  Helsingfors = 'Helsingfors',
-  Helsingin = 'Helsingin',
-  Helsinki = 'Helsinki',
-  Hyvinkää = 'Hyvinkää',
-  Hämeenlinna = 'Hämeenlinna',
-  Inkoo = 'Inkoo',
-  Järvenpää = 'Järvenpää',
-  Kirkkonummi = 'Kirkkonummi',
-  Lapinjärvi = 'Lapinjärvi',
-  LocalityHELSINKI = 'HELSINKI',
-  LocalityVantaa = 'vantaa',
-  Luoma = 'Luoma,',
-  Masala = 'Masala',
-  Ojakkala = 'Ojakkala',
-  Otalampi = 'Otalampi',
-  Palojoki = 'Palojoki',
-  Porvoo = 'Porvoo',
-  Sipoo = 'Sipoo',
-  Söderkulla = 'Söderkulla',
-  Talma = 'Talma',
-  Tervalampi = 'Tervalampi',
-  Tuusula = 'Tuusula',
-  Vanda = 'Vanda',
-  Vantaa = 'Vantaa',
+  Espoo = "Espoo",
+  Helsinki = "Helsinki",
+  Tampere = "Tampere",
+  Vantaa = "Vantaa",
 }
 
 export interface NameClass {
   fi: string;
-  en: null | string;
+  en: string;
   sv: null | string;
   zh: null;
 }
 
 export interface Tag {
-  id: string;
+  id:   string;
   name: string;
+}
+
+export interface WhereWhenDuration {
+  where_and_when: null | string;
+  duration:       null | string;
 }
 
 export interface Meta {
   count: string;
+}
+export interface EventDates {
+  starting_day:           Date | null;
+  ending_day:             Date | null;
+  additional_description: null;
 }
