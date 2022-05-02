@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Places } from "./places";
 import { Activities } from "../app/activities";
 import { Events } from "../app/events";
-
+import { Filters } from './filters';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +13,18 @@ export class jsonService {
   activity: string = '../assets/activities.json';
   event: string = '../assets/events.json';
   constructor(private http: HttpClient) { }
+  getData(filter:any):Observable<Filters> {
+    if (filter === 'places') {
+      return this.http.get<Filters>(this.place);
+    }
+    else if (filter === 'activities') {
+      return this.http.get<Filters>(this.activity);
+    }
+    else if (filter === 'events') {
+      return this.http.get<Filters>(this.event);
+    }
+    return this.http.get<Filters>(this.place);
+  }
   getPlaces():Observable<Places> {
     return this.http.get<Places>(this.place);
   }
