@@ -15,16 +15,20 @@ export class jsonService {
   constructor(private http: HttpClient) { }
   getData(filter:any):Observable<Filters> {
     if (filter === 'places') {
+      console.log('list set to places')
       return this.http.get<Filters>(this.place);
     }
     else if (filter === 'activities') {
+      console.log('list set to activities')
       return this.http.get<Filters>(this.activity);
     }
     else if (filter === 'events') {
+      console.log('list set to events')
       return this.http.get<Filters>(this.event);
     }
     return this.http.get<Filters>(this.place);
   }
+  
   getPlaces():Observable<Places> {
     return this.http.get<Places>(this.place);
   }
