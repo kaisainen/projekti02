@@ -92,7 +92,7 @@ export class MapComponent implements AfterViewInit, OnInit {
       const currentLat = position.coords.latitude;
       const currentLon = position.coords.longitude;
 
-      this.api.PlaceMarker().subscribe((res: any) => {
+      this.api.getAllPlaces().subscribe((res: any) => {
         for (const c of res.data) {
           const lon = c.location.lon;
           const lat = c.location.lat;
@@ -110,7 +110,40 @@ export class MapComponent implements AfterViewInit, OnInit {
       });
     });
   }
+  makeEventsMarkers(map: L.Map) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const currentLat = position.coords.latitude;
+      const currentLon = position.coords.longitude;
 
+      this.api.getAllEvents().subscribe((res: any) => {
+        for (const c of res.data) {
+          const lon = c.location.lon;
+          const lat = c.location.lat;
+          const marker = L.marker([lat, lon]);
+      
+          marker.bindPopup(this.makePlacesPopup(c));
+          marker.addTo(map);
+        }
+      });
+    });
+  }
+  makeActivitiesMarkers(map: L.Map) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const currentLat = position.coords.latitude;
+      const currentLon = position.coords.longitude;
+
+      this.api.getAllActivities().subscribe((res: any) => {
+        for (const c of res.data) {
+          const lon = c.location.lon;
+          const lat = c.location.lat;
+          const marker = L.marker([lat, lon]);
+      
+          marker.bindPopup(this.makePlacesPopup(c));
+          marker.addTo(map);
+        }
+      });
+    });
+  }
   makeMyLocationMarker(map: L.Map): void {
     navigator.geolocation.getCurrentPosition((position) => {
       const currentLat = position.coords.latitude;
@@ -133,6 +166,8 @@ export class MapComponent implements AfterViewInit, OnInit {
     this.initMap();
     this.makeMyLocationMarker(this.map);
     this.makePlacesMarkers(this.map);
+    this.makeActivitiesMarkers(this.map);
+    this.makeEventsMarkers(this.map);
   }
 
 }
