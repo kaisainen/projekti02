@@ -18,6 +18,7 @@ export class ListComponent implements OnInit {
   events: Events[] = [];
   km: any;
   userCoordinates: number[] = [];
+  // filter = "";
   filter: Filters[] = [];
   place = false;
   event = false;
@@ -29,7 +30,7 @@ export class ListComponent implements OnInit {
   // Täällä maali, consoleen tulee arvot oikein mutta ngIf ei vaihda listaa
   setFilter(filter:any) : void {
     this.getData(filter);                
-    // if (this.filter === 'places') {
+    // if (filter === 'places') {
     //   this.place = true;
     //   this.event = false;
     //   this.activity = false;
@@ -38,7 +39,7 @@ export class ListComponent implements OnInit {
     //   console.log("activity = ",this.activity)
     //   console.log("event = ",this.event)
     // }
-    // else if(this.filter === 'events') {
+    // else if(filter === 'events') {
     //   this.place = false;
     //   this.event = true;
     //   this.activity = false;
@@ -47,7 +48,7 @@ export class ListComponent implements OnInit {
     //   console.log("place = ",this.place)
     //   console.log("activity = ",this.activity)
     // }
-    // else if (this.filter === 'activities') {
+    // else if (filter === 'activities') {
     //   this.place = false;
     //   this.event = false;
     //   this.activity = true;
@@ -62,22 +63,22 @@ export class ListComponent implements OnInit {
     this.getPlaces();
     this.getActivities();
     this.getEvents();
-    this.getData('places');
+    // this.getData('places');
   }
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
       const userLat = position.coords.latitude;
       const userLon = position.coords.longitude;
       this.userCoordinates.push(userLat);
-      this.userCoordinates.push(userLon);
+      this.userCoordinates.push(userLon); 
     });
   }
-
   getData(filter:any): void {
+    console.log("getting data")
     this.jsonService.getData(filter).subscribe((res: Filters) => {
       this.filter.push(res);
       // here we set the distance to user for each place (the Activities interface is updated with this new property).
-      for (let data of filter[0].data) {
+      for (let data of this.filter[0].data) {
         data.distance = this.getDistanceV1(this.userCoordinates, [
           data.location.lat,
           data.location.lon,
@@ -86,7 +87,20 @@ export class ListComponent implements OnInit {
       this.filter[0].data.sort((a, b) => a.distance - b.distance);
     });
   }
-  // gets places and sorts them ascending by distance to user
+  // getData(filter:any): void {
+  //   this.jsonService.getData(filter).subscribe((res: Filters) => {
+  //     this.filter.push(res);
+  //     // here we set the distance to user for each place (the Activities interface is updated with this new property).
+  //     for (let data of filter[0].data) {
+  //       data.distance = this.getDistanceV1(this.userCoordinates, [
+  //         data.location.lat,
+  //         data.location.lon,
+  //       ]);
+  //     }
+  //     this.filter[0].data.sort((a, b) => a.distance - b.distance);
+  //   });
+  // }
+  // // gets places and sorts them ascending by distance to user
   getPlaces(): void {
     this.jsonService.getPlaces().subscribe((res: Places) => {
       this.places.push(res);
