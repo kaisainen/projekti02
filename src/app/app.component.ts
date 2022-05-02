@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { faMap } from '@fortawesome/free-solid-svg-icons';
-
+import { ListComponent } from './list/list.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  
   title = 'projekti02';
   shownMap = false;
   shownList = true;
@@ -18,9 +19,21 @@ export class AppComponent implements OnInit {
   desktop = false;
   faList = faList;
   faMap = faMap;
+  filter = "";
+  @Output() notifyParent: EventEmitter<any> = new EventEmitter();
+  constructor(private list : ListComponent) {}
 
-  constructor() {}
-
+  test($event:any) {
+    this.filter = $event;
+    this.list.setFilter(this.filter);
+    console.log(this.filter);
+    this.sendNotification(this.filter);
+  }
+ 
+  sendNotification(filter:any) {
+    console.log(filter +" has been sent to list component")
+      this.notifyParent.emit(filter);
+  }
   ngOnInit(): void {
     this.getScreenSize();
   }

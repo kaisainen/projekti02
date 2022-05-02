@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -22,7 +22,7 @@ import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
       <div *ngIf="showFilters" class="tag-container">
         <p *ngFor="let filter of filters">
           <span
-            (click)="setMainFilter(filter)"
+            (click)="setMainFilter(filter); sendNotification()"
             class="tag p-yellow-hover"
             [ngClass]="{ selectedtag: filter === selectedMainFilter }"
             ><a href="#">{{ filter | uppercase }}</a></span
@@ -72,7 +72,11 @@ export class FilterComponent implements OnInit {
   selectedTags: string[] = [];
   selectedTag = false;
   showFilters = false;
-  @Input() selectedMainFilter = 'places';
+  selectedMainFilter = 'places';
+  @Output() notifyParent: EventEmitter<any> = new EventEmitter();
+    sendNotification() {
+        this.notifyParent.emit(this.selectedMainFilter);
+    }
 
   constructor() {}
 

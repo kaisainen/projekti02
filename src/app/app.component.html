@@ -1,7 +1,7 @@
 <section class="page-container">
     <app-header class="header"></app-header>
 
-    <filter class="filter"></filter>
+    <filter class="filter"(notifyParent)="test($event)"></filter>
 
     <div class="top" *ngIf="showTop">
         <p [ngClass]="{'lightblue':shownMap}" (click)="showMap()">
@@ -14,7 +14,7 @@
         </p>
     </div>
 
-    <app-list class="list" *ngIf="shownList"></app-list>
+    <app-list class="list" *ngIf="shownList" (setFilter)="notifyParent"></app-list>
     <app-map class="map" *ngIf="shownMap || desktop"></app-map>
 
     <app-footer class="footer"></app-footer>
