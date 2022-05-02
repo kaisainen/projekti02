@@ -4,6 +4,7 @@ import { Places } from '../places';
 import { Activities } from "../../app/activities";
 import { Events } from "../../app/events";
 import { FilterComponent } from '../filter/filter.component';
+import { Filters } from '../filters';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -17,9 +18,9 @@ export class ListComponent implements OnInit {
   events: Events[] = [];
   km: any;
   userCoordinates: number[] = [];
-  filter = '';
+  filter: Filters[] = [];
   place = false;
-  event = true;
+  event = false;
   activity = false;
   @Output() notifyParent: EventEmitter<any> = new EventEmitter();
   constructor(private jsonService: jsonService) {}
@@ -27,40 +28,41 @@ export class ListComponent implements OnInit {
 
   // Täällä maali, consoleen tulee arvot oikein mutta ngIf ei vaihda listaa
   setFilter(filter:any) : void {
-    this.filter = filter;
-    if (this.filter === 'places') {
-      this.place = true;
-      this.event = false;
-      this.activity = false;
-      console.log("list has been set to places")
-      console.log("place = ",this.place)
-      console.log("activity = ",this.activity)
-      console.log("event = ",this.event)
-    }
-    else if(this.filter === 'events') {
-      this.place = false;
-      this.event = true;
-      this.activity = false;
-      console.log("list has been set to events")
-      console.log("event = ",this.event)
-      console.log("place = ",this.place)
-      console.log("activity = ",this.activity)
-    }
-    else if (this.filter === 'activities') {
-      this.place = false;
-      this.event = false;
-      this.activity = true;
-      console.log("list has been set to activities")
-      console.log("event = ",this.event)
-      console.log("activity = ",this.activity)
-      console.log("place = ",this.place)
-    }
+    this.getData(filter);                
+    // if (this.filter === 'places') {
+    //   this.place = true;
+    //   this.event = false;
+    //   this.activity = false;
+    //   console.log("list has been set to places")
+    //   console.log("place = ",this.place)
+    //   console.log("activity = ",this.activity)
+    //   console.log("event = ",this.event)
+    // }
+    // else if(this.filter === 'events') {
+    //   this.place = false;
+    //   this.event = true;
+    //   this.activity = false;
+    //   console.log("list has been set to events")
+    //   console.log("event = ",this.event)
+    //   console.log("place = ",this.place)
+    //   console.log("activity = ",this.activity)
+    // }
+    // else if (this.filter === 'activities') {
+    //   this.place = false;
+    //   this.event = false;
+    //   this.activity = true;
+    //   console.log("list has been set to activities")
+    //   console.log("event = ",this.event)
+    //   console.log("activity = ",this.activity)
+    //   console.log("place = ",this.place)
+    // }
   }
   ngOnInit(): void {
     this.getUserLocation();
     this.getPlaces();
     this.getActivities();
     this.getEvents();
+    this.getData('places');
   }
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -71,6 +73,19 @@ export class ListComponent implements OnInit {
     });
   }
 
+  getData(filter:any): void {
+    this.jsonService.getData(filter).subscribe((res: Filters) => {
+      this.filter.push(res);
+      // here we set the distance to user for each place (the Activities interface is updated with this new property).
+      for (let data of filter[0].data) {
+        data.distance = this.getDistanceV1(this.userCoordinates, [
+          data.location.lat,
+          data.location.lon,
+        ]);
+      }
+      this.filter[0].data.sort((a, b) => a.distance - b.distance);
+    });
+  }
   // gets places and sorts them ascending by distance to user
   getPlaces(): void {
     this.jsonService.getPlaces().subscribe((res: Places) => {
