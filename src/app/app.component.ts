@@ -20,16 +20,10 @@ export class AppComponent implements OnInit {
   faList = faList;
   faMap = faMap;
   filter = "";
-  @Output() notifyParent: EventEmitter<any> = new EventEmitter();
+  Filter = "";
+  @Output() notifyParent: EventEmitter<Object> = new EventEmitter();
   constructor(private list : ListComponent) {}
 
-  test($event:any) {
-    this.filter = $event;
-    this.list.setFilter(this.filter);
-    console.log(this.filter);
-    this.sendNotification(this.filter);
-  }
- 
   sendNotification(filter:any) {
     console.log(filter +" has been sent to list component")
       this.notifyParent.emit(filter);

@@ -13,20 +13,21 @@ export class jsonService {
   activity: string = '../assets/activities.json';
   event: string = '../assets/events.json';
   constructor(private http: HttpClient) { }
-  getData(filter:any):Observable<Filters> {
+  getData(filter:any):Observable<any> {
     if (filter === 'places') {
       console.log('list set to places')
-      return this.http.get<Filters>(this.place);
+      return this.http.get<Places>(this.place);
     }
     else if (filter === 'activities') {
       console.log('list set to activities')
-      return this.http.get<Filters>(this.activity);
+      return this.http.get<Activities>(this.activity);
     }
     else if (filter === 'events') {
       console.log('list set to events')
-      return this.http.get<Filters>(this.event);
+      return this.http.get<Events>(this.event);
     }
-    return this.http.get<Filters>(this.place);
+    console.log("you should not see this")
+    return this.http.get<Places>(this.place);
   }
   
   getPlaces():Observable<Places> {

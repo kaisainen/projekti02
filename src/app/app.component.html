@@ -1,7 +1,7 @@
 <section class="page-container">
     <app-header class="header"></app-header>
 
-    <filter class="filter"(notifyParent)="test($event)"></filter>
+    <filter class="filter"(notifyParent)="sendNotification($event)"></filter>
 
     <div class="top" *ngIf="showTop">
         <p [ngClass]="{'lightblue':shownMap}" (click)="showMap()">
