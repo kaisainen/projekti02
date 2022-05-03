@@ -9,7 +9,7 @@ img {
 
 .distance-in-list {
   text-align: right;
-  font-size: smaller;
+  font-size: 1.2rem;
   color: gray;
   vertical-align: middle;
   padding-right: 0.5rem;
@@ -26,12 +26,12 @@ table {
 
 @media only screen and (min-width: 768px) {
   .list {
-    width: 425px
+    width: 425px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .list {
-    width: 425px
+    width: 425px;
   }
 }
 @media only screen and (min-width: 1440px) {

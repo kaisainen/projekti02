@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output} from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -25,7 +25,7 @@ import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
             (click)="setMainFilter(filter)"
             class="tag p-yellow-hover"
             [ngClass]="{ selectedtag: filter === selectedMainFilter }"
-            ><a href="#">{{ filter | uppercase }}</a></span
+            ><a href="#">{{ filter | titlecase }}</a></span
           >
         </p>
       </div>
@@ -36,7 +36,7 @@ import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
             (click)="addSelectedTag(tag)"
             [ngClass]="getYellowClass(tag)"
             class="tag p-yellow-hover"
-            >#{{ tag }}</span
+            >{{ tag | titlecase }}</span
           >
         </p>
       </div>

@@ -1,16 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-
 .grid-container {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
-  background-color: #A1B5D8;
+  background-color: var(--main-other-bg-color);
   padding: 6px;
   font-family: var(--main-font);
 }
 .filter-title {
-  font-size: 20px;
-  background-color: #A1B5D8;
+  font-size: 1.6rem;
+  background-color: var(--main-other-bg-color);
   border: none;
 }
 .tag-container {
@@ -18,23 +16,23 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px 10px 0 10px;
-  background-color: #A1B5D8;
+  background-color: var(--main-other-bg-color);
 }
 .tag {
-  background-color: #A1B5D8;
+  background-color: var(--main-other-bg-color);
   border: solid black 1px;
   border-radius: 17px;
   padding: 5px 10px;
   margin: 5px;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .selectedtag {
-  background-color: var(--yellow-bg-color);
+  background-color: lightblue;
 }
 .main-filters-container {
   display: flex;
   flex-direction: column;
-  background-color: #A1B5D8;
+  background-color: var(--main-other-bg-color);
   width: 50%;
   font-family: var(--main-font);
   font-size: 16px;
@@ -49,7 +47,7 @@ a {
 }
 @media only screen and (min-width: 769px) {
   .p-yellow-hover:hover {
-    background-color: var(--yellow-bg-color);
+    background-color: lightblue;
     /* margin-left: -10px;
     margin: 0; */
   }

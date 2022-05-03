@@ -1,16 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 :root {
-  --yellow-bg-color: #fdeb6c;
-  --turquoise-bg-color: #57e0b2;
-  --orange-bg-color: #fcad47;
-  --main-font: Nunito, "Helvetica Neue", sans-serif;
+  --main-bg-color: #738290;
+  --main-other-bg-color: #a1b5d8;
+  --main-font: "Nunito", "Helvetica Neue", sans-serif;
 }
 
-html,
-body {
-  height: 100%;
+html {
+  font-size: 62.5%;
 }
 body {
   margin: 0;
   font-family: var(--main-font);
+  font-size: 1.3rem;
+}
+h2 {
+  font-size: 1.4rem;
 }
