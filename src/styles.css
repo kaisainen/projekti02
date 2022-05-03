@@ -20,9 +20,9 @@ h2 {
 }
 @media only screen and (min-width: 769px) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 }
