@@ -51,4 +51,10 @@ a {
     /* margin-left: -10px;
     margin: 0; */
   }
+  .filter-title {
+    font-size: 2rem;
+  }
+  .tag {
+    font-size: 1.8rem;
+  }
 }
