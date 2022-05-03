@@ -62,7 +62,7 @@ export class ListComponent implements OnInit {
     this.getPlaces();
     this.getActivities();
     this.getEvents();
-
+    this.getData("places")
   }
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -91,7 +91,7 @@ export class ListComponent implements OnInit {
   if (filter === 'events'){
     this.jsonService.getEvents().subscribe((res: Events) => {
       this.filter = [];
-       this.filter.push(res);
+      this.filter.push(res);
       // here we set the distance to user for each place (the Activities interface is updated with this new property).
       for (let data of this.filter[0].data) {
         data.distance = this.getDistanceV1(this.userCoordinates, [

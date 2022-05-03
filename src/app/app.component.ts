@@ -22,8 +22,11 @@ export class AppComponent implements OnInit {
   filter = "";
   Filter = "";
   @Output() notifyParent: EventEmitter<Object> = new EventEmitter();
-  constructor(private list : ListComponent) {}
-
+  constructor() {}
+  redirect(filter:any) {
+    console.log("redirecting")
+    this.sendNotification(filter);
+  }
   sendNotification(filter:any) {
     console.log(filter +" has been sent to list component")
       this.notifyParent.emit(filter);

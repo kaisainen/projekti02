@@ -74,7 +74,7 @@ export class FilterComponent implements OnInit {
   showFilters = false;
   selectedMainFilter = 'places';
   selectedInterface = '';
-  @Output() notifyParent: EventEmitter<Object> = new EventEmitter();
+  @Output() notifyParent: EventEmitter<any> = new EventEmitter();
     sendNotification() {
         this.notifyParent.emit(this.selectedMainFilter);
     }
