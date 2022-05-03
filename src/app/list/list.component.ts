@@ -31,6 +31,7 @@ export class ListComponent implements OnInit {
       const userLon = position.coords.longitude;
       this.userCoordinates.push(userLat);
       this.userCoordinates.push(userLon);
+      console.log(this.userCoordinates);
     });
   }
 
