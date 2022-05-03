@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { jsonService } from '../json.service';
 import { Places } from '../places';
-import { Activities } from "../../app/activities";
-import { Events } from "../../app/events";
+import { Activities } from '../../app/activities';
+import { Events } from '../../app/events';
+import { KilometerToMeterPipe } from '../kilometer-to-meter.pipe';
 
 @Component({
   selector: 'app-list',
@@ -21,8 +22,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getUserLocation();
     this.getPlaces();
-    this.getActivities();
-    this.getEvents();
+    // this.getActivities();
+    // this.getEvents();
   }
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {

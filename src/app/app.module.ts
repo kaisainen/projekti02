@@ -13,8 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { PlaceDetailComponent } from './place-detail/place-detail.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-
+import { MatButtonModule } from '@angular/material/button';
+import { KilometerToMeterPipe } from './kilometer-to-meter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,10 +24,18 @@ import {MatButtonModule} from '@angular/material/button';
     FooterComponent,
     ListComponent,
     MapComponent,
-    PlaceDetailComponent
+    PlaceDetailComponent,
+    KilometerToMeterPipe,
   ],
-  imports: [BrowserModule, NgbModule, FontAwesomeModule, HttpClientModule, AppRoutingModule, MatBottomSheetModule, BrowserAnimationsModule, MatButtonModule
-
+  imports: [
+    BrowserModule,
+    NgbModule,
+    FontAwesomeModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MatBottomSheetModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
