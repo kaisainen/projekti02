@@ -1,47 +1,9 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'filter',
-  template: `
-    <section class="filter-container">
-      <div class="grid-container">
-        <button type="button" class="filter-title" (click)="showMainFilters()">
-          {{ selectedMainFilter | uppercase }}
-          <fa-icon *ngIf="!showFilters" [icon]="faCaretRight"></fa-icon>
-          <fa-icon *ngIf="showFilters" [icon]="faCaretDown"></fa-icon>
-        </button>
-
-        <button type="button" class="filter-title" (click)="showFilterTags()">
-          FILTERS
-          <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
-          <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
-        </button>
-      </div>
-
-      <div *ngIf="showFilters" class="tag-container">
-        <p *ngFor="let filter of filters">
-          <span
-            (click)="setMainFilter(filter); sendNotification()"
-            class="tag p-yellow-hover"
-            [ngClass]="{ selectedtag: filter === selectedMainFilter }"
-            ><a href="#">{{ filter | uppercase }}</a></span
-          >
-        </p>
-      </div>
-
-      <div *ngIf="showTags" class="tag-container">
-        <p *ngFor="let tag of tags">
-          <span
-            (click)="addSelectedTag(tag)"
-            [ngClass]="getYellowClass(tag)"
-            class="tag p-yellow-hover"
-            >#{{ tag }}</span
-          >
-        </p>
-      </div>
-    </section>
-  `,
+  templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css'],
 })
 export class FilterComponent implements OnInit {
@@ -72,12 +34,14 @@ export class FilterComponent implements OnInit {
   selectedTags: string[] = [];
   selectedTag = false;
   showFilters = false;
-  selectedMainFilter = 'places';
+  selectedMainFilter = 'events';
   selectedInterface = '';
-  @Output() notifyParent: EventEmitter<any> = new EventEmitter();
-    sendNotification() {
-        this.notifyParent.emit(this.selectedMainFilter);
-    }
+
+  @Output() mainFilter: EventEmitter<any> = new EventEmitter();
+
+  // sendNotification() {
+  //   this.mainFilter.emit(this.selectedMainFilter);
+  // }
 
   constructor() {}
 

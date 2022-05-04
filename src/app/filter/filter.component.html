@@ -1,0 +1,40 @@
+<section class="filter-container">
+  <div class="grid-container">
+    <button type="button" class="filter-title" (click)="showMainFilters()">
+      {{ selectedMainFilter | uppercase }}
+      <fa-icon *ngIf="!showFilters" [icon]="faCaretRight"></fa-icon>
+      <fa-icon *ngIf="showFilters" [icon]="faCaretDown"></fa-icon>
+    </button>
+
+    <button type="button" class="filter-title" (click)="showFilterTags()">
+      FILTERS
+      <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
+      <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
+    </button>
+  </div>
+
+  <div *ngIf="showFilters" class="tag-container">
+    <p *ngFor="let filter of filters">
+      <span
+        (click)="setMainFilter(filter)"
+        class="tag p-yellow-hover"
+        [ngClass]="{ selectedtag: filter === selectedMainFilter }"
+        ><a href="#">{{ filter | uppercase }}</a></span
+      >
+    </p>
+  </div>
+
+  <div *ngIf="showTags" class="tag-container">
+    <p *ngFor="let tag of tags">
+      <span
+        (click)="addSelectedTag(tag)"
+        [ngClass]="getYellowClass(tag)"
+        class="tag p-yellow-hover"
+        >#{{ tag }}</span
+      >
+    </p>
+  </div>
+</section>
+<!-- pass selectedMainFilter value to mainFilter in app-list  -->
+<app-list [mainFilter]="selectedMainFilter"></app-list>
+<app-map [mainFilter]="selectedMainFilter"></app-map>

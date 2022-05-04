@@ -1,10 +1,19 @@
-import { Component, EventEmitter, Injectable, NgModule, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Injectable,
+  Input,
+  NgModule,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { jsonService } from '../json.service';
 import { Places } from '../places';
-import { Activities } from "../../app/activities";
-import { Events } from "../../app/events";
-import { FilterComponent } from '../filter/filter.component';
+import { Activities } from '../activities';
+import { Events } from '../events';
+import { FilterComponent } from './filter.component';
 import { Filters } from '../filters';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -12,6 +21,8 @@ import { Filters } from '../filters';
 })
 @Injectable({ providedIn: 'root' })
 export class ListComponent implements OnInit {
+  @Input() mainFilter: any;
+
   FilterComponent: any = FilterComponent;
   places: Places[] = [];
   activities: Activities[] = [];
@@ -25,10 +36,9 @@ export class ListComponent implements OnInit {
   activity = false;
   constructor(private jsonService: jsonService) {}
 
-
   // Täällä maali, consoleen tulee arvot oikein mutta ngIf ei vaihda listaa
-  setFilter(filter:any) : void {
-    this.getData(filter);                
+  setFilter(filter: any): void {
+    this.getData(filter);
     // if (filter === 'places') {
     //   this.place = true;
     //   this.event = false;
@@ -62,60 +72,60 @@ export class ListComponent implements OnInit {
     this.getPlaces();
     this.getActivities();
     this.getEvents();
-    this.getData("places")
+    this.getData(this.mainFilter);
   }
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
       const userLat = position.coords.latitude;
       const userLon = position.coords.longitude;
       this.userCoordinates.push(userLat);
-      this.userCoordinates.push(userLon); 
+      this.userCoordinates.push(userLon);
     });
   }
-  getData(filter:any): void {
-    console.log("getting data")
-    if(filter === 'places') {
-    this.filter = [];
-    this.jsonService.getPlaces().subscribe((res: Places) => {
-      this.filter.push(res);
-      // here we set the distance to user for each place (the Activities interface is updated with this new property).
-      for (let data of this.filter[0].data) {
-        data.distance = this.getDistanceV1(this.userCoordinates, [
-          data.location.lat,
-          data.location.lon,
-        ]);
-      }
-      this.filter[0].data.sort((a:any, b:any) => a.distance - b.distance);
-    });
-  }
-  if (filter === 'events'){
-    this.jsonService.getEvents().subscribe((res: Events) => {
+  getData(filter: any): void {
+    console.log('getting data');
+    if (filter === 'places') {
       this.filter = [];
-      this.filter.push(res);
-      // here we set the distance to user for each place (the Activities interface is updated with this new property).
-      for (let data of this.filter[0].data) {
-        data.distance = this.getDistanceV1(this.userCoordinates, [
-          data.location.lat,
-          data.location.lon,
-        ]);
-      }
-      this.filter[0].data.sort((a: any, b: any) => a.distance - b.distance);
-    });
-  }
-  if (filter === 'activities'){
-    this.jsonService.getActivities().subscribe((res: Activities) => {
-      this.filter = [];
-      this.filter.push(res);
-      // here we set the distance to user for each place (the Activities interface is updated with this new property).
-      for (let data of this.filter[0].data) {
-        data.distance = this.getDistanceV1(this.userCoordinates, [
-          data.location.lat,
-          data.location.lon,
-        ]);
-      }
-      this.filter[0].data.sort((a:any, b:any) => a.distance - b.distance);
-    });
-  }
+      this.jsonService.getPlaces().subscribe((res: Places) => {
+        this.filter.push(res);
+        // here we set the distance to user for each place (the Activities interface is updated with this new property).
+        for (let data of this.filter[0].data) {
+          data.distance = this.getDistanceV1(this.userCoordinates, [
+            data.location.lat,
+            data.location.lon,
+          ]);
+        }
+        this.filter[0].data.sort((a: any, b: any) => a.distance - b.distance);
+      });
+    }
+    if (filter === 'events') {
+      this.jsonService.getEvents().subscribe((res: Events) => {
+        this.filter = [];
+        this.filter.push(res);
+        // here we set the distance to user for each place (the Activities interface is updated with this new property).
+        for (let data of this.filter[0].data) {
+          data.distance = this.getDistanceV1(this.userCoordinates, [
+            data.location.lat,
+            data.location.lon,
+          ]);
+        }
+        this.filter[0].data.sort((a: any, b: any) => a.distance - b.distance);
+      });
+    }
+    if (filter === 'activities') {
+      this.jsonService.getActivities().subscribe((res: Activities) => {
+        this.filter = [];
+        this.filter.push(res);
+        // here we set the distance to user for each place (the Activities interface is updated with this new property).
+        for (let data of this.filter[0].data) {
+          data.distance = this.getDistanceV1(this.userCoordinates, [
+            data.location.lat,
+            data.location.lon,
+          ]);
+        }
+        this.filter[0].data.sort((a: any, b: any) => a.distance - b.distance);
+      });
+    }
   }
   // getData(filter:any): void {
   //   this.jsonService.getData(filter).subscribe((res: Filters) => {

@@ -1,23 +1,22 @@
 <section class="page-container">
-    <app-header class="header"></app-header>
+  <app-header class="header"></app-header>
 
-    <filter class="filter"(notifyParent)="redirect($event)"></filter>
+  <filter class="filter"></filter>
 
-    <div class="top" *ngIf="showTop">
-        <p [ngClass]="{'lightblue':shownMap}" (click)="showMap()">
-            Map
-            <fa-icon class="icon" [icon]="faMap"></fa-icon>
-        </p>
-        <p [ngClass]="{'lightblue':shownList}" (click)="showList()">
-            List
-            <fa-icon class="icon" [icon]="faList"></fa-icon>
-        </p>
-    </div>
+  <!-- <div class="top" *ngIf="showTop">
+    <p [ngClass]="{ lightblue: shownMap }" (click)="showMap()">
+      Map
+      <fa-icon class="icon" [icon]="faMap"></fa-icon>
+    </p>
+    <p [ngClass]="{ lightblue: shownList }" (click)="showList()">
+      List
+      <fa-icon class="icon" [icon]="faList"></fa-icon>
+    </p>
+  </div> -->
 
-    <app-list class="list" *ngIf="shownList" (setFilter)="sendNotification($event)"></app-list>
+  <!-- <app-list class="list" *ngIf="shownList" (setFilter)="sendNotification($event)"></app-list> -->
 
-    <app-map class="map" *ngIf="shownMap || desktop"></app-map>
+  <!-- <app-map class="map" *ngIf="shownMap || desktop"></app-map> -->
 
-    <app-footer class="footer"></app-footer>
-
+  <app-footer class="footer"></app-footer>
 </section>

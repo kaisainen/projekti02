@@ -1,9 +1,16 @@
-import { Component, AfterViewInit, OnInit, ComponentFactoryResolver, ApplicationRef, Injector } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  OnInit,
+  ComponentFactoryResolver,
+  ApplicationRef,
+  Injector,
+  Input,
+} from '@angular/core';
 import * as L from 'leaflet';
 import { ApiService } from '../api.service';
 import { PlaceDetailComponent } from '../place-detail/place-detail.component';
 import { Places } from '../places';
-
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -26,6 +33,7 @@ L.Marker.prototype.options.icon = iconDefault;
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements AfterViewInit, OnInit {
+  @Input() mainFilter: any;
   private map: any;
   places: Places[] = [];
 
@@ -35,8 +43,7 @@ export class MapComponent implements AfterViewInit, OnInit {
     private applicationRef: ApplicationRef,
     private injector: Injector
   ) {}
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   private initMap(): void {
     this.map = L.map('map').locate({ setView: true, maxZoom: 15 });
@@ -56,37 +63,35 @@ export class MapComponent implements AfterViewInit, OnInit {
 
     tiles.addTo(this.map);
   }
-  makePlacesPopup(data: any): any{
+  makePlacesPopup(data: any): any {
     let markerPopup: any = this.compilePopup(PlaceDetailComponent, (p: any) => {
       (p.instance.name = data.name.fi),
-      (p.instance.address = data.location.address.street_address),
-      (p.instance.postal_code = data.location.address.postal_code),
-      (p.instance.locality = data.location.address.locality),
-      (p.instance.info_url = data.info_url),
-      (p.instance.intro = data.description.intro)
+        (p.instance.address = data.location.address.street_address),
+        (p.instance.postal_code = data.location.address.postal_code),
+        (p.instance.locality = data.location.address.locality),
+        (p.instance.info_url = data.info_url),
+        (p.instance.intro = data.description.intro);
     });
     return markerPopup;
   }
   private compilePopup(component: any, onAttach: any): any {
-  const compFactory: any = this.resolver.resolveComponentFactory(component);
-  let compRef: any = compFactory.create(this.injector);
-  
-  if (onAttach)
-    onAttach(compRef);
-  
-  this.applicationRef.attachView(compRef.hostView);
-  compRef.onDestroy(() => this.applicationRef.detachView(compRef.hostView));
-  
-  let div = document.createElement('div');
-  div.appendChild(compRef.location.nativeElement);
-  return div;
+    const compFactory: any = this.resolver.resolveComponentFactory(component);
+    let compRef: any = compFactory.create(this.injector);
+
+    if (onAttach) onAttach(compRef);
+
+    this.applicationRef.attachView(compRef.hostView);
+    compRef.onDestroy(() => this.applicationRef.detachView(compRef.hostView));
+
+    let div = document.createElement('div');
+    div.appendChild(compRef.location.nativeElement);
+    return div;
   }
-  
-    makeCurrentLocationPopup(): string {
-    return  `` +
-    `<div>Olen tässä</div>`  
-    }
-  
+
+  makeCurrentLocationPopup(): string {
+    return `` + `<div>Olen tässä</div>`;
+  }
+
   makePlacesMarkers(map: L.Map) {
     navigator.geolocation.getCurrentPosition((position) => {
       const currentLat = position.coords.latitude;
@@ -120,7 +125,7 @@ export class MapComponent implements AfterViewInit, OnInit {
           const lon = c.location.lon;
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
-      
+
           marker.bindPopup(this.makePlacesPopup(c));
           marker.addTo(map);
         }
@@ -137,7 +142,7 @@ export class MapComponent implements AfterViewInit, OnInit {
           const lon = c.location.lon;
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
-      
+
           marker.bindPopup(this.makePlacesPopup(c));
           marker.addTo(map);
         }
@@ -154,20 +159,28 @@ export class MapComponent implements AfterViewInit, OnInit {
 
       currentLocationMarker.setStyle({ color: 'red' });
 
-      currentLocationMarker.bindPopup(
-        this.makeCurrentLocationPopup()
-      );
+      currentLocationMarker.bindPopup(this.makeCurrentLocationPopup());
 
       currentLocationMarker.addTo(map);
     });
   }
 
+  mayMarkersBasedOnFilter(filter: string, map: L.Map) {
+    if (filter === 'places') {
+      this.makePlacesMarkers(map);
+    } else if (filter === 'activities') {
+      this.makeActivitiesMarkers(map);
+    } else {
+      this.makeEventsMarkers(map);
+    }
+  }
+
   ngAfterViewInit(): void {
     this.initMap();
     this.makeMyLocationMarker(this.map);
-    this.makePlacesMarkers(this.map);
-    this.makeActivitiesMarkers(this.map);
-    this.makeEventsMarkers(this.map);
+    // this.makePlacesMarkers(this.map);
+    // this.makeActivitiesMarkers(this.map);
+    // this.makeEventsMarkers(this.map);
+    this.mayMarkersBasedOnFilter(this.mainFilter, this.map);
   }
-
 }
