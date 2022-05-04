@@ -13,42 +13,54 @@
 
 @media only screen and (min-width: 768px) {
   .map {
-    height: 350px;
-    width: 350px;
+    height: 570px;
+    width: 450px;
   }
 }
 @media (min-width: 1024px) {
   /* big landscape tablets, laptops, and desktops */
   .map {
+    position: relative;
+    right: 200px;
     height: 660px;
     width: 600px;
+  }
+}
+@media only screen and (min-width: 840px) {
+  .map {
+    position: relative;
+    right: 2px;
+    height: 570px;
+    width: 475px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .map {
     position: relative;
-    left: 60px;
-    height: 660px;
+    left: 10px;
+    height: 570px;
   }
 }
 @media only screen and (min-width: 1536px) {
   .map {
     position: relative;
-    left: 37px;
-    height: 660px;
+    left: 51px;
+    height: 570px;
+    width: 530px;
   }
 }
 @media only screen and (min-width: 1920px) {
   .map {
-    position: absolute;
-    left: -21px;
-    height: 660px;
+    position: relative;
+    height: 570px;
+    width: 715px;
   }
 }
 @media only screen and (min-width: 2560px) {
   .map {
     position: absolute;
-    left: -50px;
-    height: 660px;
+    left: -180px;
+    height: 570px;
+    width: 700px;
   }
 }

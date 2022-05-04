@@ -22,8 +22,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getUserLocation();
     this.getPlaces();
-    // this.getActivities();
-    // this.getEvents();
+   // this.getActivities();
+   // this.getEvents();
   }
   getUserLocation() {
     navigator.geolocation.getCurrentPosition((position) => {
