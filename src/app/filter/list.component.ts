@@ -6,6 +6,7 @@ import {
   NgModule,
   OnInit,
   Output,
+  SimpleChanges,
 } from '@angular/core';
 import { jsonService } from '../json.service';
 import { Places } from '../places';
@@ -35,7 +36,10 @@ export class ListComponent implements OnInit {
   event = false;
   activity = false;
   constructor(private jsonService: jsonService) {}
-
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes)
+    this.getData(this.mainFilter);
+  }
   // Täällä maali, consoleen tulee arvot oikein mutta ngIf ei vaihda listaa
   setFilter(filter: any): void {
     this.getData(filter);
