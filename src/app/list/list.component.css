@@ -26,7 +26,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .list {
-    width: 425px;
+    width: 375px;
   }
   .distance-in-list {
     font-size: 1.6rem;
@@ -39,7 +39,7 @@ table {
 }
 @media only screen and (min-width: 1440px) {
   .list {
-    width: 350px;
+    width: 425px;
     position: relative;
     left: 250px;
   }
@@ -49,7 +49,7 @@ table {
 }
 @media only screen and (min-width: 1536px) {
   .list {
-    width: 350px;
+    width: 420px;
     position: relative;
     left: 325px;
   }
@@ -63,7 +63,7 @@ table {
 }
 @media only screen and (min-width: 2560px) {
   .list {
-    width: 500px;
+    width: 535px;
     position: relative;
     left: 860px;
   }
