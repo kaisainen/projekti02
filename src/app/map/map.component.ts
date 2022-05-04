@@ -3,7 +3,7 @@ import * as L from 'leaflet';
 import { ApiService } from '../api.service';
 import { PlaceDetailComponent } from '../place-detail/place-detail.component';
 import { Places } from '../places';
-
+import 'leaflet.markercluster';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
 const iconUrl = 'assets/marker-icon.png';
@@ -88,11 +88,10 @@ export class MapComponent implements AfterViewInit, OnInit {
     }
   
   makePlacesMarkers(map: L.Map) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const currentLat = position.coords.latitude;
-      const currentLon = position.coords.longitude;
+  
 
       this.api.getAllPlaces().subscribe((res: any) => {
+        const markerCluster =  new L.MarkerClusterGroup();
         for (const c of res.data) {
           const lon = c.location.lon;
           const lat = c.location.lat;
@@ -105,10 +104,14 @@ export class MapComponent implements AfterViewInit, OnInit {
           // console.log(c.name.en + ':' + distance);
           //above is for testing
           marker.bindPopup(this.makePlacesPopup(c));
-          marker.addTo(map);
+          markerCluster.addLayer(marker);
+
+        //  marker.addTo(map);
         }
+        map.addLayer(markerCluster);
+
       });
-    });
+    
   }
   makeEventsMarkers(map: L.Map) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -116,14 +119,20 @@ export class MapComponent implements AfterViewInit, OnInit {
       const currentLon = position.coords.longitude;
 
       this.api.getAllEvents().subscribe((res: any) => {
+        const markerCluster =  new L.MarkerClusterGroup();
+
         for (const c of res.data) {
           const lon = c.location.lon;
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
       
           marker.bindPopup(this.makePlacesPopup(c));
-          marker.addTo(map);
+          markerCluster.addLayer(marker);
+
+         // marker.addTo(map);
         }
+        map.addLayer(markerCluster);
+
       });
     });
   }
@@ -133,14 +142,20 @@ export class MapComponent implements AfterViewInit, OnInit {
       const currentLon = position.coords.longitude;
 
       this.api.getAllActivities().subscribe((res: any) => {
+        const markerCluster =  new L.MarkerClusterGroup();
+
         for (const c of res.data) {
           const lon = c.location.lon;
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
       
           marker.bindPopup(this.makePlacesPopup(c));
-          marker.addTo(map);
+          markerCluster.addLayer(marker);
+
+    //  marker.addTo(map);
         }
+        map.addLayer(markerCluster);
+
       });
     });
   }
