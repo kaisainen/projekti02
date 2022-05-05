@@ -45,6 +45,27 @@ a {
   text-decoration: none;
   color: black;
 }
+/* displaying map or list start */
+.top {
+  grid-area: top;
+  display: flex;
+  flex-direction: row;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.top > * {
+  flex: 1;
+  padding-left: 4rem;
+  margin: 0;
+}
+.icon {
+  padding-left: 0.5rem;
+}
+.lightblue {
+  background-color: lightblue;
+}
+/* displaying map or list end */
+
 @media only screen and (min-width: 769px) {
   .p-yellow-hover:hover {
     background-color: lightblue;

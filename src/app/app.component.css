@@ -25,24 +25,6 @@
     "map"
     "footer";
 }
-.top {
-  grid-area: top;
-  display: flex;
-  flex-direction: row;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-.top > * {
-  flex: 1;
-  padding-left: 4rem;
-  margin: 0;
-}
-.icon {
-  padding-left: 0.5rem;
-}
-.lightblue {
-  background-color: lightblue;
-}
 @media only screen and (min-width: 429px) {
   .page-container {
     grid-template-columns: 1.5fr 1fr;
@@ -63,17 +45,14 @@
       "filter filter filter"
       "list list map"
       "footer footer footer";
-      
   }
   @media only screen and (min-width: 1400px) {
     .page-container {
-    background-image: url(../assets/helsinki.jpg);
+      background-image: url(../assets/helsinki.jpg);
+    }
+    .map {
+      position: relative;
+      right: 300px;
+    }
   }
-  .map {
-    position: relative;
-    right: 300px;
-  }
-  }
-
-  
 }

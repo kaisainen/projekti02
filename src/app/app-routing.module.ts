@@ -1,18 +1,14 @@
 import { NgModule } from '@angular/core';
-import { MapComponent } from './map/map.component';
+import { MapComponent } from './filter/map/map.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PlaceDetailComponent } from './place-detail/place-detail.component';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'map', pathMatch: 'full' },
- 
- ];
+const routes: Routes = [{ path: '', redirectTo: 'map', pathMatch: 'full' }];
 
 @NgModule({
-  
-  imports: [ CommonModule, RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [CommonModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,50 +1,29 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCaretDown,
+  faCaretRight,
+  faList,
+  faMap,
+} from '@fortawesome/free-solid-svg-icons';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'filter',
-  template: `
-    <section class="filter-container">
-      <div class="grid-container">
-        <button type="button" class="filter-title" (click)="showMainFilters()">
-          {{ selectedMainFilter | uppercase }}
-          <fa-icon *ngIf="!showFilters" [icon]="faCaretRight"></fa-icon>
-          <fa-icon *ngIf="showFilters" [icon]="faCaretDown"></fa-icon>
-        </button>
-
-        <button type="button" class="filter-title" (click)="showFilterTags()">
-          FILTERS
-          <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
-          <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
-        </button>
-      </div>
-
-      <div *ngIf="showFilters" class="tag-container">
-        <p *ngFor="let filter of filters">
-          <span
-            (click)="setMainFilter(filter)"
-            class="tag p-yellow-hover"
-            [ngClass]="{ selectedtag: filter === selectedMainFilter }"
-            ><a href="#">{{ filter | titlecase }}</a></span
-          >
-        </p>
-      </div>
-
-      <div *ngIf="showTags" class="tag-container">
-        <p *ngFor="let tag of tags">
-          <span
-            (click)="addSelectedTag(tag)"
-            [ngClass]="getYellowClass(tag)"
-            class="tag p-yellow-hover"
-            >{{ tag | titlecase }}</span
-          >
-        </p>
-      </div>
-    </section>
-  `,
+  templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css'],
 })
 export class FilterComponent implements OnInit {
+  // show map or list
+  shownMap = false;
+  shownList = true;
+  showTop = true;
+  screenHeight: any;
+  screenWidth: any;
+  desktop = false;
+  faList = faList;
+  faMap = faMap;
+
+  // filters related variables
   tags: string[] = [];
   placetags = [
     'cafe',
@@ -132,5 +111,29 @@ export class FilterComponent implements OnInit {
     this.showFilters = !this.showFilters;
   }
 
-  ngOnInit(): void {}
+  showMap() {
+    this.shownMap = true;
+    this.shownList = false;
+  }
+  showList() {
+    this.shownList = true;
+    this.shownMap = false;
+  }
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+    this.screenHeight = window.innerHeight;
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth > 429) {
+      this.desktop = true;
+      this.shownMap = false;
+      this.shownList = true;
+      this.showTop = false;
+    } else {
+      this.desktop = false;
+    }
+  }
+
+  ngOnInit(): void {
+    this.getScreenSize();
+  }
 }
