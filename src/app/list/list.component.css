@@ -24,6 +24,16 @@ table {
   padding-top: 2rem;
 }
 
+/* Kommentti: seuraava sääntö scrollbarille, ei toimi vielä täydellisesti */
+#places {
+  height: 570px;
+  /* width: auto; */
+  /* overflow: auto; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-right: 0.5rem;
+}
+
 @media only screen and (min-width: 768px) {
   .list {
     width: 375px;
