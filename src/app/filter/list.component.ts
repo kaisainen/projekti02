@@ -37,7 +37,7 @@ export class ListComponent implements OnInit {
   activity = false;
   constructor(private jsonService: jsonService) {}
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes)
+    console.log(changes);
     this.getData(this.mainFilter);
   }
   // Täällä maali, consoleen tulee arvot oikein mutta ngIf ei vaihda listaa
@@ -73,9 +73,9 @@ export class ListComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getUserLocation();
-    this.getPlaces();
-    this.getActivities();
-    this.getEvents();
+    // this.getPlaces();
+    // this.getActivities();
+    // this.getEvents();
     this.getData(this.mainFilter);
   }
   getUserLocation() {

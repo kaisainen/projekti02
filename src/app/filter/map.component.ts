@@ -6,6 +6,7 @@ import {
   ApplicationRef,
   Injector,
   Input,
+  SimpleChanges,
 } from '@angular/core';
 import * as L from 'leaflet';
 import { ApiService } from '../api.service';
@@ -36,6 +37,9 @@ export class MapComponent implements AfterViewInit, OnInit {
   @Input() mainFilter: any;
   private map: any;
   places: Places[] = [];
+  placesMarkers: any[] = [];
+  eventsMarkers: any[] = [];
+  actMarkers: any[] = [];
 
   constructor(
     private api: ApiService,
@@ -43,7 +47,6 @@ export class MapComponent implements AfterViewInit, OnInit {
     private applicationRef: ApplicationRef,
     private injector: Injector
   ) {}
-  ngOnInit(): void {}
 
   private initMap(): void {
     this.map = L.map('map').locate({ setView: true, maxZoom: 15 });
@@ -102,13 +105,7 @@ export class MapComponent implements AfterViewInit, OnInit {
           const lon = c.location.lon;
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
-          //this is just testing
-          // const distance = this.getDistance(
-          //   [currentLat, currentLon],
-          //   [lat, lon]
-          // );
-          // console.log(c.name.en + ':' + distance);
-          //above is for testing
+          // this.placesMarkers.push(marker);
           marker.bindPopup(this.makePlacesPopup(c));
           marker.addTo(map);
         }
@@ -121,23 +118,6 @@ export class MapComponent implements AfterViewInit, OnInit {
       const currentLon = position.coords.longitude;
 
       this.api.getAllEvents().subscribe((res: any) => {
-        for (const c of res.data) {
-          const lon = c.location.lon;
-          const lat = c.location.lat;
-          const marker = L.marker([lat, lon]);
-
-          marker.bindPopup(this.makePlacesPopup(c));
-          marker.addTo(map);
-        }
-      });
-    });
-  }
-  makeActivitiesMarkers(map: L.Map) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const currentLat = position.coords.latitude;
-      const currentLon = position.coords.longitude;
-
-      this.api.getAllActivities().subscribe((res: any) => {
         for (const c of res.data) {
           const lon = c.location.lon;
           const lat = c.location.lat;
@@ -164,8 +144,27 @@ export class MapComponent implements AfterViewInit, OnInit {
       currentLocationMarker.addTo(map);
     });
   }
+  makeActivitiesMarkers(map: L.Map) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const currentLat = position.coords.latitude;
+      const currentLon = position.coords.longitude;
 
-  mayMarkersBasedOnFilter(filter: string, map: L.Map) {
+      this.api.getAllActivities().subscribe((res: any) => {
+        for (const c of res.data) {
+          const lon = c.location.lon;
+          const lat = c.location.lat;
+          const marker = L.marker([lat, lon]);
+
+          marker.bindPopup(this.makePlacesPopup(c));
+          marker.addTo(map);
+        }
+      });
+    });
+  }
+
+  makeMarkersBasedOnFilter(filter: string, map: L.Map) {
+    console.log('getting data');
+
     if (filter === 'places') {
       this.makePlacesMarkers(map);
     } else if (filter === 'activities') {
@@ -175,12 +174,25 @@ export class MapComponent implements AfterViewInit, OnInit {
     }
   }
 
+  removeMarkers(map: L.Map) {}
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+
+    this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
+  }
+  ngOnInit(): void {
+    // this.initMap();
+    // this.makeMyLocationMarker(this.map);
+    // this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
+  }
+
   ngAfterViewInit(): void {
     this.initMap();
     this.makeMyLocationMarker(this.map);
-    // this.makePlacesMarkers(this.map);
+    this.makePlacesMarkers(this.map);
     // this.makeActivitiesMarkers(this.map);
     // this.makeEventsMarkers(this.map);
-    this.mayMarkersBasedOnFilter(this.mainFilter, this.map);
+    // this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
   }
 }
