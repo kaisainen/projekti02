@@ -4,12 +4,6 @@
 .filter {
   grid-area: filter;
 }
-.map {
-  grid-area: map;
-}
-.list {
-  grid-area: list;
-}
 .footer {
   grid-area: footer;
 }
@@ -20,39 +14,5 @@
   grid-template-areas:
     "header"
     "filter"
-    "top"
-    "list"
-    "map"
     "footer";
-}
-@media only screen and (min-width: 429px) {
-  .page-container {
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "header header"
-      "filter filter"
-      "list map"
-      "footer footer";
-  }
-}
-@media only screen and (min-width: 769px) {
-  .page-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "header header header"
-      "filter filter filter"
-      "list list map"
-      "footer footer footer";
-  }
-  @media only screen and (min-width: 1400px) {
-    .page-container {
-      background-image: url(../assets/helsinki.jpg);
-    }
-    .map {
-      position: relative;
-      right: 300px;
-    }
-  }
 }

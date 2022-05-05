@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import {
   faCaretDown,
   faCaretRight,
@@ -51,7 +51,9 @@ export class FilterComponent implements OnInit {
   selectedTags: string[] = [];
   selectedTag = false;
   showFilters = false;
-  @Input() selectedMainFilter = 'places';
+  selectedMainFilter = 'places';
+
+  @Output() mainFilter: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
 

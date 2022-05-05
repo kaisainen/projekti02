@@ -50,7 +50,6 @@ table {
 @media only screen and (min-width: 1440px) {
   .list {
     width: 425px;
-    position: relative;
     left: 250px;
   }
   .panel {
@@ -60,21 +59,15 @@ table {
 @media only screen and (min-width: 1536px) {
   .list {
     width: 420px;
-    position: relative;
-    left: 325px;
   }
 }
 @media only screen and (min-width: 1920px) {
   .list {
     width: 500px;
-    position: relative;
-    left: 460px;
   }
 }
 @media only screen and (min-width: 2560px) {
   .list {
     width: 535px;
-    position: relative;
-    left: 860px;
   }
 }

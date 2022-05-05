@@ -37,10 +37,6 @@
   font-family: var(--main-font);
   font-size: 16px;
 }
-/* .p-yellow-hover {
-  margin: 0;
-  padding: 5px 0 5px 20px;
-} */
 a {
   text-decoration: none;
   color: black;
@@ -66,11 +62,22 @@ a {
 }
 /* displaying map or list end */
 
+@media only screen and (min-width: 429px) {
+  .list-map-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
 @media only screen and (min-width: 769px) {
+  .main-container {
+    background-image: url(./../../assets/helsinki.jpg);
+  }
+  .list {
+    justify-self: end;
+  }
   .p-yellow-hover:hover {
     background-color: lightblue;
-    /* margin-left: -10px;
-    margin: 0; */
   }
   .filter-title {
     font-size: 2rem;

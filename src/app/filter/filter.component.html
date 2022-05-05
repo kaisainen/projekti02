@@ -1,51 +1,63 @@
-<section class="filter-container">
-  <div class="grid-container">
-    <button type="button" class="filter-title" (click)="showMainFilters()">
-      {{ selectedMainFilter | uppercase }}
-      <fa-icon *ngIf="!showFilters" [icon]="faCaretRight"></fa-icon>
-      <fa-icon *ngIf="showFilters" [icon]="faCaretDown"></fa-icon>
-    </button>
+<section class="main-container">
+  <section class="filter-container">
+    <div class="grid-container">
+      <button type="button" class="filter-title" (click)="showMainFilters()">
+        {{ selectedMainFilter | uppercase }}
+        <fa-icon *ngIf="!showFilters" [icon]="faCaretRight"></fa-icon>
+        <fa-icon *ngIf="showFilters" [icon]="faCaretDown"></fa-icon>
+      </button>
 
-    <button type="button" class="filter-title" (click)="showFilterTags()">
-      FILTERS
-      <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
-      <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
-    </button>
-  </div>
+      <button type="button" class="filter-title" (click)="showFilterTags()">
+        FILTERS
+        <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
+        <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
+      </button>
+    </div>
 
-  <div *ngIf="showFilters" class="tag-container">
-    <p *ngFor="let filter of filters">
-      <span
-        (click)="setMainFilter(filter)"
-        class="tag p-yellow-hover"
-        [ngClass]="{ selectedtag: filter === selectedMainFilter }"
-        ><a href="#">{{ filter | titlecase }}</a></span
-      >
+    <div *ngIf="showFilters" class="tag-container">
+      <p *ngFor="let filter of filters">
+        <span
+          (click)="setMainFilter(filter)"
+          class="tag p-yellow-hover"
+          [ngClass]="{ selectedtag: filter === selectedMainFilter }"
+          ><a href="#">{{ filter | titlecase }}</a></span
+        >
+      </p>
+    </div>
+
+    <div *ngIf="showTags" class="tag-container">
+      <p *ngFor="let tag of tags">
+        <span
+          (click)="addSelectedTag(tag)"
+          [ngClass]="getYellowClass(tag)"
+          class="tag p-yellow-hover"
+          >{{ tag | titlecase }}</span
+        >
+      </p>
+    </div>
+  </section>
+
+  <div class="top" *ngIf="showTop">
+    <p [ngClass]="{ lightblue: shownMap }" (click)="showMap()">
+      Map
+      <fa-icon class="icon" [icon]="faMap"></fa-icon>
+    </p>
+    <p [ngClass]="{ lightblue: shownList }" (click)="showList()">
+      List
+      <fa-icon class="icon" [icon]="faList"></fa-icon>
     </p>
   </div>
 
-  <div *ngIf="showTags" class="tag-container">
-    <p *ngFor="let tag of tags">
-      <span
-        (click)="addSelectedTag(tag)"
-        [ngClass]="getYellowClass(tag)"
-        class="tag p-yellow-hover"
-        >{{ tag | titlecase }}</span
-      >
-    </p>
-  </div>
+  <section class="list-map-container">
+    <app-list
+      class="list"
+      *ngIf="shownList"
+      [mainFilter]="selectedMainFilter"
+    ></app-list>
+    <app-map
+      class="map"
+      *ngIf="shownMap || desktop"
+      [mainFilter]="selectedMainFilter"
+    ></app-map>
+  </section>
 </section>
-
-<div class="top" *ngIf="showTop">
-  <p [ngClass]="{ lightblue: shownMap }" (click)="showMap()">
-    Map
-    <fa-icon class="icon" [icon]="faMap"></fa-icon>
-  </p>
-  <p [ngClass]="{ lightblue: shownList }" (click)="showList()">
-    List
-    <fa-icon class="icon" [icon]="faList"></fa-icon>
-  </p>
-</div>
-
-<app-list class="list" *ngIf="shownList"></app-list>
-<app-map class="map" *ngIf="shownMap || desktop"></app-map>

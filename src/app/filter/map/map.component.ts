@@ -5,6 +5,8 @@ import {
   ComponentFactoryResolver,
   ApplicationRef,
   Injector,
+  Input,
+  SimpleChanges,
 } from '@angular/core';
 import * as L from 'leaflet';
 import { ApiService } from '../../api.service';
@@ -33,6 +35,8 @@ L.Marker.prototype.options.icon = iconDefault;
   styleUrls: ['./map.component.css'],
 })
 export class MapComponent implements AfterViewInit, OnInit {
+  @Input() mainFilter: any;
+
   private map: any;
   places: Places[] = [];
 
@@ -42,7 +46,6 @@ export class MapComponent implements AfterViewInit, OnInit {
     private applicationRef: ApplicationRef,
     private injector: Injector
   ) {}
-  ngOnInit(): void {}
 
   private initMap(): void {
     this.map = L.map('map').locate({ setView: true, maxZoom: 15 });
@@ -173,11 +176,34 @@ export class MapComponent implements AfterViewInit, OnInit {
     });
   }
 
+  makeMarkersBasedOnFilter(filter: string, map: L.Map) {
+    console.log('getting data');
+
+    if (filter === 'places') {
+      this.makePlacesMarkers(map);
+    } else if (filter === 'activities') {
+      this.makeActivitiesMarkers(map);
+    } else {
+      this.makeEventsMarkers(map);
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+
+    this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
+  }
+  ngOnInit(): void {
+    this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
+  }
+
   ngAfterViewInit(): void {
     this.initMap();
     this.makeMyLocationMarker(this.map);
-    this.makePlacesMarkers(this.map);
-    this.makeActivitiesMarkers(this.map);
-    this.makeEventsMarkers(this.map);
+    this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
+
+    // this.makePlacesMarkers(this.map);
+    // this.makeActivitiesMarkers(this.map);
+    // this.makeEventsMarkers(this.map);
   }
 }

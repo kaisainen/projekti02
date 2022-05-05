@@ -1,18 +1,18 @@
-export interface Places {
+export interface Filters {
   meta: Meta;
   data: Datum[];
   tags: { [key: string]: string };
 }
 
 export interface Datum {
-  id: string;
-  name: NameClass;
-  source_type: EType;
-  info_url: string;
-  modified_at: Date;
-  location: Location;
-  description: Description;
-  tags: Tag[];
+  id:                  string;
+  name:                NameClass;
+  source_type:         EType;
+  info_url:            string;
+  modified_at:         Date;
+  location:            Location;
+  description:         Description;
+  tags:                Tag[];
   where_when_duration: WhereWhenDuration;
   event_dates: EventDates;
   extra_searchwords: string[];
@@ -21,46 +21,46 @@ export interface Datum {
 }
 
 export interface Description {
-  intro: null;
-  body: string;
+  intro:  null;
+  body:   string;
   images: Image[];
 }
 
 export interface Image {
-  url: string;
+  url:              string;
   copyright_holder: string;
-  license_type: EType;
-  media_id: null;
+  license_type:     EType;
+  media_id:         null;
 }
 
 export interface EType {
-  id: number;
+  id:   number;
   name: NameEnum;
 }
 
 export enum NameEnum {
-  AllRightsReserved = 'All rights reserved.',
-  MyHelsinki = 'MyHelsinki',
+  AllRightsReserved = "All rights reserved.",
+  MyHelsinki = "MyHelsinki",
 }
 
 export interface Location {
-  lat: number;
-  lon: number;
+  lat:     number;
+  lon:     number;
   address: Address;
 }
 
 export interface Address {
   street_address: null | string;
-  postal_code: null | string;
-  locality: Locality;
-  neighbourhood: null;
+  postal_code:    null | string;
+  locality:       Locality;
+  neighbourhood:  null;
 }
 
 export enum Locality {
-  Espoo = 'Espoo',
-  Helsinki = 'Helsinki',
-  Tampere = 'Tampere',
-  Vantaa = 'Vantaa',
+  Espoo = "Espoo",
+  Helsinki = "Helsinki",
+  Tampere = "Tampere",
+  Vantaa = "Vantaa",
 }
 
 export interface NameClass {
@@ -71,20 +71,20 @@ export interface NameClass {
 }
 
 export interface Tag {
-  id: string;
+  id:   string;
   name: string;
 }
 
 export interface WhereWhenDuration {
   where_and_when: null | string;
-  duration: null | string;
+  duration:       null | string;
 }
 
 export interface Meta {
   count: string;
 }
 export interface EventDates {
-  starting_day: Date | null;
-  ending_day: Date | null;
+  starting_day:           Date | null;
+  ending_day:             Date | null;
   additional_description: null;
 }

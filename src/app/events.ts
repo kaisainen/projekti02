@@ -5,76 +5,83 @@ export interface Events {
 }
 
 export interface Datum {
-  id:          string;
-  name:        NameClass;
+  id: string;
+  name: NameClass;
   source_type: EType;
-  info_url:    null | string;
+  info_url: string;
   modified_at: Date;
-  location:    Location;
+  location: Location;
   description: Description;
-  tags:        Tag[];
+  tags: Tag[];
+  where_when_duration: WhereWhenDuration;
   event_dates: EventDates;
+  extra_searchwords: string[];
+  opening_hours_url: string;
   distance: number;
+}
+export interface WhereWhenDuration {
+  where_and_when: null | string;
+  duration: null | string;
 }
 
 export interface Description {
-  intro:  null | string;
-  body:   string;
+  intro: null;
+  body: string;
   images: Image[];
 }
 
 export interface Image {
-  url:              string;
+  url: string;
   copyright_holder: string;
-  license_type:     EType;
-  media_id:         null;
+  license_type: EType;
+  media_id: null;
 }
 
 export interface EType {
-  id:   number;
+  id: number;
   name: NameEnum;
 }
 
 export enum NameEnum {
-  AllRightsReserved = "All rights reserved.",
-  LinkedEvents = "LinkedEvents",
+  AllRightsReserved = 'All rights reserved.',
+  MyHelsinki = 'MyHelsinki',
 }
 
 export interface EventDates {
-  starting_day:           Date | null;
-  ending_day:             Date | null;
+  starting_day: Date | null;
+  ending_day: Date | null;
   additional_description: null;
 }
 
 export interface Location {
-  lat:     number;
-  lon:     number;
+  lat: number;
+  lon: number;
   address: Address;
 }
 
 export interface Address {
   street_address: null | string;
-  postal_code:    null | string;
-  locality:       Locality | null;
-  neighbourhood:  null;
+  postal_code: null | string;
+  locality: Locality;
+  neighbourhood: null;
 }
 
 export enum Locality {
-  Espoo = "Espoo",
-  Helsinki = "Helsinki",
-  Kauniainen = "Kauniainen",
-  Vantaa = "Vantaa",
+  Espoo = 'Espoo',
+  Helsinki = 'Helsinki',
+  Tampere = 'Tampere',
+  Vantaa = 'Vantaa',
 }
 
 export interface NameClass {
   fi: string;
-  en: null | string;
+  en: string;
   sv: null | string;
-  zh: null | string;
+  zh: null;
 }
 
 export interface Tag {
-  id:   string;
+  id: string;
   name: string;
 }
 

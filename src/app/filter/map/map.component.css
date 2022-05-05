@@ -1,8 +1,7 @@
 .map {
   height: 65vh;
   width: 65vh;
-  margin: auto;
-
+  /* margin: auto; */
 }
 @media only screen and (min-width: 429px) {
   .map {
@@ -17,16 +16,15 @@
     width: 450px;
   }
 }
-@media (min-width: 1024px) {
-  /* big landscape tablets, laptops, and desktops */
+/* @media (min-width: 1024px) {
   .map {
     position: relative;
     right: 200px;
     height: 660px;
     width: 600px;
   }
-}
-@media only screen and (min-width: 840px) {
+} */
+/* @media only screen and (min-width: 840px) {
   .map {
     position: relative;
     right: 2px;
@@ -63,4 +61,4 @@
     height: 570px;
     width: 700px;
   }
-}
+} */

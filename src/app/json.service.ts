@@ -1,25 +1,41 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Places } from "./places";
-import { Activities } from "../app/activities";
-import { Events } from "../app/events";
+import { Places } from './places';
+import { Activities } from '../app/activities';
+import { Events } from '../app/events';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class jsonService {
   place: string = '../assets/places.json';
   activity: string = '../assets/activities.json';
   event: string = '../assets/events.json';
-  constructor(private http: HttpClient) { }
-  getPlaces():Observable<Places> {
+  constructor(private http: HttpClient) {}
+
+  getData(filter: any): Observable<any> {
+    if (filter === 'places') {
+      console.log('list set to places');
+      return this.http.get<Places>(this.place);
+    } else if (filter === 'activities') {
+      console.log('list set to activities');
+      return this.http.get<Activities>(this.activity);
+    } else if (filter === 'events') {
+      console.log('list set to events');
+      return this.http.get<Events>(this.event);
+    }
+    console.log('you should not see this');
     return this.http.get<Places>(this.place);
   }
-  getActivities():Observable<Activities> {
+
+  getPlaces(): Observable<Places> {
+    return this.http.get<Places>(this.place);
+  }
+  getActivities(): Observable<Activities> {
     return this.http.get<Activities>(this.activity);
   }
-  getEvents():Observable<Events> {
+  getEvents(): Observable<Events> {
     return this.http.get<Events>(this.event);
   }
 }
@@ -76,5 +92,3 @@ export class jsonService {
 // lisää metodin kutsu ngOnInit(): sisälle this.getPlaces();
 // lisää metodin kutsu ngOnInit(): sisälle this.getActivities();
 // lisää metodin kutsu ngOnInit(): sisälle this.getEvents();
-
-

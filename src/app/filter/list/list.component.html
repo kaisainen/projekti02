@@ -1,9 +1,9 @@
 <div class="flex">
   <div class="list">
-    <!-- EVENTS -->
-    <div id="events">
-      <div *ngFor="let event of events">
-        <div *ngFor="let data of event.data | slice: 0:10">
+    <!-- TEST -->
+    <div id="customList">
+      <div *ngFor="let list of filter">
+        <div *ngFor="let data of list.data | slice: 0:10">
           <ngb-accordion #acc="ngbAccordion">
             <ngb-panel>
               <ng-template ngbPanelHeader>
@@ -11,13 +11,12 @@
                   <table>
                     <tr>
                       <td style="width: 75%" rowspan="2">
-                        <p>{{ data.name.fi }}</p>
+                        <h2 id="name">{{ data.name.fi }}</h2>
                       </td>
                       <td style="width: 25%"></td>
                     </tr>
                     <tr>
                       <td style="width: 25%" class="distance-in-list">
-                        <!-- <p id="km">{{ showDistance(data) }}</p> -->
                         <p>{{ data.distance | kilometerToMeter }}</p>
                       </td>
                     </tr>
@@ -29,107 +28,6 @@
                   {{ data.location.address.street_address }},
                   {{ data.location.address.postal_code }},
                   {{ data.location.address.locality }}
-                </p>
-                <p [innerHTML]="data.description.body"></p>
-                <p>
-                  <a href="{{ data.info_url }}" target="_blank">{{
-                    data.info_url
-                  }}</a>
-                </p>
-                Tags:
-                <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
-                <img
-                  *ngFor="let img of data.description.images; let i = index"
-                  src="{{ data.description.images[i].url }}"
-                  alt=""
-                />
-              </ng-template>
-            </ngb-panel>
-          </ngb-accordion>
-        </div>
-      </div>
-    </div>
-    <!-- ACTIVITIES -->
-    <div id="activities">
-      <div *ngFor="let activity of activities">
-        <div *ngFor="let data of activity.data | slice: 0:10">
-          <ngb-accordion #acc="ngbAccordion">
-            <ngb-panel>
-              <ng-template ngbPanelHeader>
-                <button ngbPanelToggle class="accordion-button">
-                  <table>
-                    <tr>
-                      <td style="width: 75%" rowspan="2">
-                        <p>{{ data.name.fi }}</p>
-                      </td>
-                      <td style="width: 25%"></td>
-                    </tr>
-                    <tr>
-                      <td style="width: 25%" class="distance-in-list">
-                        <!-- <p id="km">{{ showDistance(data) }}</p> -->
-                        <p>{{ data.distance | kilometerToMeter }}</p>
-                      </td>
-                    </tr>
-                  </table>
-                </button>
-              </ng-template>
-              <ng-template ngbPanelContent>
-                <p style="font-weight: bold">
-                  {{ data.location.address.street_address }},
-                  {{ data.location.address.postal_code }},
-                  {{ data.location.address.locality }}
-                </p>
-                <p [innerHTML]="data.description.body"></p>
-                <p>
-                  <a href="{{ data.info_url }}" target="_blank">{{
-                    data.info_url
-                  }}</a>
-                </p>
-                Tags:
-                <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
-                <img
-                  *ngFor="let img of data.description.images; let i = index"
-                  src="{{ data.description.images[i].url }}"
-                  alt=""
-                />
-              </ng-template>
-            </ngb-panel>
-          </ngb-accordion>
-        </div>
-      </div>
-    </div>
-    <!-- PLACES -->
-    <div id="places">
-      <div *ngFor="let place of places">
-        <div *ngFor="let data of place.data | slice: 0:10">
-          <ngb-accordion #acc="ngbAccordion">
-            <ngb-panel>
-              <ng-template ngbPanelHeader>
-                <button ngbPanelToggle class="accordion-button">
-                  <table>
-                    <tr>
-                      <td style="width: 75%" rowspan="2">
-                        <h2>{{ data.name.fi }}</h2>
-                      </td>
-                      <td style="width: 25%"></td>
-                    </tr>
-                    <tr>
-                      <td style="width: 25%" class="distance-in-list">
-                        <p>{{ data.distance | kilometerToMeter }}</p>
-                        <!-- <p id="km">{{ showDistance(data) }}</p> -->
-                      </td>
-                    </tr>
-                  </table>
-                </button>
-              </ng-template>
-              <ng-template ngbPanelContent>
-                <p style="font-weight: bold">
-                  {{ data.location.address.street_address }},
-                  {{ data.location.address.postal_code }},
-                  {{ data.location.address.locality }}
-                </p>
-                <p>
-                  {{ data.description.body }}
                 </p>
                 <p>
                   <a href="{{ data.info_url }}" target="_blank">{{
@@ -145,60 +43,6 @@
                 />
               </ng-template>
             </ngb-panel>
-            <!-- Note: former version of ngb-panel as commented below -->
-            <!-- <ngb-panel title="{{ data.name.fi }} {{ showDistance(data) }}">
-            <ng-template ngbPanelContent>
-              <p style="font-weight: bold">
-                {{ data.location.address.street_address }}
-                {{ data.location.address.postal_code }}
-                {{ data.location.address.locality }}
-              </p>
-              <p>
-                {{ data.description.body }}
-              </p>
-              <p>
-                <a href="{{ data.info_url }}" target="_blank">{{
-                  data.info_url
-                }}</a>
-              </p>
-              Tags:
-              <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
-              <img
-                *ngFor="let img of data.description.images; let i = index"
-                src="{{ data.description.images[i].url }}"
-                alt=""
-              />
-            </ng-template>
-          </ngb-panel> -->
-            <!-- Note: (original) Custom header below -->
-            <!-- <ngb-panel>
-            <ng-template  ngbPanelHeader >
-              <button  ngbPanelToggle class="accordion-button">
-                  <p id="name">{{ data.name.fi }}</p>
-                  <p id="km">{{ getDistanceV1(userCoordinates, [data.location.lat,data.location.lon]) }}</p>
-              </button>
-            </ng-template>
-            <ng-template ngbPanelContent>
-              <p style="font-weight: bold">
-                {{ data.location.address.street_address }}
-                {{ data.location.address.postal_code }}
-                {{ data.location.address.locality }}
-              </p>
-              <p>
-              {{ data.description.body }}
-            </p>
-            <p>
-              <a href="{{ data.info_url }}"target="_blank">{{ data.info_url}}</a>
-            </p>
-            Tags:
-              <p id="tags" *ngFor="let tag of data.tags">{{tag.name}}</p>
-              <img
-                *ngFor="let img of data.description.images; let i = index"
-                src="{{ data.description.images[i].url }}"
-                alt=""
-              /> 
-            </ng-template>
-          </ngb-panel>  -->
           </ngb-accordion>
         </div>
       </div>
