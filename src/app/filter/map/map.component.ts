@@ -11,7 +11,6 @@ import {
 import * as L from 'leaflet';
 import { ApiService } from '../../api.service';
 import { PlaceDetailComponent } from '../../place-detail/place-detail.component';
-import { Places } from '../../places';
 import 'leaflet.markercluster';
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
@@ -37,8 +36,11 @@ L.Marker.prototype.options.icon = iconDefault;
 export class MapComponent implements AfterViewInit, OnInit {
   @Input() mainFilter: any;
 
-  private map: any;
-  places: Places[] = [];
+  map: any;
+
+  placesMarkers = new L.LayerGroup();
+  eventsMarkers = new L.LayerGroup();
+  actsMarkers = new L.LayerGroup();
 
   constructor(
     private api: ApiService,
@@ -94,6 +96,7 @@ export class MapComponent implements AfterViewInit, OnInit {
     return `` + `<div>Olen tässä</div>`;
   }
 
+  // this is now redundant code
   makePlacesMarkers(map: L.Map) {
     this.api.getAllPlaces().subscribe((res: any) => {
       const markerCluster = new L.MarkerClusterGroup();
@@ -101,48 +104,69 @@ export class MapComponent implements AfterViewInit, OnInit {
         const lon = c.location.lon;
         const lat = c.location.lat;
         const marker = L.marker([lat, lon]);
-        //this is just testing
-        // const distance = this.getDistance(
-        //   [currentLat, currentLon],
-        //   [lat, lon]
-        // );
-        // console.log(c.name.en + ':' + distance);
-        //above is for testing
         marker.bindPopup(this.makePlacesPopup(c));
         markerCluster.addLayer(marker);
-
-        //  marker.addTo(map);
       }
       map.addLayer(markerCluster);
     });
   }
+  // this is now redundant code
   makeEventsMarkers(map: L.Map) {
+    this.api.getAllEvents().subscribe((res: any) => {
+      const markerCluster = new L.MarkerClusterGroup();
+
+      for (const c of res.data) {
+        const lon = c.location.lon;
+        const lat = c.location.lat;
+        const marker = L.marker([lat, lon]);
+        marker.bindPopup(this.makePlacesPopup(c));
+        markerCluster.addLayer(marker);
+      }
+      map.addLayer(markerCluster);
+    });
+  }
+  // this is now redundant code
+  makeActivitiesMarkers(map: L.Map) {
+    this.api.getAllActivities().subscribe((res: any) => {
+      const markerCluster = new L.MarkerClusterGroup();
+
+      for (const c of res.data) {
+        const lon = c.location.lon;
+        const lat = c.location.lat;
+        const marker = L.marker([lat, lon]);
+        marker.bindPopup(this.makePlacesPopup(c));
+        markerCluster.addLayer(marker);
+      }
+      map.addLayer(markerCluster);
+    });
+  }
+  makeMyLocationMarker(map: L.Map): void {
     navigator.geolocation.getCurrentPosition((position) => {
       const currentLat = position.coords.latitude;
       const currentLon = position.coords.longitude;
+      const currentLocationMarker = L.circleMarker([currentLat, currentLon]);
+      currentLocationMarker.setStyle({ color: 'red' });
+      currentLocationMarker.bindPopup(this.makeCurrentLocationPopup());
+      currentLocationMarker.addTo(map);
+    });
+  }
 
-      this.api.getAllEvents().subscribe((res: any) => {
+  makeMarkersBasedOnFilter(filter: string, map: L.Map): void {
+    let clusters = new L.MarkerClusterGroup();
+    if (filter === 'places') {
+      this.api.getAllPlaces().subscribe((res: any) => {
         const markerCluster = new L.MarkerClusterGroup();
-
         for (const c of res.data) {
           const lon = c.location.lon;
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
-
           marker.bindPopup(this.makePlacesPopup(c));
           markerCluster.addLayer(marker);
 
-          // marker.addTo(map);
+          markerCluster.addTo(this.placesMarkers);
         }
-        map.addLayer(markerCluster);
       });
-    });
-  }
-  makeActivitiesMarkers(map: L.Map) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const currentLat = position.coords.latitude;
-      const currentLon = position.coords.longitude;
-
+    } else if (filter === 'activities') {
       this.api.getAllActivities().subscribe((res: any) => {
         const markerCluster = new L.MarkerClusterGroup();
 
@@ -150,60 +174,59 @@ export class MapComponent implements AfterViewInit, OnInit {
           const lon = c.location.lon;
           const lat = c.location.lat;
           const marker = L.marker([lat, lon]);
-
           marker.bindPopup(this.makePlacesPopup(c));
           markerCluster.addLayer(marker);
 
-          //  marker.addTo(map);
+          markerCluster.addTo(this.actsMarkers);
         }
-        map.addLayer(markerCluster);
       });
-    });
-  }
-  makeMyLocationMarker(map: L.Map): void {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const currentLat = position.coords.latitude;
-
-      const currentLon = position.coords.longitude;
-
-      const currentLocationMarker = L.circleMarker([currentLat, currentLon]);
-
-      currentLocationMarker.setStyle({ color: 'red' });
-
-      currentLocationMarker.bindPopup(this.makeCurrentLocationPopup());
-
-      currentLocationMarker.addTo(map);
-    });
-  }
-
-  makeMarkersBasedOnFilter(filter: string, map: L.Map) {
-    console.log('getting data');
-
-    if (filter === 'places') {
-      this.makePlacesMarkers(map);
-    } else if (filter === 'activities') {
-      this.makeActivitiesMarkers(map);
     } else {
-      this.makeEventsMarkers(map);
+      this.api.getAllEvents().subscribe((res: any) => {
+        const markerCluster = new L.MarkerClusterGroup();
+
+        for (const c of res.data) {
+          const lon = c.location.lon;
+          const lat = c.location.lat;
+          const marker = L.marker([lat, lon]);
+          marker.bindPopup(this.makePlacesPopup(c));
+          markerCluster.addLayer(marker);
+
+          markerCluster.addTo(this.eventsMarkers);
+        }
+      });
+    }
+  }
+
+  showLayerBasedOnFilter(filter: string, map: L.Map) {
+    if (filter === 'places') {
+      map.removeLayer(this.eventsMarkers);
+      map.removeLayer(this.actsMarkers);
+      map.addLayer(this.placesMarkers);
+    } else if (filter === 'activities') {
+      map.removeLayer(this.placesMarkers);
+      map.removeLayer(this.eventsMarkers);
+      map.addLayer(this.actsMarkers);
+    } else {
+      map.removeLayer(this.placesMarkers);
+      map.removeLayer(this.actsMarkers);
+      map.addLayer(this.eventsMarkers);
     }
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
-
     this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
+    this.showLayerBasedOnFilter(this.mainFilter, this.map);
   }
   ngOnInit(): void {
-    this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
-  }
-
-  ngAfterViewInit(): void {
     this.initMap();
     this.makeMyLocationMarker(this.map);
     this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
+    this.showLayerBasedOnFilter(this.mainFilter, this.map);
+  }
 
-    // this.makePlacesMarkers(this.map);
-    // this.makeActivitiesMarkers(this.map);
-    // this.makeEventsMarkers(this.map);
+  ngAfterViewInit(): void {
+    // this.initMap();
+    // this.makeMyLocationMarker(this.map);
+    // this.makeMarkersBasedOnFilter(this.mainFilter, this.map);
   }
 }

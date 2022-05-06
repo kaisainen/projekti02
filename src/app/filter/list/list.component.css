@@ -44,17 +44,17 @@ table {
 }
 @media only screen and (min-width: 1024px) {
   .list {
-    width: 425px;
+    /* width: 425px; */
+    width: 600px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .list {
     width: 425px;
-    left: 250px;
   }
-  .panel {
+  /* .panel {
     height: 150px;
-  }
+  } */
 }
 @media only screen and (min-width: 1536px) {
   .list {

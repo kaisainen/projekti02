@@ -3,7 +3,7 @@
     <!-- TEST -->
     <div id="customList">
       <div *ngFor="let list of filter">
-        <div *ngFor="let data of list.data | slice: 0:10">
+        <div *ngFor="let data of list.data | slice: 0:15">
           <ngb-accordion #acc="ngbAccordion">
             <ngb-panel>
               <ng-template ngbPanelHeader>
@@ -34,6 +34,7 @@
                     data.info_url
                   }}</a>
                 </p>
+                <p>{{ data.description.body }}</p>
                 Tags:
                 <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
                 <img
