@@ -24,6 +24,15 @@ table {
   padding-top: 2rem;
 }
 
+#customList {
+  height: 570px;
+  /* width: auto; */
+  /* overflow: auto; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* margin-right: 0.5rem; */
+}
+
 @media only screen and (min-width: 768px) {
   .list {
     width: 316px;
@@ -35,14 +44,6 @@ table {
 @media only screen and (min-width: 1024px) {
   .list {
     width: 425px;
-  }
-  #customList {
-    height: 570px;
-    /* width: auto; */
-    /* overflow: auto; */
-    overflow-x: hidden;
-    overflow-y: scroll;
-    /* margin-right: 0.5rem; */
   }
 }
 @media only screen and (min-width: 1440px) {
