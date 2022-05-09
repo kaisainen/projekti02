@@ -12,7 +12,7 @@ img {
   font-size: 1.2rem;
   color: gray;
   vertical-align: middle;
-  padding-right: 0.5rem;
+  /* padding-right: 0.5rem; */
 }
 
 table {
@@ -26,7 +26,7 @@ table {
 
 @media only screen and (min-width: 768px) {
   .list {
-    width: 375px;
+    width: 316px;
   }
   .distance-in-list {
     font-size: 1.6rem;
@@ -34,8 +34,7 @@ table {
 }
 @media only screen and (min-width: 1024px) {
   .list {
-    /* width: 425px; */
-    width: 600px;
+    width: 425px;
   }
   #customList {
     height: 570px;
@@ -43,7 +42,7 @@ table {
     /* overflow: auto; */
     overflow-x: hidden;
     overflow-y: scroll;
-    margin-right: 0.5rem;
+    /* margin-right: 0.5rem; */
   }
 }
 @media only screen and (min-width: 1440px) {
