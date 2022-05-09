@@ -6,6 +6,7 @@ import { Events } from '../../events';
 import { KilometerToMeterPipe } from '../../kilometer-to-meter.pipe';
 import { FilterComponent } from '../filter.component';
 import { Filters } from 'src/app/filters';
+import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-list',
@@ -28,7 +29,7 @@ export class ListComponent implements OnInit {
   event = false;
   activity = false;
 
-  constructor(private jsonService: jsonService) {}
+  constructor(private jsonService: jsonService,private apiService: ApiService) {}
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
@@ -55,7 +56,8 @@ export class ListComponent implements OnInit {
     console.log('getting data');
     if (filter === 'places') {
       console.log('getting places');
-      this.jsonService.getPlaces().subscribe((res: Places) => {
+      // this.jsonService.getPlaces().subscribe((res: Places) => {
+      this.apiService.getAllPlaces().subscribe((res: Places) => {
         this.filter = [];
         this.filter.push(res);
         // here we set the distance to user for each place (the Activities interface is updated with this new property).
@@ -69,7 +71,8 @@ export class ListComponent implements OnInit {
       });
     } else if (filter === 'events') {
       console.log('getting events');
-      this.jsonService.getEvents().subscribe((res: Events) => {
+      // this.jsonService.getEvents().subscribe((res: Events) => {
+      this.apiService.getAllEvents().subscribe((res: Events) => {
         this.filter = [];
         this.filter.push(res);
         // here we set the distance to user for each place (the Activities interface is updated with this new property).
@@ -82,7 +85,8 @@ export class ListComponent implements OnInit {
         this.filter[0].data.sort((a: any, b: any) => a.distance - b.distance);
       });
     } else if (filter === 'activities') {
-      this.jsonService.getActivities().subscribe((res: Activities) => {
+      // this.jsonService.getActivities().subscribe((res: Activities) => {
+      this.apiService.getAllActivities().subscribe((res: Activities) => {
         this.filter = [];
         this.filter.push(res);
         // here we set the distance to user for each place (the Activities interface is updated with this new property).
