@@ -34,7 +34,7 @@
                     data.info_url
                   }}</a>
                 </p>
-                <p>{{ data.description.body }}</p>
+                <p [innerHTML]="data.description.body"></p>
                 Tags:
                 <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
                 <img
