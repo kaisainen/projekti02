@@ -15,6 +15,7 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { KilometerToMeterPipe } from './kilometer-to-meter.pipe';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { KilometerToMeterPipe } from './kilometer-to-meter.pipe';
     MapComponent,
     PlaceDetailComponent,
     KilometerToMeterPipe,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,

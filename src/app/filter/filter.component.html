@@ -1,26 +1,22 @@
 <section class="main-container">
-  <section class="filter-container">
-    <div class="grid-container">
-      <button type="button" class="filter-title" (click)="showMainFilters()">
+    <section class="filter-container">
+        <div class="grid-container">
+            <button type="button" class="filter-title" (click)="showMainFilters()">
         {{ selectedMainFilter | uppercase }}
         <fa-icon *ngIf="!showFilters" [icon]="faCaretRight"></fa-icon>
         <fa-icon *ngIf="showFilters" [icon]="faCaretDown"></fa-icon>
       </button>
 
-      <button type="button" class="filter-title" (click)="showFilterTags()">
+            <button type="button" class="filter-title" (click)="showFilterTags()">
         FILTERS
         <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
         <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
       </button>
-    </div>
+        </div>
 
-    <div *ngIf="showFilters" class="tag-container">
-      <p *ngFor="let filter of filters">
-        <span
-          (click)="setMainFilter(filter)"
-          class="tag p-yellow-hover"
-          [ngClass]="{ selectedtag: filter === selectedMainFilter }"
-          ><a href="#">{{ filter | titlecase }}</a></span
+        <div *ngIf="showFilters" class="tag-container">
+            <p *ngFor="let filter of filters">
+                <span (click)="setMainFilter(filter)" class="tag p-yellow-hover" [ngClass]="{ selectedtag: filter === selectedMainFilter }"><a href="#">{{ filter | titlecase }}</a></span
         >
       </p>
     </div>
@@ -47,8 +43,9 @@
       <fa-icon class="icon" [icon]="faList"></fa-icon>
     </p>
   </div>
-
+  
   <section class="list-map-container">
+   
     <app-list
       class="list"
       *ngIf="shownList"
@@ -59,5 +56,7 @@
       *ngIf="shownMap || desktop"
       [mainFilter]="selectedMainFilter"
     ></app-map>
+   
   </section>
+  <app-weather class="weather"></app-weather>
 </section>
