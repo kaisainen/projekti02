@@ -1,89 +1,113 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
-  background-color: var(--main-other-bg-color);
-  padding: 6px;
-  font-family: var(--main-font);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    background-color: var(--main-other-bg-color);
+    padding: 6px;
+    font-family: var(--main-font);
 }
+
 .filter-title {
-  font-size: 1.6rem;
-  background-color: var(--main-other-bg-color);
-  border: none;
+    font-size: 1.6rem;
+    background-color: var(--main-other-bg-color);
+    border: none;
 }
+
 .tag-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px 10px 0 10px;
-  background-color: var(--main-other-bg-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 10px 0 10px;
+    background-color: var(--main-other-bg-color);
 }
+
 .tag {
-  background-color: var(--main-other-bg-color);
-  border: solid black 1px;
-  border-radius: 17px;
-  padding: 5px 10px;
-  margin: 5px;
-  font-size: 1.2rem;
+    background-color: var(--main-other-bg-color);
+    border: solid black 1px;
+    border-radius: 17px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 1.2rem;
 }
+
 .selectedtag {
-  background-color: lightblue;
+    background-color: lightblue;
 }
+
 .main-filters-container {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--main-other-bg-color);
-  width: 50%;
-  font-family: var(--main-font);
-  font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-other-bg-color);
+    width: 50%;
+    font-family: var(--main-font);
+    font-size: 16px;
 }
+
 a {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
+
+
 /* displaying map or list start */
+
 .top {
-  grid-area: top;
-  display: flex;
-  flex-direction: row;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+    grid-area: top;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
-.top > * {
-  flex: 1;
-  padding-left: 4rem;
-  margin: 0;
+
+.top>* {
+    flex: 1;
+    padding-left: 4rem;
+    margin: 0;
 }
+
 .icon {
-  padding-left: 0.5rem;
+    padding-left: 0.5rem;
 }
+
 .lightblue {
-  background-color: lightblue;
+    background-color: lightblue;
 }
+
+
 /* displaying map or list end */
 
-@media only screen and (min-width: 429px) {
-  .list-map-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    /* gap: 2rem; */
-  }
+
+/* Displaying weather */
+
+@media only screen and (max-width: 1024px) {
+    .weather {
+        display: none;
+    }
 }
+
+@media only screen and (min-width: 429px) {
+    .list-map-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        /* gap: 2rem; */
+    }
+}
+
 @media only screen and (min-width: 769px) {
-  .main-container {
-    background-image: url(./../../assets/helsinki.jpg);
-  }
-  .list {
-    justify-self: end;
-  }
-  .p-yellow-hover:hover {
-    background-color: lightblue;
-  }
-  .filter-title {
-    font-size: 2rem;
-  }
-  .tag {
-    font-size: 1.8rem;
-  }
+    .main-container {
+        background-image: url(./../../assets/helsinki.jpg);
+    }
+    .list {
+        justify-self: end;
+    }
+    .p-yellow-hover:hover {
+        background-color: lightblue;
+    }
+    .filter-title {
+        font-size: 2rem;
+    }
+    .tag {
+        font-size: 1.8rem;
+    }
 }

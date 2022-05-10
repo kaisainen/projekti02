@@ -1,3 +1,20 @@
+<nav class="navbar navbar-expand-md navbar-light bg-color" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+        <a class="navbar-brand upp title-font" href="#">Near to me</a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+        </button>-->
+        <div id="divWeatherHeader">
+            <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+                <i class="fas fa-3x fa-sun sun"></i>
+            </div>
+            <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+                <i class="fas fa-3x fa-moon moon"></i>
+            </div>
+            <div class="weatherWidgetRow cloudDiv">
+                <i class="fas fa-cloud fa-3x cloud"></i>
+            </div>
+            <div class="weatherWidgetRow" style="font-size: 12px;margin-top: 1px;">{{WeatherData.temp_celcius}}°</div>
 <nav
   class="navbar navbar-expand-md navbar-light bg-color"
   aria-label="Fourth navbar example"
@@ -23,7 +40,8 @@
       <span class="navbar-toggler-icon"></span>
     </button> -->
 
-    <!-- <div class="collapse navbar-collapse" id="navbarsExample04">
+        </div>
+        <!-- <div class="collapse navbar-collapse" id="navbarsExample04">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item dropdown">
           <a
@@ -59,5 +77,5 @@
         />
       </form>
     </div> -->
-  </div>
+    </div>
 </nav>

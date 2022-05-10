@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-weather',
+  templateUrl: './weather.component.html',
+  styleUrls: ['./weather.component.css']
 })
-export class HeaderComponent implements OnInit {
-
+export class WeatherComponent implements OnInit {
   WeatherData: any;
 
   constructor() { }
