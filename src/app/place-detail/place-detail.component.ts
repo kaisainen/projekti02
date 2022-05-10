@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Places } from '../places';
@@ -13,21 +12,10 @@ import { ApiService } from '../api.service';
 })
 export class PlaceDetailComponent implements OnInit {
   places: Places[] = [];
-  address!: String;
-  postalCode!: String; 
-  locality!: String;
-  name!: string;
-  fi!: string;
-  info_url!: string;
   placeId: any;
-  intro!: string;
-  images!: string;
-  tags!: string;
-  
 
-  @ViewChild('templateBottomSheet') TemplateBottomSheet!: TemplateRef<any>;
 
-  constructor(private bottomSheet: MatBottomSheet, 
+  constructor( 
     private route: ActivatedRoute,
     private api: ApiService) { }
 
@@ -40,13 +28,9 @@ export class PlaceDetailComponent implements OnInit {
     });
   }
   
-  openTemplateSheetMenu() {
-    this.bottomSheet.open(this.TemplateBottomSheet);
-  }
+ 
 
-  closeTemplateSheetMenu() {
-    this.bottomSheet.dismiss();
-  }
+  
 
   getPlace(): void {
     this.route.paramMap.pipe(switchMap(params => {

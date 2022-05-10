@@ -11,9 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MapComponent } from './filter/map/map.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PlaceDetailComponent } from './place-detail/place-detail.component';
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
 import { KilometerToMeterPipe } from './kilometer-to-meter.pipe';
 import { WeatherComponent } from './weather/weather.component';
 
@@ -35,9 +33,7 @@ import { WeatherComponent } from './weather/weather.component';
     FontAwesomeModule,
     HttpClientModule,
     AppRoutingModule,
-    MatBottomSheetModule,
     BrowserAnimationsModule,
-    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
