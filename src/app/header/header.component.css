@@ -13,3 +13,19 @@
   font-family: "Saira Stencil One", cursive;
   font-size: 50px;
 }
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style-type: none;
+}
+
+ul > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.pointer-logo {
+  max-height: 65px;
+}
