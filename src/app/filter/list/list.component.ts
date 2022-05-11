@@ -52,14 +52,32 @@ export class ListComponent implements OnInit {
       this.userCoordinates.push(userLon);
     });
   }
+  
+  // getData(filter: any): void {
+  //   console.log('getting data');
+  //   if (filter === 'places') {
+  //     console.log('getting places');
+  //     // this.jsonService.getPlaces().subscribe((res: Places) => {
+  //     this.apiService.getAllPlaces().subscribe((res: Places) => {
+  //       this.filter = [];
+  //       this.filter.push(res);
+  //       // here we set the distance to user for each place (the Activities interface is updated with this new property).
   getData(filter: any): void {
     console.log('getting data');
     if (filter === 'places') {
-      console.log('getting places');
-      // this.jsonService.getPlaces().subscribe((res: Places) => {
+      let tag = 'Park';
+      let check: { data: any; }[] = [];
+      this.filter = [];
       this.apiService.getAllPlaces().subscribe((res: Places) => {
-        this.filter = [];
-        this.filter.push(res);
+        check.push(res);
+        for (let data of check[0].data) {
+          for (let i = 0; i < data.tags.length; i++) {
+            console.log(data.tags[1].name);
+            if (data.tags[i].name === tag) {
+              this.filter.push(data);
+            }
+          }
+        }
         // here we set the distance to user for each place (the Activities interface is updated with this new property).
         for (let data of this.filter[0].data) {
           data.distance = this.getDistance(this.userCoordinates, [
