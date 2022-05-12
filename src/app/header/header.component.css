@@ -64,6 +64,13 @@
     }
 }
 
+/* Comment: the next rule blocks logo in all screens widths smaller than tablet */
+@media only screen and (max-width: 767px) {
+    .block-logo {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 429px) {
     #divWeatherHeader {
         display: none;
