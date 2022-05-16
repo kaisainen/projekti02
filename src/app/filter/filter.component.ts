@@ -125,7 +125,7 @@ export class FilterComponent implements OnInit {
   getScreenSize() {
     this.screenHeight = window.innerHeight;
     this.screenWidth = window.innerWidth;
-    if (this.screenWidth > 429) {
+    if (this.screenWidth > 440) {
       this.desktop = true;
       this.shownMap = false;
       this.shownList = true;
