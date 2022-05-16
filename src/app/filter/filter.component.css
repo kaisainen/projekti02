@@ -1,9 +1,11 @@
 .grid-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
+    /* display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto; */
+    display: flex;
+    flex-direction: row;
     background-color: var(--main-other-bg-color);
-    padding: 6px;
+    padding-top: 3px;
     font-family: var(--main-font);
 }
 
@@ -17,17 +19,23 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10px 10px 0 10px;
+    /* padding: 10px 10px 0 10px; */
     background-color: var(--main-other-bg-color);
 }
 
 .tag {
     background-color: var(--main-other-bg-color);
-    border: solid black 1px;
+    border: solid black 1.5px;
     border-radius: 17px;
     padding: 5px 10px;
     margin: 5px;
     font-size: 1.2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    text-transform: uppercase;
+}
+
+.tag:hover {
+    background-color: var(--main-bg-color);
 }
 
 .selectedtag {
@@ -36,11 +44,12 @@
 
 .main-filters-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: var(--main-other-bg-color);
     width: 50%;
     font-family: var(--main-font);
     font-size: 16px;
+    justify-content: center;
 }
 
 a {
@@ -102,7 +111,7 @@ a {
         justify-self: end;
     }
     .p-yellow-hover:hover {
-        background-color: lightblue;
+        background-color: var(--main-bg-color);
     }
     .filter-title {
         font-size: 2rem;
