@@ -47,7 +47,7 @@ export class MapComponent implements AfterViewInit, OnInit {
   ) {}
 
   private initMap(): void {
-    this.map = L.map('map').locate({ setView: true, maxZoom: 15 });
+    this.map = L.map('map').locate({ setView: true, maxZoom: 9 });
 
     const tiles = L.tileLayer(
       'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWgtMjAiLCJhIjoiY2wxbTg0dWZyMGdlaTNqb2JhbXVqaG90aiJ9.P2rhaDNS3sVsqmeewBeQpQ',
