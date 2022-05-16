@@ -63,8 +63,12 @@
         margin-left: 30px;
     }
 }
-
-
+/* Reduce size of title in small screens */
+@media only screen and (max-width: 321px) {
+    .title-font {
+    font-size: 45px;
+    }
+}
 /* Comment: the next rule blocks logo in all screens widths smaller than tablet */
 
 @media only screen and (max-width: 767px) {
