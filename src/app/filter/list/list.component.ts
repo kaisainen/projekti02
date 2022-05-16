@@ -1,9 +1,7 @@
 import { Component, OnInit, Pipe, Input, SimpleChanges } from '@angular/core';
-import { jsonService } from '../../json.service';
 import { Places } from '../../places';
 import { Activities } from '../../activities';
 import { Events } from '../../events';
-import { KilometerToMeterPipe } from '../../kilometer-to-meter.pipe';
 import { FilterComponent } from '../filter.component';
 import { Filters } from 'src/app/filters';
 import { ApiService } from '../../api.service';
@@ -29,16 +27,12 @@ export class ListComponent implements OnInit {
   event = false;
   activity = false;
 
-  constructor(private jsonService: jsonService,private apiService: ApiService) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
     this.getData(this.mainFilter);
   }
-  // setFilter(filter: any): void {
-  //   this.getData(filter);
-  // }
-
   ngOnInit(): void {
     this.getUserLocation();
     this.getData(this.mainFilter);
@@ -61,24 +55,7 @@ export class ListComponent implements OnInit {
       this.apiService.getAllPlaces().subscribe((res: Places) => {
         this.filter = [];
         this.filter.push(res);
-        // here we set the distance to user for each place (the Activities interface is updated with this new property).
-  // getData(filter: any): void {
-  //   console.log('getting data');
-  //   if (filter === 'places') {
-  //     let tag = 'Park';
-  //     let check: { data: any; }[] = [];
-  //     this.filter = [];
-  //     this.apiService.getAllPlaces().subscribe((res: Places) => {
-  //       check.push(res);
-  //       for (let data of check[0].data) {
-  //         for (let i = 0; i < data.tags.length; i++) {
-  //           console.log(data.tags[1].name);
-  //           if (data.tags[i].name === tag) {
-  //             this.filter.push(data);
-  //           }
-  //         }
-  //       }
-        // here we set the distance to user for each place (the Activities interface is updated with this new property).
+        // here we set the distance to user for each place (the Places interface is updated with this new property).
         for (let data of this.filter[0].data) {
           data.distance = this.getDistance(this.userCoordinates, [
             data.location.lat,
@@ -89,11 +66,10 @@ export class ListComponent implements OnInit {
       });
     } else if (filter === 'events') {
       console.log('getting events');
-      // this.jsonService.getEvents().subscribe((res: Events) => {
       this.apiService.getAllEvents().subscribe((res: Events) => {
         this.filter = [];
         this.filter.push(res);
-        // here we set the distance to user for each place (the Activities interface is updated with this new property).
+        // here we set the distance to user for each place (the Events interface is updated with this new property).
         for (let data of this.filter[0].data) {
           data.distance = this.getDistance(this.userCoordinates, [
             data.location.lat,
