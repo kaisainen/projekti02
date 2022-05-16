@@ -22,6 +22,7 @@ table {
 .accordion-button {
   max-height: 5.5rem;
   padding-top: 2rem;
+  background-color: lightgray;
 }
 
 #customList {

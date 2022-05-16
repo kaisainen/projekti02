@@ -1,25 +1,26 @@
 <section class="main-container">
     <section class="filter-container">
         <div class="grid-container">
-            <button type="button" class="filter-title" (click)="showMainFilters()">
+            <!-- <button type="button" class="filter-title" (click)="showMainFilters()">
         {{ selectedMainFilter | uppercase }}
         <fa-icon *ngIf="!showFilters" [icon]="faCaretRight"></fa-icon>
         <fa-icon *ngIf="showFilters" [icon]="faCaretDown"></fa-icon>
-      </button>
+      </button> -->
 
-            <button type="button" class="filter-title" (click)="showFilterTags()">
+            <!-- <button type="button" class="filter-title" (click)="showFilterTags()">
         FILTERS
         <fa-icon *ngIf="!showTags" [icon]="faCaretRight"></fa-icon>
         <fa-icon *ngIf="showTags" [icon]="faCaretDown"></fa-icon>
-      </button>
-        </div>
+      </button> -->
+        
 
-        <div *ngIf="showFilters" class="tag-container">
-            <p *ngFor="let filter of filters">
+        <!-- <div *ngIf="showFilters" class="tag-container"> -->
+            <p class="main-filters-container" *ngFor="let filter of filters">
                 <span (click)="setMainFilter(filter)" class="tag p-yellow-hover" [ngClass]="{ selectedtag: filter === selectedMainFilter }"><a href="#">{{ filter | titlecase }}</a></span
         >
       </p>
     </div>
+    <!-- </div> -->
 
     <div *ngIf="showTags" class="tag-container">
       <p *ngFor="let tag of tags">
