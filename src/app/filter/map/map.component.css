@@ -1,0 +1,48 @@
+.map {
+  height: 65vh;
+  width: 65vh;
+}
+@media only screen and (min-width: 429px) {
+  .map {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .map {
+    height: 570px;
+    width: 450px;
+  }
+}
+@media (min-width: 1024px) {
+  .map {
+    position: relative;
+    right: 200px;
+    height: 660px;
+    width: 600px;
+  }
+}
+@media only screen and (min-width: 840px) {
+  .map {
+    position: relative;
+    right: 2px;
+    height: 570px;
+    width: 475px;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  .map {
+    width: 530px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .map {
+    width: 715px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .map {
+    width: 800px;
+  }
+}

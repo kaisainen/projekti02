@@ -1,0 +1,72 @@
+img {
+  max-width: 100%;
+  padding: 1rem;
+}
+#tags {
+  padding-top: 0.1rem;
+  line-height: 0.5rem;
+}
+
+.distance-in-list {
+  text-align: right;
+  font-size: 1.2rem;
+  color: gray;
+  vertical-align: middle;
+  /* padding-right: 0.5rem; */
+}
+
+table {
+  width: 100%;
+}
+
+.accordion-button {
+  max-height: 5.5rem;
+  padding-top: 2rem;
+  background-color: lightgray;
+}
+
+#customList {
+  height: 570px;
+  /* width: auto; */
+  /* overflow: auto; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* margin-right: 0.5rem; */
+}
+
+@media only screen and (min-width: 768px) {
+  .list {
+    width: 316px;
+  }
+  .distance-in-list {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .list {
+    width: 425px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .list {
+    width: 425px;
+  }
+  /* .panel {
+    height: 150px;
+  } */
+}
+@media only screen and (min-width: 1536px) {
+  .list {
+    width: 420px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .list {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .list {
+    width: 535px;
+  }
+}

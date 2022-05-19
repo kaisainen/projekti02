@@ -1,0 +1,52 @@
+<div class="flex">
+  <div class="list">
+    <!-- TEST -->
+    <div id="customList">
+      <div *ngFor="let list of filter">
+        <div *ngFor="let data of list.data | slice: 0:50">
+          <ngb-accordion #acc="ngbAccordion">
+            <ngb-panel>
+              <ng-template ngbPanelHeader>
+                <button ngbPanelToggle class="accordion-button">
+                  <table>
+                    <tr>
+                      <td style="width: 75%" rowspan="2">
+                        <h2 id="name">{{ data.name.fi }}</h2>
+                      </td>
+                      <td style="width: 25%"></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 25%" class="distance-in-list">
+                        <p>{{ data.distance | kilometerToMeter }}</p>
+                      </td>
+                    </tr>
+                  </table>
+                </button>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <p style="font-weight: bold">
+                  {{ data.location.address.street_address }},
+                  {{ data.location.address.postal_code }},
+                  {{ data.location.address.locality }}
+                </p>
+                <p>
+                  <a href="{{ data.info_url }}" target="_blank">{{
+                    data.info_url
+                  }}</a>
+                </p>
+                <p [innerHTML]="data.description.body"></p>
+                Tags:
+                <p id="tags" *ngFor="let tag of data.tags">{{ tag.name }}</p>
+                <img
+                  *ngFor="let img of data.description.images; let i = index"
+                  src="{{ data.description.images[i].url }}"
+                  alt=""
+                />
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
