@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
 })
 export class ApiService {
 
-  private apiUrl = 'http://localhost:8080';
+  private apiUrl = 'https://near--to--me.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
