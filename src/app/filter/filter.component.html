@@ -1,0 +1,35 @@
+<section class="main-container">
+    <section class="filter-container">
+        <div class="grid-container">
+            <p class="main-filters-container" *ngFor="let filter of filters">
+                <span (click)="setMainFilter(filter)" class="tag p-yellow-hover" [ngClass]="{ selectedtag: filter === selectedMainFilter }"><a href="#">{{ filter | titlecase }}</a></span
+        >
+      </p>
+    </div>
+  </section>
+
+  <div class="top" *ngIf="showTop">
+    <p [ngClass]="{ lightblue: shownMap }" (click)="showMap()">
+      Map
+      <fa-icon class="icon" [icon]="faMap"></fa-icon>
+    </p>
+    <p [ngClass]="{ lightblue: shownList }" (click)="showList()">
+      List
+      <fa-icon class="icon" [icon]="faList"></fa-icon>
+    </p>
+  </div>
+  
+  <section class="list-map-container">
+    <app-list
+      class="list"
+      *ngIf="shownList"
+      [mainFilter]="selectedMainFilter"
+    ></app-list>
+    <app-map
+      class="map"
+      *ngIf="shownMap || desktop"
+      [mainFilter]="selectedMainFilter"
+    ></app-map>
+  </section>
+  <app-weather class="weather"></app-weather>
+</section>

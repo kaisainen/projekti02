@@ -1,0 +1,18 @@
+.header {
+  grid-area: header;
+}
+.filter {
+  grid-area: filter;
+}
+.footer {
+  grid-area: footer;
+}
+.page-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "filter"
+    "footer";
+}

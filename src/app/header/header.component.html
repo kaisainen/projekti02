@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-md navbar-light bg-color" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+        <ul>
+            <li>
+                <a class="navbar-brand upp title-font" href="#">Near to me</a>
+            </li>
+            <span class="block-logo">
+            <li>
+                <figure><img src="../../assets/logo_final.png" alt="" class="pointer-logo"></figure>
+            </li>
+            </span>
+        </ul>
+    </div>
+
+    <div id="divWeatherHeader">
+        <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+            <i class="fas fa-3x fa-sun sun"></i>
+        </div>
+        <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+            <i class="fas fa-3x fa-moon moon"></i>
+        </div>
+        <div class="weatherWidgetRow cloudDiv">
+            <i class="fas fa-cloud fa-3x cloud"></i>
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 12px;margin-top: 1px;">{{WeatherData.temp_celcius}}°</div>
+    </div>
+</nav>

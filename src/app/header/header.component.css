@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap");
+.bg-color {
+    background-color: var(--main-bg-color);
+}
+
+.upp {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.title-font {
+    font-family: "Saira Stencil One", cursive;
+    font-size: 50px;
+}
+
+
+/* weather  */
+
+#divWeatherHeader {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 5px;
+    top: 10px;
+    right: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weatherWidgetRow {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.sun {
+    color: yellow;
+    filter: drop-shadow( 1px 1px 10px yellow);
+}
+
+.moon {
+    color: white;
+    filter: drop-shadow( 1px 1px 10px white);
+}
+
+.cloudDiv {
+    margin-top: -40px;
+}
+
+.cloud {
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 5px rgb(104, 175, 197));
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes cloudMovement {
+    from {
+        margin-left: -10px;
+    }
+    to {
+        margin-left: 30px;
+    }
+}
+/* Reduce size of title in small screens */
+@media only screen and (max-width: 321px) {
+    .title-font {
+    font-size: 45px;
+    }
+}
+/* Comment: the next rule blocks logo in all screens widths smaller than tablet */
+
+@media only screen and (max-width: 767px) {
+    .block-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 429px) {
+    #divWeatherHeader {
+        top: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    #divWeatherHeader {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    #divWeatherHeader {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    #divWeatherHeader {
+        display: none;
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
+
+ul>* {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.pointer-logo {
+    max-height: 65px;
+}
