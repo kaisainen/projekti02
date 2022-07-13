@@ -10,7 +10,7 @@
     "heroku-postbuild": "ng build",
     "node": "16.13.0",
     "npm": "8.1.0"
-      },
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.2",
